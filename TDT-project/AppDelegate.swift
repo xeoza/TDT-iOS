@@ -7,18 +7,23 @@
 //
 
 import UIKit
+import Firebase
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
   
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    FirebaseApp.configure()
+    Database.database().isPersistenceEnabled = true
     
     let tabBarController = GeneralTabBarController()
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootViewController = tabBarController
     window?.makeKeyAndVisible()
+        
     tabBarController.presentOnboardingController()
   
     return true
@@ -27,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var orientationLock = UIInterfaceOrientationMask.allButUpsideDown
   
   func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+    guard Auth.auth().currentUser != nil else { return .portrait }
     return self.orientationLock
   }
   

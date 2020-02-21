@@ -12,6 +12,7 @@
 		4BAEE48621272C4F0045AB10 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEE47D21272C4F0045AB10 /* OnboardingController.swift */; };
 		4BAEE48721272C4F0045AB10 /* OnboardingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEE47E21272C4F0045AB10 /* OnboardingContainerView.swift */; };
 		5F1A08F83F54471CEC5DF909 /* libPods-TDT-project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F16D5483C4EF3FEC6D53D6 /* libPods-TDT-project.a */; };
+		E04E67FC23FFE30B008CB5F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */; };
 		E095ADF023FE826C0068A4AA /* GeneralTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		4BE9F1DE219B457C00C6768F /* TDT-project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TDT-project.entitlements"; sourceTree = "<group>"; };
 		A254D4D6ED95219C8036E043 /* Pods-TDT-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDT-project.release.xcconfig"; path = "Target Support Files/Pods-TDT-project/Pods-TDT-project.release.xcconfig"; sourceTree = "<group>"; };
 		A7E91611BD823692429B49F2 /* Pods-TDT-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDT-project.debug.xcconfig"; path = "Target Support Files/Pods-TDT-project/Pods-TDT-project.debug.xcconfig"; sourceTree = "<group>"; };
+		E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTabBarController.swift; sourceTree = "<group>"; };
 		F6F16D5483C4EF3FEC6D53D6 /* libPods-TDT-project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TDT-project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -75,6 +77,7 @@
 		4B4F452D1F32230C00A6FF96 /* TDT-project */ = {
 			isa = PBXGroup;
 			children = (
+				E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */,
 				4BE9F1DE219B457C00C6768F /* TDT-project.entitlements */,
 				4BAEE47221272C4F0045AB10 /* AuthenticationControllers */,
 				4B4F452E1F32230C00A6FF96 /* AppDelegate.swift */,
@@ -131,7 +134,6 @@
 				4B4F45281F32230C00A6FF96 /* Frameworks */,
 				4B4F45291F32230C00A6FF96 /* Resources */,
 				4B9AF38E1F3B9B6E00A3934D /* Embed App Extensions */,
-				9D3B806CC8B7F585138A2A2A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B4F45381F32230C00A6FF96 /* Assets.xcassets in Resources */,
+				E04E67FC23FFE30B008CB5F4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,26 +221,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9D3B806CC8B7F585138A2A2A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TDT-project/Pods-TDT-project-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/CropViewController/TOCropViewControllerBundle.bundle",
-				"${PODS_ROOT}/PhoneNumberKit/PhoneNumberKit/Resources/PhoneNumberMetadata.json",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TOCropViewControllerBundle.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PhoneNumberMetadata.json",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TDT-project/Pods-TDT-project-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
