@@ -1,5 +1,10 @@
 # Team Development Technology/2020.Т3
 
+| Branch  | Build status  | Deploy status|
+|:-------------|:---------------:| -------------:|
+| master       | [![Build Status](https://travis-ci.com/xeoza/TDT-iOS.svg?branch=master)](https://travis-ci.com/xeoza/TDT-iOS)| **TODO** |
+| develop      | [![Build Status](https://travis-ci.com/xeoza/TDT-iOS.svg?branch=develop)](https://travis-ci.com/xeoza/TDT-iOS)| **TODO** |
+
 Продукт: Приложение для iOS устройств
 
 Краткое описание проекта: Клиент облачной системы мгновенного обмена сообщениями на основе Firebase
