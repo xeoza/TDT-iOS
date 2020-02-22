@@ -5,6 +5,8 @@
 | master       | [![Build Status](https://travis-ci.com/xeoza/TDT-iOS.svg?branch=master)](https://travis-ci.com/xeoza/TDT-iOS)| **TODO** |
 | develop      | [![Build Status](https://travis-ci.com/xeoza/TDT-iOS.svg?branch=develop)](https://travis-ci.com/xeoza/TDT-iOS)| **TODO** |
 
+[![codecov](https://codecov.io/gh/xeoza/tdt-ios/branch/master/graph/badge.svg)](https://codecov.io/gh/xeoza/tdt-ios)
+
 Продукт: Приложение для iOS устройств
 
 Краткое описание проекта: Клиент облачной системы мгновенного обмена сообщениями на основе Firebase

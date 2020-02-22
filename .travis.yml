@@ -5,3 +5,5 @@ before_script:
   - agvtool next-version -all
 script:
   - xcodebuild -scheme TDT-project -workspace TDT-project.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8 Plus,OS=13.2.2' build
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
