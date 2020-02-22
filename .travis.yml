@@ -1,0 +1,5 @@
+os: osx
+language: swift
+osx_image: xcode11.3
+script:
+  - xcodebuild -scheme TDT-project -workspace TDT-project.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8 Plus,OS=13.2.2' build
