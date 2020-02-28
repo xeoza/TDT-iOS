@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B4F452F1F32230C00A6FF96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F452E1F32230C00A6FF96 /* AppDelegate.swift */; };
+		4B4F45381F32230C00A6FF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B4F45371F32230C00A6FF96 /* Assets.xcassets */; };
+		4BAEE48621272C4F0045AB10 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEE47D21272C4F0045AB10 /* OnboardingController.swift */; };
+		4BAEE48721272C4F0045AB10 /* OnboardingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEE47E21272C4F0045AB10 /* OnboardingContainerView.swift */; };
+		5F1A08F83F54471CEC5DF909 /* libPods-TDT-project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F16D5483C4EF3FEC6D53D6 /* libPods-TDT-project.a */; };
+		E04E67FC23FFE30B008CB5F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */; };
+		E095ADF023FE826C0068A4AA /* GeneralTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4B9AF38E1F3B9B6E00A3934D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4B4F452B1F32230C00A6FF96 /* TDT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B4F452E1F32230C00A6FF96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4B4F45371F32230C00A6FF96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B4F453C1F32230C00A6FF96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BAEE47D21272C4F0045AB10 /* OnboardingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
+		4BAEE47E21272C4F0045AB10 /* OnboardingContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContainerView.swift; sourceTree = "<group>"; };
+		4BE9F1DE219B457C00C6768F /* TDT-project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TDT-project.entitlements"; sourceTree = "<group>"; };
+		A254D4D6ED95219C8036E043 /* Pods-TDT-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDT-project.release.xcconfig"; path = "Target Support Files/Pods-TDT-project/Pods-TDT-project.release.xcconfig"; sourceTree = "<group>"; };
+		A7E91611BD823692429B49F2 /* Pods-TDT-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDT-project.debug.xcconfig"; path = "Target Support Files/Pods-TDT-project/Pods-TDT-project.debug.xcconfig"; sourceTree = "<group>"; };
+		E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTabBarController.swift; sourceTree = "<group>"; };
+		F6F16D5483C4EF3FEC6D53D6 /* libPods-TDT-project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TDT-project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B4F45281F32230C00A6FF96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1A08F83F54471CEC5DF909 /* libPods-TDT-project.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B4F45221F32230C00A6FF96 = {
+			isa = PBXGroup;
+			children = (
+				4B4F452D1F32230C00A6FF96 /* TDT-project */,
+				4B4F452C1F32230C00A6FF96 /* Products */,
+				7E8FA8B62C065E105C730F2E /* Pods */,
+				CFD73E72E9C03971DE331AEF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4B4F452C1F32230C00A6FF96 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B4F452B1F32230C00A6FF96 /* TDT.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B4F452D1F32230C00A6FF96 /* TDT-project */ = {
+			isa = PBXGroup;
+			children = (
+				E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */,
+				4BE9F1DE219B457C00C6768F /* TDT-project.entitlements */,
+				4BAEE47221272C4F0045AB10 /* AuthenticationControllers */,
+				4B4F452E1F32230C00A6FF96 /* AppDelegate.swift */,
+				4B4F45371F32230C00A6FF96 /* Assets.xcassets */,
+				4B4F453C1F32230C00A6FF96 /* Info.plist */,
+				E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */,
+			);
+			path = "TDT-project";
+			sourceTree = "<group>";
+		};
+		4BAEE47221272C4F0045AB10 /* AuthenticationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4BAEE47C21272C4F0045AB10 /* Onboarding */,
+			);
+			path = AuthenticationControllers;
+			sourceTree = "<group>";
+		};
+		4BAEE47C21272C4F0045AB10 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4BAEE47D21272C4F0045AB10 /* OnboardingController.swift */,
+				4BAEE47E21272C4F0045AB10 /* OnboardingContainerView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		7E8FA8B62C065E105C730F2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7E91611BD823692429B49F2 /* Pods-TDT-project.debug.xcconfig */,
+				A254D4D6ED95219C8036E043 /* Pods-TDT-project.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CFD73E72E9C03971DE331AEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6F16D5483C4EF3FEC6D53D6 /* libPods-TDT-project.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B4F452A1F32230C00A6FF96 /* TDT-project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B4F453F1F32230C00A6FF96 /* Build configuration list for PBXNativeTarget "TDT-project" */;
+			buildPhases = (
+				1642BA1D2E6EAC775D64D2C3 /* [CP] Check Pods Manifest.lock */,
+				4B4F45271F32230C00A6FF96 /* Sources */,
+				4B4F45281F32230C00A6FF96 /* Frameworks */,
+				4B4F45291F32230C00A6FF96 /* Resources */,
+				4B9AF38E1F3B9B6E00A3934D /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TDT-project";
+			productName = "TDT-project";
+			productReference = 4B4F452B1F32230C00A6FF96 /* TDT.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B4F45231F32230C00A6FF96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Danila Zykin";
+				TargetAttributes = {
+					4B4F452A1F32230C00A6FF96 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 53J8SQKY56;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 4B4F45261F32230C00A6FF96 /* Build configuration list for PBXProject "TDT-project" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4B4F45221F32230C00A6FF96;
+			productRefGroup = 4B4F452C1F32230C00A6FF96 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B4F452A1F32230C00A6FF96 /* TDT-project */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B4F45291F32230C00A6FF96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B4F45381F32230C00A6FF96 /* Assets.xcassets in Resources */,
+				E04E67FC23FFE30B008CB5F4 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1642BA1D2E6EAC775D64D2C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TDT-project-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B4F45271F32230C00A6FF96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BAEE48721272C4F0045AB10 /* OnboardingContainerView.swift in Sources */,
+				4BAEE48621272C4F0045AB10 /* OnboardingController.swift in Sources */,
+				E095ADF023FE826C0068A4AA /* GeneralTabBarController.swift in Sources */,
+				4B4F452F1F32230C00A6FF96 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4B4F453D1F32230C00A6FF96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = A3WPJ33XN8;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		4B4F453E1F32230C00A6FF96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = A3WPJ33XN8;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B4F45401F32230C00A6FF96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7E91611BD823692429B49F2 /* Pods-TDT-project.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 53J8SQKY56;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_OPTIMIZATION_LEVEL = s;
+				INFOPLIST_FILE = "TDT-project/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tdt-project";
+				PRODUCT_NAME = TDT;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4B4F45411F32230C00A6FF96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A254D4D6ED95219C8036E043 /* Pods-TDT-project.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_OPTIMIZATION_LEVEL = s;
+				INFOPLIST_FILE = "TDT-project/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tdt-project";
+				PRODUCT_NAME = TDT;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B4F45261F32230C00A6FF96 /* Build configuration list for PBXProject "TDT-project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B4F453D1F32230C00A6FF96 /* Debug */,
+				4B4F453E1F32230C00A6FF96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B4F453F1F32230C00A6FF96 /* Build configuration list for PBXNativeTarget "TDT-project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B4F45401F32230C00A6FF96 /* Debug */,
+				4B4F45411F32230C00A6FF96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B4F45231F32230C00A6FF96 /* Project object */;
+}
