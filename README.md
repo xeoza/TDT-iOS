@@ -59,3 +59,7 @@ Senior Developer       Бабаджанян Р.В.     ____________
 * ```pod deintegrate```
 * ```pod clean```
 * ```pod update```
+
+CD Setup:
+* Signing in Travis CI
+* Deploy in TestFlight
