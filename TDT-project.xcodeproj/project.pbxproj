@@ -14,6 +14,7 @@
 		5F1A08F83F54471CEC5DF909 /* libPods-TDT-project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F16D5483C4EF3FEC6D53D6 /* libPods-TDT-project.a */; };
 		E04E67FC23FFE30B008CB5F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */; };
 		E095ADF023FE826C0068A4AA /* GeneralTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */; };
+		E0DBFB632416E4CF000041F0 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DBFB622416E4CF000041F0 /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		A7E91611BD823692429B49F2 /* Pods-TDT-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDT-project.debug.xcconfig"; path = "Target Support Files/Pods-TDT-project/Pods-TDT-project.debug.xcconfig"; sourceTree = "<group>"; };
 		E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTabBarController.swift; sourceTree = "<group>"; };
+		E0DBFB622416E4CF000041F0 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		F6F16D5483C4EF3FEC6D53D6 /* libPods-TDT-project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TDT-project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 				4B4F45371F32230C00A6FF96 /* Assets.xcassets */,
 				4B4F453C1F32230C00A6FF96 /* Info.plist */,
 				E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */,
+				E0DBFB602416E47D000041F0 /* Helpers */,
 			);
 			path = "TDT-project";
 			sourceTree = "<group>";
@@ -120,6 +123,22 @@
 				F6F16D5483C4EF3FEC6D53D6 /* libPods-TDT-project.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0DBFB602416E47D000041F0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E0DBFB612416E498000041F0 /* UserDefaultsManager */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E0DBFB612416E498000041F0 /* UserDefaultsManager */ = {
+			isa = PBXGroup;
+			children = (
+				E0DBFB622416E4CF000041F0 /* UserDefaultsManager.swift */,
+			);
+			path = UserDefaultsManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BAEE48721272C4F0045AB10 /* OnboardingContainerView.swift in Sources */,
+				E0DBFB632416E4CF000041F0 /* UserDefaultsManager.swift in Sources */,
 				4BAEE48621272C4F0045AB10 /* OnboardingController.swift in Sources */,
 				E095ADF023FE826C0068A4AA /* GeneralTabBarController.swift in Sources */,
 				4B4F452F1F32230C00A6FF96 /* AppDelegate.swift in Sources */,
