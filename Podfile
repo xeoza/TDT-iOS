@@ -9,4 +9,8 @@ target 'TDT-project' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
+  
+  pod 'SDWebImage', :modular_headers => true
+  pod 'CropViewController'
+  pod 'ARSLineProgress'
 end
