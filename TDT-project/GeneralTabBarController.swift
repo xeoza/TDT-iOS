@@ -8,15 +8,8 @@
 
 import UIKit
 
-enum Tabs: Int {
-  case contacts = 0
-  case chats = 1
-  case settings = 2
-}
 
 class GeneralTabBarController: UITabBarController {
-  
-  var onceToken = 0
   
   func presentOnboardingController() {
     let destination = OnboardingController()
