@@ -1,12 +1,18 @@
+env:
+  global:
+  - secure: "ELQgRUJ3ptwIg9JbJTUO/9XqFgw6Di8CPeHEk/mr0KR5AUO8OYRWovHs8Tes1XO1C1kefYar3s/R8uOoGnrR18h7hg+Fq8jSBeDVkSxFKg6P1HwICZbn61fF7T24uuxE/+RvH6Ykj9V5QiMwNSbPVQeuAxG3YI2CYnl6nB7IrNay7sr2w+VTWqKTV7FU4mVmOAzRzvTU4PQdsP8JZ54R55PK5oikhb7XC0UewSg3LPxq2P3dgL57BstV5rq7iutp9vJkqgZDIr8whkjAiHEMKS92yrHfkhOBTkabNDtkrUAEwzX+ZCSOWJf59JWhvaWWlUkeQHCy32SXRBzt9MPBcP9zJKwv4A7lkToRfMZTnqnyYbxB0cJTXm9GV+OFSt0e4RhGlMl4W/DI82CwPokg+lnhqjxDtsWYL9ohGTkrPFUtnUMHd0F6JKbp1qXy+wfXuLUmCp8whB5BP597p6uCKwXtHj7nHtddhNaXb5TKHPGZWalsQW2HKI6cWjPlvezeJHC4Z6YHRdALSYFH9Ux92L5PE0LRbiIhXcztmPgJkPWyK2s+JFCphEsruc+FLrAFMFIYQTeS76to0wqMYM3Ds+K7vYjhMuiax/nJVgseX38FykXh2cVVse1syiVgDeXiIE2NNsf5t3s4ZypcyQmKwjl9zjIW7+K6I7iQ9temZNc="
 os: osx
 language: swift
 osx_image: xcode11.3
 before_script:
-  - agvtool new-version -all $(date +'%Y.%m.%d.%H.%M')
+- agvtool new-version -all $(date +'%Y.%m.%d.%H.%M')
+before_install:
+- openssl aes-256-cbc -k "$ENC_KEY" -in GoogleService-Info.plist.enc -out GoogleService-Info.plist -d
 install:
-  - rm -f Podfile.lock
-  - travis_wait 30 pod install --verbose 
+- rm -f Podfile.lock
+- travis_wait 30 pod install --verbose
 script:
-  - xcodebuild -scheme TDT-project -workspace TDT-project.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8 Plus,OS=13.2.2' build
+- xcodebuild -scheme TDT-project -workspace TDT-project.xcworkspace -sdk iphonesimulator
+  -destination 'platform=iOS Simulator,name=iPhone 8 Plus,OS=13.2.2' build
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.io/bash)

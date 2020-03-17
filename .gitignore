@@ -7,6 +7,8 @@ TDT-project.xcworkspace/xcuserdata/romanmizin.xcuserdatad/UserInterfaceState.xcu
 TDT-project.xcodeproj/project.xcworkspace/xcuserdata/romanmizin.xcuserdatad/UserInterfaceState.xcuserstate
 .swiftlint.yml
 
+GoogleService-Info.plist
+
 build/
 DerivedData/
 ## Various settings
