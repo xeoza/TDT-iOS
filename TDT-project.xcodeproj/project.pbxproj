@@ -17,6 +17,9 @@
 		E093E9C0242A9D9A00426F6B /* SplashScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E093E9BF242A9D9A00426F6B /* SplashScreenContainer.swift */; };
 		E093E9C3242A9E8A00426F6B /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E093E9C2242A9E8A00426F6B /* ThemeManager.swift */; };
 		E093E9C5242AA0E100426F6B /* SplashScreenContainer+BiometricalControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E093E9C4242AA0E100426F6B /* SplashScreenContainer+BiometricalControl.swift */; };
+		E093E9C9242AAADE00426F6B /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E093E9C8242AAADE00426F6B /* ChatsTableViewController.swift */; };
+		E093E9CD242AABA400426F6B /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E093E9CC242AABA400426F6B /* ContactsController.swift */; };
+		E093E9D0242AABF000426F6B /* AccountSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E093E9CF242AABF000426F6B /* AccountSettingsController.swift */; };
 		E095ADF023FE826C0068A4AA /* GeneralTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */; };
 		E0A9A6592418E5B300235774 /* AuthPhoneNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A9A6582418E5B300235774 /* AuthPhoneNumberController.swift */; };
 		E0A9A65B2418E5CF00235774 /* AuthVerificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A9A65A2418E5CF00235774 /* AuthVerificationController.swift */; };
@@ -95,6 +98,9 @@
 		E093E9BF242A9D9A00426F6B /* SplashScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenContainer.swift; sourceTree = "<group>"; };
 		E093E9C2242A9E8A00426F6B /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		E093E9C4242AA0E100426F6B /* SplashScreenContainer+BiometricalControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashScreenContainer+BiometricalControl.swift"; sourceTree = "<group>"; };
+		E093E9C8242AAADE00426F6B /* ChatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
+		E093E9CC242AABA400426F6B /* ContactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
+		E093E9CF242AABF000426F6B /* AccountSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsController.swift; sourceTree = "<group>"; };
 		E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTabBarController.swift; sourceTree = "<group>"; };
 		E0A9A6582418E5B300235774 /* AuthPhoneNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPhoneNumberController.swift; sourceTree = "<group>"; };
 		E0A9A65A2418E5CF00235774 /* AuthVerificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVerificationController.swift; sourceTree = "<group>"; };
@@ -180,6 +186,9 @@
 		4B4F452D1F32230C00A6FF96 /* TDT-project */ = {
 			isa = PBXGroup;
 			children = (
+				E093E9CE242AABD000426F6B /* SettingsControllers */,
+				E093E9CA242AAB7A00426F6B /* ContactsControllers */,
+				E093E9C6242AAA9A00426F6B /* ChatsControllers */,
 				E0A9A66A2418ECB800235774 /* Support */,
 				E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */,
 				4BE9F1DE219B457C00C6768F /* TDT-project.entitlements */,
@@ -245,6 +254,46 @@
 				E093E9C2242A9E8A00426F6B /* ThemeManager.swift */,
 			);
 			path = ThemeManager;
+			sourceTree = "<group>";
+		};
+		E093E9C6242AAA9A00426F6B /* ChatsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E093E9C7242AAAA500426F6B /* Controllers */,
+			);
+			path = ChatsControllers;
+			sourceTree = "<group>";
+		};
+		E093E9C7242AAAA500426F6B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E093E9C8242AAADE00426F6B /* ChatsTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E093E9CA242AAB7A00426F6B /* ContactsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E093E9CB242AAB8A00426F6B /* Controllers */,
+			);
+			path = ContactsControllers;
+			sourceTree = "<group>";
+		};
+		E093E9CB242AAB8A00426F6B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E093E9CC242AABA400426F6B /* ContactsController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E093E9CE242AABD000426F6B /* SettingsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E093E9CF242AABF000426F6B /* AccountSettingsController.swift */,
+			);
+			path = SettingsControllers;
 			sourceTree = "<group>";
 		};
 		E0A9A6572418E59500235774 /* Authentication */ = {
@@ -596,9 +645,11 @@
 				E0A9A6592418E5B300235774 /* AuthPhoneNumberController.swift in Sources */,
 				E0A9A6662418E61900235774 /* UserProfileController+keyboardHandlers.swift in Sources */,
 				E0A9A6DB2418ECB800235774 /* ImagePickerAction.swift in Sources */,
+				E093E9C9242AAADE00426F6B /* ChatsTableViewController.swift in Sources */,
 				E0A9A6D42418ECB800235774 /* Announcement.swift in Sources */,
 				E0A9A7022418F41D00235774 /* INSPhotosViewController.swift in Sources */,
 				E095ADF023FE826C0068A4AA /* GeneralTabBarController.swift in Sources */,
+				E093E9CD242AABA400426F6B /* ContactsController.swift in Sources */,
 				E0A9A7042418F41D00235774 /* INSPhotosInteractionAnimator.swift in Sources */,
 				E0A9A6F02418ECB800235774 /* UserDefaultsManager.swift in Sources */,
 				E0A9A6E62418ECB800235774 /* EnterPhoneNumberController.swift in Sources */,
@@ -609,6 +660,7 @@
 				E0A9A6F22418ECB800235774 /* CenteredCollectionViewFlowLayout.swift in Sources */,
 				E0A9A6EE2418ECB800235774 /* RevealableView.swift in Sources */,
 				E0A9A6EF2418ECB800235774 /* UICollectionView+Extension.swift in Sources */,
+				E093E9D0242AABF000426F6B /* AccountSettingsController.swift in Sources */,
 				E0A9A7062418F41D00235774 /* INSScalingImageView.swift in Sources */,
 				E0A9A6E82418ECB800235774 /* Country.swift in Sources */,
 				E0A9A6D62418ECB800235774 /* CameraOverlayView.swift in Sources */,
