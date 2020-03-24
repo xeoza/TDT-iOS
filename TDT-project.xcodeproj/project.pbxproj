@@ -13,6 +13,10 @@
 		4BAEE48721272C4F0045AB10 /* OnboardingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEE47E21272C4F0045AB10 /* OnboardingContainerView.swift */; };
 		5F1A08F83F54471CEC5DF909 /* libPods-TDT-project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F16D5483C4EF3FEC6D53D6 /* libPods-TDT-project.a */; };
 		E04E67FC23FFE30B008CB5F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */; };
+		E093E9BE242A9D5900426F6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E093E9BD242A9D5900426F6B /* LaunchScreen.storyboard */; };
+		E093E9C0242A9D9A00426F6B /* SplashScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E093E9BF242A9D9A00426F6B /* SplashScreenContainer.swift */; };
+		E093E9C3242A9E8A00426F6B /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E093E9C2242A9E8A00426F6B /* ThemeManager.swift */; };
+		E093E9C5242AA0E100426F6B /* SplashScreenContainer+BiometricalControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E093E9C4242AA0E100426F6B /* SplashScreenContainer+BiometricalControl.swift */; };
 		E095ADF023FE826C0068A4AA /* GeneralTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */; };
 		E0A9A6592418E5B300235774 /* AuthPhoneNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A9A6582418E5B300235774 /* AuthPhoneNumberController.swift */; };
 		E0A9A65B2418E5CF00235774 /* AuthVerificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A9A65A2418E5CF00235774 /* AuthVerificationController.swift */; };
@@ -87,6 +91,10 @@
 		A254D4D6ED95219C8036E043 /* Pods-TDT-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDT-project.release.xcconfig"; path = "Target Support Files/Pods-TDT-project/Pods-TDT-project.release.xcconfig"; sourceTree = "<group>"; };
 		A7E91611BD823692429B49F2 /* Pods-TDT-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDT-project.debug.xcconfig"; path = "Target Support Files/Pods-TDT-project/Pods-TDT-project.debug.xcconfig"; sourceTree = "<group>"; };
 		E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E093E9BD242A9D5900426F6B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E093E9BF242A9D9A00426F6B /* SplashScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenContainer.swift; sourceTree = "<group>"; };
+		E093E9C2242A9E8A00426F6B /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		E093E9C4242AA0E100426F6B /* SplashScreenContainer+BiometricalControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashScreenContainer+BiometricalControl.swift"; sourceTree = "<group>"; };
 		E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTabBarController.swift; sourceTree = "<group>"; };
 		E0A9A6582418E5B300235774 /* AuthPhoneNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPhoneNumberController.swift; sourceTree = "<group>"; };
 		E0A9A65A2418E5CF00235774 /* AuthVerificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVerificationController.swift; sourceTree = "<group>"; };
@@ -176,6 +184,7 @@
 				E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */,
 				4BE9F1DE219B457C00C6768F /* TDT-project.entitlements */,
 				4BAEE47221272C4F0045AB10 /* AuthenticationControllers */,
+				E093E9BC242A9D2A00426F6B /* SplashScreenControllers */,
 				4B4F452E1F32230C00A6FF96 /* AppDelegate.swift */,
 				4B4F45371F32230C00A6FF96 /* Assets.xcassets */,
 				4B4F453C1F32230C00A6FF96 /* Info.plist */,
@@ -220,6 +229,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E093E9BC242A9D2A00426F6B /* SplashScreenControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E093E9BD242A9D5900426F6B /* LaunchScreen.storyboard */,
+				E093E9BF242A9D9A00426F6B /* SplashScreenContainer.swift */,
+				E093E9C4242AA0E100426F6B /* SplashScreenContainer+BiometricalControl.swift */,
+			);
+			path = SplashScreenControllers;
+			sourceTree = "<group>";
+		};
+		E093E9C1242A9E6B00426F6B /* ThemeManager */ = {
+			isa = PBXGroup;
+			children = (
+				E093E9C2242A9E8A00426F6B /* ThemeManager.swift */,
+			);
+			path = ThemeManager;
+			sourceTree = "<group>";
+		};
 		E0A9A6572418E59500235774 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +271,7 @@
 		E0A9A66A2418ECB800235774 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				E093E9C1242A9E6B00426F6B /* ThemeManager */,
 				E0A9A6F62418F41D00235774 /* INSPhotoGallery */,
 				E0A9A6872418ECB800235774 /* In-AppNotificationBanner */,
 				E0A9A68C2418ECB800235774 /* PickerTrayController */,
@@ -477,6 +505,7 @@
 				E0A9A7052418F41D00235774 /* INSPhotoGallery.bundle in Resources */,
 				4B4F45381F32230C00A6FF96 /* Assets.xcassets in Resources */,
 				E0A9A6E92418ECB800235774 /* CallingCodes.plist in Resources */,
+				E093E9BE242A9D5900426F6B /* LaunchScreen.storyboard in Resources */,
 				E04E67FC23FFE30B008CB5F4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,12 +580,14 @@
 			files = (
 				E0A9A6652418E61900235774 /* UserProfileDataDatabaseUpdater.swift in Sources */,
 				E0A9A6E02418ECB800235774 /* Public.swift in Sources */,
+				E093E9C5242AA0E100426F6B /* SplashScreenContainer+BiometricalControl.swift in Sources */,
 				E0A9A6D92418ECB800235774 /* ImageCell.swift in Sources */,
 				4BAEE48721272C4F0045AB10 /* OnboardingContainerView.swift in Sources */,
 				E0A9A6E52418ECB800235774 /* SelectCountryCodeController.swift in Sources */,
 				E0A9A6D52418ECB800235774 /* AnnouncementFactory.swift in Sources */,
 				E0A9A6682418E61900235774 /* UserProfileAvatarOpenerDelegate.swift in Sources */,
 				4BAEE48621272C4F0045AB10 /* OnboardingController.swift in Sources */,
+				E093E9C0242A9D9A00426F6B /* SplashScreenContainer.swift in Sources */,
 				E0A9A6DA2418ECB800235774 /* AnimationController.swift in Sources */,
 				E0A9A65B2418E5CF00235774 /* AuthVerificationController.swift in Sources */,
 				E0A9A6672418E61900235774 /* UserProfileController.swift in Sources */,
@@ -592,6 +623,7 @@
 				E0A9A6F52418ECB800235774 /* AvatarOpenerOverlay.swift in Sources */,
 				E0A9A6DE2418ECB800235774 /* UIImageExtensions.swift in Sources */,
 				E0A9A6D22418ECB800235774 /* UIView+Extensions.swift in Sources */,
+				E093E9C3242A9E8A00426F6B /* ThemeManager.swift in Sources */,
 				E0A9A6D82418ECB800235774 /* CameraCell.swift in Sources */,
 				E0A9A6D72418ECB800235774 /* ActionCell.swift in Sources */,
 				E0A9A6D32418ECB800235774 /* AnnouncementShowing.swift in Sources */,
