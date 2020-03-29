@@ -14,6 +14,7 @@
 		5F1A08F83F54471CEC5DF909 /* libPods-TDT-project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F16D5483C4EF3FEC6D53D6 /* libPods-TDT-project.a */; };
 		E04E67FC23FFE30B008CB5F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */; };
 		E095ADF023FE826C0068A4AA /* GeneralTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */; };
+		E097347F2430E519001D64B5 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E097347E2430E519001D64B5 /* ThemeManager.swift */; };
 		E097347A2430DE12001D64B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09734792430DE12001D64B5 /* LaunchScreen.storyboard */; };
 		E097347C2430DE3E001D64B5 /* SplashScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E097347B2430DE3E001D64B5 /* SplashScreenContainer.swift */; };
 		E0A9A6592418E5B300235774 /* AuthPhoneNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A9A6582418E5B300235774 /* AuthPhoneNumberController.swift */; };
@@ -90,6 +91,7 @@
 		A7E91611BD823692429B49F2 /* Pods-TDT-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDT-project.debug.xcconfig"; path = "Target Support Files/Pods-TDT-project/Pods-TDT-project.debug.xcconfig"; sourceTree = "<group>"; };
 		E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTabBarController.swift; sourceTree = "<group>"; };
+		E097347E2430E519001D64B5 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		E09734792430DE12001D64B5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E097347B2430DE3E001D64B5 /* SplashScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenContainer.swift; sourceTree = "<group>"; };
 		E0A9A6582418E5B300235774 /* AuthPhoneNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPhoneNumberController.swift; sourceTree = "<group>"; };
@@ -225,6 +227,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E097347D2430E503001D64B5 /* ThemeManager */ = {
+			isa = PBXGroup;
+			children = (
+				E097347E2430E519001D64B5 /* ThemeManager.swift */,
+			);
+			path = ThemeManager;
 		E09734782430DDFD001D64B5 /* SplashScreenControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +266,7 @@
 		E0A9A66A2418ECB800235774 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				E097347D2430E503001D64B5 /* ThemeManager */,
 				E0A9A6F62418F41D00235774 /* INSPhotoGallery */,
 				E0A9A6872418ECB800235774 /* In-AppNotificationBanner */,
 				E0A9A68C2418ECB800235774 /* PickerTrayController */,
@@ -571,6 +580,7 @@
 				E0A9A6E52418ECB800235774 /* SelectCountryCodeController.swift in Sources */,
 				E0A9A6D52418ECB800235774 /* AnnouncementFactory.swift in Sources */,
 				E0A9A6682418E61900235774 /* UserProfileAvatarOpenerDelegate.swift in Sources */,
+				E097347F2430E519001D64B5 /* ThemeManager.swift in Sources */,
 				4BAEE48621272C4F0045AB10 /* OnboardingController.swift in Sources */,
 				E097347C2430DE3E001D64B5 /* SplashScreenContainer.swift in Sources */,
 				E0A9A6DA2418ECB800235774 /* AnimationController.swift in Sources */,
