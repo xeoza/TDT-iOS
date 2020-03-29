@@ -22,7 +22,9 @@ class OnboardingController: UIViewController {
   }
   
   fileprivate func setColorsAccordingToTheme() {
-    view.backgroundColor = UIColor.white
+    let theme = ThemeManager.currentTheme()
+    ThemeManager.applyTheme(theme: theme)
+    view.backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
     onboardingContainerView.backgroundColor = view.backgroundColor
   }
   

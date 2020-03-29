@@ -23,6 +23,7 @@ class UserDefaultsManager: NSObject {
   let inAppSounds = "In-AppSounds"
   let inAppVibration = "In-AppVibration"
   let biometricalAuth = "BiometricalAuth"
+  let selectedTheme = "SelectedTheme"
   
   //updating
   func updateObject(for key: String, with data: Any?) {
@@ -43,10 +44,14 @@ class UserDefaultsManager: NSObject {
   }
   
   
-//  func currentBoolObjectState(for key: String) -> Bool {
-//    return defaults.bool(forKey: key)
-//  }
-  //
+  func currentIntObjectState(for key: String) -> Int? {
+    return defaults.integer(forKey: key)
+  }
+  
+  func currentBoolObjectState(for key: String) -> Bool {
+    return defaults.bool(forKey: key)
+  }
+  
   
   // other
   func configureInitialLaunch() {
