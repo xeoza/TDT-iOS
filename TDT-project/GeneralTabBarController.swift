@@ -10,7 +10,13 @@ import UIKit
 
 
 class GeneralTabBarController: UITabBarController {
-  
+	
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    configureTabBar()
+  }
+
   func presentOnboardingController() {
     let destination = OnboardingController()
     let newNavigationController = UINavigationController(rootViewController: destination)
@@ -21,5 +27,10 @@ class GeneralTabBarController: UITabBarController {
         newNavigationController.modalPresentationStyle = .fullScreen
     }
     present(newNavigationController, animated: false, completion: nil)
+  }
+	
+  fileprivate func configureTabBar() {
+    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: ThemeManager.currentTheme().generalSubtitleColor], for: .normal)
+	tabBar.unselectedItemTintColor = ThemeManager.currentTheme().generalSubtitleColor
   }
 }

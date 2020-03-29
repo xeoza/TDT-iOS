@@ -14,6 +14,7 @@
 		5F1A08F83F54471CEC5DF909 /* libPods-TDT-project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F16D5483C4EF3FEC6D53D6 /* libPods-TDT-project.a */; };
 		E04E67FC23FFE30B008CB5F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */; };
 		E095ADF023FE826C0068A4AA /* GeneralTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */; };
+		E097347F2430E519001D64B5 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E097347E2430E519001D64B5 /* ThemeManager.swift */; };
 		E0A9A6592418E5B300235774 /* AuthPhoneNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A9A6582418E5B300235774 /* AuthPhoneNumberController.swift */; };
 		E0A9A65B2418E5CF00235774 /* AuthVerificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A9A65A2418E5CF00235774 /* AuthVerificationController.swift */; };
 		E0A9A6642418E61900235774 /* UserProfileContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A9A65F2418E61900235774 /* UserProfileContainerView.swift */; };
@@ -88,6 +89,7 @@
 		A7E91611BD823692429B49F2 /* Pods-TDT-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDT-project.debug.xcconfig"; path = "Target Support Files/Pods-TDT-project/Pods-TDT-project.debug.xcconfig"; sourceTree = "<group>"; };
 		E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTabBarController.swift; sourceTree = "<group>"; };
+		E097347E2430E519001D64B5 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		E0A9A6582418E5B300235774 /* AuthPhoneNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPhoneNumberController.swift; sourceTree = "<group>"; };
 		E0A9A65A2418E5CF00235774 /* AuthVerificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVerificationController.swift; sourceTree = "<group>"; };
 		E0A9A65F2418E61900235774 /* UserProfileContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileContainerView.swift; sourceTree = "<group>"; };
@@ -220,6 +222,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E097347D2430E503001D64B5 /* ThemeManager */ = {
+			isa = PBXGroup;
+			children = (
+				E097347E2430E519001D64B5 /* ThemeManager.swift */,
+			);
+			path = ThemeManager;
+			sourceTree = "<group>";
+		};
 		E0A9A6572418E59500235774 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +254,7 @@
 		E0A9A66A2418ECB800235774 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				E097347D2430E503001D64B5 /* ThemeManager */,
 				E0A9A6F62418F41D00235774 /* INSPhotoGallery */,
 				E0A9A6872418ECB800235774 /* In-AppNotificationBanner */,
 				E0A9A68C2418ECB800235774 /* PickerTrayController */,
@@ -556,6 +567,7 @@
 				E0A9A6E52418ECB800235774 /* SelectCountryCodeController.swift in Sources */,
 				E0A9A6D52418ECB800235774 /* AnnouncementFactory.swift in Sources */,
 				E0A9A6682418E61900235774 /* UserProfileAvatarOpenerDelegate.swift in Sources */,
+				E097347F2430E519001D64B5 /* ThemeManager.swift in Sources */,
 				4BAEE48621272C4F0045AB10 /* OnboardingController.swift in Sources */,
 				E0A9A6DA2418ECB800235774 /* AnimationController.swift in Sources */,
 				E0A9A65B2418E5CF00235774 /* AuthVerificationController.swift in Sources */,
