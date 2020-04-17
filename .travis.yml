@@ -3,10 +3,12 @@ language: swift
 osx_image: xcode11.3
 before_script:
   - agvtool new-version -all $(date +'%Y.%m.%d.%H.%M')
+before_install:
+  - gem install cocoapods -v '0.32.1'
 install:
   - rm -f Podfile.lock
   - travis_wait 30 pod install --verbose 
 script:
   - xcodebuild -scheme TDT-project -workspace TDT-project.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8 Plus,OS=13.2.2' build
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+   bash <(curl -s https://codecov.io/bash)
