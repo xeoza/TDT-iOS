@@ -233,6 +233,7 @@
 				E097347E2430E519001D64B5 /* ThemeManager.swift */,
 			);
 			path = ThemeManager;
+		};
 		E09734782430DDFD001D64B5 /* SplashScreenControllers */ = {
 			isa = PBXGroup;
 			children = (
