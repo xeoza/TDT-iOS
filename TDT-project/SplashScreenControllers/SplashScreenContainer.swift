@@ -25,6 +25,7 @@ class SplashScreenContainer: UIView {
   
   var viewForSatausbarSafeArea: UIView = {
     var viewForSatausbarSafeArea = UIView()
+    viewForSatausbarSafeArea.backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
     viewForSatausbarSafeArea.translatesAutoresizingMaskIntoConstraints = false
     
     return viewForSatausbarSafeArea
@@ -32,6 +33,7 @@ class SplashScreenContainer: UIView {
   
   var navigationBar: UINavigationBar = {
     var navigationBar = UINavigationBar()
+	navigationBar.barTintColor = ThemeManager.currentTheme().generalBackgroundColor
     navigationBar.translatesAutoresizingMaskIntoConstraints = false
     
     return navigationBar
@@ -39,6 +41,7 @@ class SplashScreenContainer: UIView {
 
   override init(frame: CGRect) {
     super.init(frame: frame)
+	backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
     addSubview(navigationBar)
     addSubview(viewForSatausbarSafeArea)
     doesDeviceHaveBiometrics()
