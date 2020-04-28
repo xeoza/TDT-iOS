@@ -64,6 +64,7 @@
 		E0A9A7082418F41D00235774 /* INSPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A9A6FE2418F41D00235774 /* INSPhotoViewController.swift */; };
 		E0A9A7092418F41D00235774 /* INSPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A9A6FF2418F41D00235774 /* INSPhoto.swift */; };
 		E0A9A70A2418F41D00235774 /* UIVIew+INSPhotoViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A9A7002418F41D00235774 /* UIVIew+INSPhotoViewer.swift */; };
+		E0E71A46245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -143,6 +144,7 @@
 		E0A9A6FE2418F41D00235774 /* INSPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INSPhotoViewController.swift; sourceTree = "<group>"; };
 		E0A9A6FF2418F41D00235774 /* INSPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INSPhoto.swift; sourceTree = "<group>"; };
 		E0A9A7002418F41D00235774 /* UIVIew+INSPhotoViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVIew+INSPhotoViewer.swift"; sourceTree = "<group>"; };
+		E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashScreenContainer+BiometricalControl.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 			children = (
 				E09734792430DE12001D64B5 /* LaunchScreen.storyboard */,
 				E097347B2430DE3E001D64B5 /* SplashScreenContainer.swift */,
+				E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */,
 			);
 			path = SplashScreenControllers;
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 			files = (
 				E0A9A6652418E61900235774 /* UserProfileDataDatabaseUpdater.swift in Sources */,
 				E0A9A6E02418ECB800235774 /* Public.swift in Sources */,
+				E0E71A46245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift in Sources */,
 				E0A9A6D92418ECB800235774 /* ImageCell.swift in Sources */,
 				4BAEE48721272C4F0045AB10 /* OnboardingContainerView.swift in Sources */,
 				E0A9A6E52418ECB800235774 /* SelectCountryCodeController.swift in Sources */,
