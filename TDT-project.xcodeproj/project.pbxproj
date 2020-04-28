@@ -65,6 +65,9 @@
 		E0A9A7092418F41D00235774 /* INSPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A9A6FF2418F41D00235774 /* INSPhoto.swift */; };
 		E0A9A70A2418F41D00235774 /* UIVIew+INSPhotoViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A9A7002418F41D00235774 /* UIVIew+INSPhotoViewer.swift */; };
 		E0E71A46245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */; };
+		E0E71A5324585755004922F6 /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5224585755004922F6 /* ContactsController.swift */; };
+		E0E71A5724585826004922F6 /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5624585826004922F6 /* ChatsTableViewController.swift */; };
+		E0E71A5924585887004922F6 /* AccountSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5824585887004922F6 /* AccountSettingsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -145,6 +148,9 @@
 		E0A9A6FF2418F41D00235774 /* INSPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INSPhoto.swift; sourceTree = "<group>"; };
 		E0A9A7002418F41D00235774 /* UIVIew+INSPhotoViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVIew+INSPhotoViewer.swift"; sourceTree = "<group>"; };
 		E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashScreenContainer+BiometricalControl.swift"; sourceTree = "<group>"; };
+		E0E71A5224585755004922F6 /* ContactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
+		E0E71A5624585826004922F6 /* ChatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
+		E0E71A5824585887004922F6 /* AccountSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +186,9 @@
 		4B4F452D1F32230C00A6FF96 /* TDT-project */ = {
 			isa = PBXGroup;
 			children = (
+				E0E71A50245855F9004922F6 /* SettingsControllers */,
+				E0E71A4F245855ED004922F6 /* ContactsControllers */,
+				E0E71A4E245855D2004922F6 /* ChatsControllers */,
 				E09734782430DDFD001D64B5 /* SplashScreenControllers */,
 				E0A9A66A2418ECB800235774 /* Support */,
 				E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */,
@@ -429,6 +438,46 @@
 			path = INSPhotoGallery;
 			sourceTree = "<group>";
 		};
+		E0E71A4E245855D2004922F6 /* ChatsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0E71A5524585809004922F6 /* Controllers */,
+			);
+			path = ChatsControllers;
+			sourceTree = "<group>";
+		};
+		E0E71A4F245855ED004922F6 /* ContactsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0E71A54245857DA004922F6 /* Controllers */,
+			);
+			path = ContactsControllers;
+			sourceTree = "<group>";
+		};
+		E0E71A50245855F9004922F6 /* SettingsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0E71A5824585887004922F6 /* AccountSettingsController.swift */,
+			);
+			path = SettingsControllers;
+			sourceTree = "<group>";
+		};
+		E0E71A54245857DA004922F6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0E71A5224585755004922F6 /* ContactsController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E0E71A5524585809004922F6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0E71A5624585826004922F6 /* ChatsTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -604,10 +653,12 @@
 				E097347C2430DE3E001D64B5 /* SplashScreenContainer.swift in Sources */,
 				E0A9A6DA2418ECB800235774 /* AnimationController.swift in Sources */,
 				E0A9A65B2418E5CF00235774 /* AuthVerificationController.swift in Sources */,
+				E0E71A5324585755004922F6 /* ContactsController.swift in Sources */,
 				E0A9A6672418E61900235774 /* UserProfileController.swift in Sources */,
 				E0A9A6E32418ECB800235774 /* EnterVerificationCodeController.swift in Sources */,
 				E0A9A7082418F41D00235774 /* INSPhotoViewController.swift in Sources */,
 				E0A9A6592418E5B300235774 /* AuthPhoneNumberController.swift in Sources */,
+				E0E71A5724585826004922F6 /* ChatsTableViewController.swift in Sources */,
 				E0A9A6662418E61900235774 /* UserProfileController+keyboardHandlers.swift in Sources */,
 				E0A9A6DB2418ECB800235774 /* ImagePickerAction.swift in Sources */,
 				E0A9A6D42418ECB800235774 /* Announcement.swift in Sources */,
@@ -623,6 +674,7 @@
 				E0A9A6DF2418ECB800235774 /* ImagePickerTrayController.swift in Sources */,
 				E0A9A6F22418ECB800235774 /* CenteredCollectionViewFlowLayout.swift in Sources */,
 				E0A9A6EE2418ECB800235774 /* RevealableView.swift in Sources */,
+				E0E71A5924585887004922F6 /* AccountSettingsController.swift in Sources */,
 				E0A9A6EF2418ECB800235774 /* UICollectionView+Extension.swift in Sources */,
 				E0A9A7062418F41D00235774 /* INSScalingImageView.swift in Sources */,
 				E0A9A6E82418ECB800235774 /* Country.swift in Sources */,
