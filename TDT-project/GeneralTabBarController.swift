@@ -11,12 +11,18 @@ import UIKit
 
 class GeneralTabBarController: UITabBarController {
 	
+
+  let splashContainer: SplashScreenContainer = {
+    let splashContainer = SplashScreenContainer()
+    splashContainer.translatesAutoresizingMaskIntoConstraints = false
+    return splashContainer
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
     configureTabBar()
   }
-
   func presentOnboardingController() {
     let destination = OnboardingController()
     let newNavigationController = UINavigationController(rootViewController: destination)
