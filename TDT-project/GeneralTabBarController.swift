@@ -16,6 +16,8 @@ enum Tabs: Int {
 
 class GeneralTabBarController: UITabBarController {
 
+  var onceToken = 0
+
   let splashContainer: SplashScreenContainer = {
     let splashContainer = SplashScreenContainer()
     splashContainer.translatesAutoresizingMaskIntoConstraints = false
@@ -26,18 +28,7 @@ class GeneralTabBarController: UITabBarController {
     super.viewDidLoad()
 
     configureTabBar()
-  }
-
-  func presentOnboardingController() {
-    let destination = OnboardingController()
-    let newNavigationController = UINavigationController(rootViewController: destination)
-    newNavigationController.navigationBar.shadowImage = UIImage()
-    newNavigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
-    newNavigationController.modalTransitionStyle = .crossDissolve
-    if #available(iOS 13.0, *) {
-        newNavigationController.modalPresentationStyle = .fullScreen
-    }
-    present(newNavigationController, animated: false, completion: nil)
+	setOnlineStatus()
   }
 
   fileprivate func configureTabBar() {
@@ -50,6 +41,18 @@ class GeneralTabBarController: UITabBarController {
     setTabs()
   }
 
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+
+    if onceToken == 0 {
+      view.addSubview(splashContainer)
+      splashContainer.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+      splashContainer.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+      splashContainer.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+      splashContainer.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+    onceToken = 1
+ }
   //MARK: - TabBarController set up
 
   let chatsController = ChatsTableViewController()
@@ -87,5 +90,17 @@ class GeneralTabBarController: UITabBarController {
     let tabBarControllers = [contactsNavigationController, chatsNavigationController as UIViewController, settingsNavigationController]
     viewControllers = tabBarControllers
     selectedIndex = Tabs.chats.rawValue
+  }
+
+  func presentOnboardingController() {
+    let destination = OnboardingController()
+    let newNavigationController = UINavigationController(rootViewController: destination)
+    newNavigationController.navigationBar.shadowImage = UIImage()
+    newNavigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    newNavigationController.modalTransitionStyle = .crossDissolve
+    if #available(iOS 13.0, *) {
+      newNavigationController.modalPresentationStyle = .fullScreen
+    }
+    present(newNavigationController, animated: false, completion: nil)
   }
 }
