@@ -8,6 +8,7 @@ target 'TDT-project' do
   pod 'Firebase/Storage'
   
   pod 'SDWebImage', :modular_headers => true
+  pod 'PhoneNumberKit'
   pod 'CropViewController'
   pod 'ARSLineProgress'
 end

@@ -12,6 +12,18 @@
 		4B4F45381F32230C00A6FF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B4F45371F32230C00A6FF96 /* Assets.xcassets */; };
 		4BAEE48621272C4F0045AB10 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEE47D21272C4F0045AB10 /* OnboardingController.swift */; };
 		4BAEE48721272C4F0045AB10 /* OnboardingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEE47E21272C4F0045AB10 /* OnboardingContainerView.swift */; };
+		E0477EDB245B518000632AA9 /* ContactsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477ED9245B517F00632AA9 /* ContactsDetailController.swift */; };
+		E0477EDC245B518000632AA9 /* ContactsController+SearchHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477EDA245B518000632AA9 /* ContactsController+SearchHandlers.swift */; };
+		E0477EE5245B51A500632AA9 /* FalconUsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477EDE245B51A500632AA9 /* FalconUsersTableViewCell.swift */; };
+		E0477EE6245B51A500632AA9 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477EDF245B51A500632AA9 /* ContactsTableViewCell.swift */; };
+		E0477EE7245B51A500632AA9 /* CurrentUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477EE0245B51A500632AA9 /* CurrentUserTableViewCell.swift */; };
+		E0477EE8245B51A500632AA9 /* ContactsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477EE2245B51A500632AA9 /* ContactsFetcher.swift */; };
+		E0477EE9245B51A500632AA9 /* FalconUsersFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477EE3245B51A500632AA9 /* FalconUsersFetcher.swift */; };
+		E0477EEA245B51A500632AA9 /* ViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477EE4245B51A500632AA9 /* ViewPlaceholder.swift */; };
+		E0477EF0245B545E00632AA9 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477EEC245B545E00632AA9 /* Conversation.swift */; };
+		E0477EF1245B545E00632AA9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477EED245B545E00632AA9 /* Message.swift */; };
+		E0477EF2245B545E00632AA9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477EEE245B545E00632AA9 /* User.swift */; };
+		E0477EF3245B545E00632AA9 /* MediaObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477EEF245B545E00632AA9 /* MediaObject.swift */; };
 		E04E67FC23FFE30B008CB5F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */; };
 		E095ADF023FE826C0068A4AA /* GeneralTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */; };
 		E097347A2430DE12001D64B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09734792430DE12001D64B5 /* LaunchScreen.storyboard */; };
@@ -94,6 +106,18 @@
 		809B26A98B43F0D86F89BEF8 /* Pods_TDT_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TDT_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A254D4D6ED95219C8036E043 /* Pods-TDT-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDT-project.release.xcconfig"; path = "Target Support Files/Pods-TDT-project/Pods-TDT-project.release.xcconfig"; sourceTree = "<group>"; };
 		A7E91611BD823692429B49F2 /* Pods-TDT-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDT-project.debug.xcconfig"; path = "Target Support Files/Pods-TDT-project/Pods-TDT-project.debug.xcconfig"; sourceTree = "<group>"; };
+		E0477ED9245B517F00632AA9 /* ContactsDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsDetailController.swift; sourceTree = "<group>"; };
+		E0477EDA245B518000632AA9 /* ContactsController+SearchHandlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ContactsController+SearchHandlers.swift"; sourceTree = "<group>"; };
+		E0477EDE245B51A500632AA9 /* FalconUsersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FalconUsersTableViewCell.swift; sourceTree = "<group>"; };
+		E0477EDF245B51A500632AA9 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
+		E0477EE0245B51A500632AA9 /* CurrentUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserTableViewCell.swift; sourceTree = "<group>"; };
+		E0477EE2245B51A500632AA9 /* ContactsFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsFetcher.swift; sourceTree = "<group>"; };
+		E0477EE3245B51A500632AA9 /* FalconUsersFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FalconUsersFetcher.swift; sourceTree = "<group>"; };
+		E0477EE4245B51A500632AA9 /* ViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPlaceholder.swift; sourceTree = "<group>"; };
+		E0477EEC245B545E00632AA9 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		E0477EED245B545E00632AA9 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E0477EEE245B545E00632AA9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E0477EEF245B545E00632AA9 /* MediaObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaObject.swift; sourceTree = "<group>"; };
 		E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTabBarController.swift; sourceTree = "<group>"; };
 		E09734792430DE12001D64B5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -186,6 +210,7 @@
 		4B4F452D1F32230C00A6FF96 /* TDT-project */ = {
 			isa = PBXGroup;
 			children = (
+				E0477EEB245B545E00632AA9 /* Model */,
 				E0E71A50245855F9004922F6 /* SettingsControllers */,
 				E0E71A4F245855ED004922F6 /* ContactsControllers */,
 				E0E71A4E245855D2004922F6 /* ChatsControllers */,
@@ -236,6 +261,37 @@
 				809B26A98B43F0D86F89BEF8 /* Pods_TDT_project.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0477EDD245B51A500632AA9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E0477EDE245B51A500632AA9 /* FalconUsersTableViewCell.swift */,
+				E0477EDF245B51A500632AA9 /* ContactsTableViewCell.swift */,
+				E0477EE0245B51A500632AA9 /* CurrentUserTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E0477EE1245B51A500632AA9 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				E0477EE2245B51A500632AA9 /* ContactsFetcher.swift */,
+				E0477EE3245B51A500632AA9 /* FalconUsersFetcher.swift */,
+				E0477EE4245B51A500632AA9 /* ViewPlaceholder.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		E0477EEB245B545E00632AA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E0477EEC245B545E00632AA9 /* Conversation.swift */,
+				E0477EED245B545E00632AA9 /* Message.swift */,
+				E0477EEE245B545E00632AA9 /* User.swift */,
+				E0477EEF245B545E00632AA9 /* MediaObject.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E09734782430DDFD001D64B5 /* SplashScreenControllers */ = {
@@ -449,6 +505,8 @@
 		E0E71A4F245855ED004922F6 /* ContactsControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E0477EDD245B51A500632AA9 /* Cells */,
+				E0477EE1245B51A500632AA9 /* Support */,
 				E0E71A54245857DA004922F6 /* Controllers */,
 			);
 			path = ContactsControllers;
@@ -465,6 +523,8 @@
 		E0E71A54245857DA004922F6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E0477EDA245B518000632AA9 /* ContactsController+SearchHandlers.swift */,
+				E0477ED9245B517F00632AA9 /* ContactsDetailController.swift */,
 				E0E71A5224585755004922F6 /* ContactsController.swift */,
 			);
 			path = Controllers;
@@ -595,6 +655,7 @@
 				"${BUILT_PRODUCTS_DIR}/CropViewController/CropViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -606,6 +667,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CropViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -643,12 +705,16 @@
 			files = (
 				E0A9A6652418E61900235774 /* UserProfileDataDatabaseUpdater.swift in Sources */,
 				E0A9A6E02418ECB800235774 /* Public.swift in Sources */,
+				E0477EDC245B518000632AA9 /* ContactsController+SearchHandlers.swift in Sources */,
 				E0E71A46245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift in Sources */,
 				E0A9A6D92418ECB800235774 /* ImageCell.swift in Sources */,
 				4BAEE48721272C4F0045AB10 /* OnboardingContainerView.swift in Sources */,
 				E0A9A6E52418ECB800235774 /* SelectCountryCodeController.swift in Sources */,
 				E0A9A6D52418ECB800235774 /* AnnouncementFactory.swift in Sources */,
+				E0477EDB245B518000632AA9 /* ContactsDetailController.swift in Sources */,
+				E0477EE5245B51A500632AA9 /* FalconUsersTableViewCell.swift in Sources */,
 				E0A9A6682418E61900235774 /* UserProfileAvatarOpenerDelegate.swift in Sources */,
+				E0477EE9245B51A500632AA9 /* FalconUsersFetcher.swift in Sources */,
 				4BAEE48621272C4F0045AB10 /* OnboardingController.swift in Sources */,
 				E097347C2430DE3E001D64B5 /* SplashScreenContainer.swift in Sources */,
 				E0A9A6DA2418ECB800235774 /* AnimationController.swift in Sources */,
@@ -656,23 +722,31 @@
 				E0E71A5324585755004922F6 /* ContactsController.swift in Sources */,
 				E0A9A6672418E61900235774 /* UserProfileController.swift in Sources */,
 				E0A9A6E32418ECB800235774 /* EnterVerificationCodeController.swift in Sources */,
+				E0477EE6245B51A500632AA9 /* ContactsTableViewCell.swift in Sources */,
 				E0A9A7082418F41D00235774 /* INSPhotoViewController.swift in Sources */,
 				E0A9A6592418E5B300235774 /* AuthPhoneNumberController.swift in Sources */,
+				E0477EF1245B545E00632AA9 /* Message.swift in Sources */,
 				E0E71A5724585826004922F6 /* ChatsTableViewController.swift in Sources */,
 				E0A9A6662418E61900235774 /* UserProfileController+keyboardHandlers.swift in Sources */,
 				E0A9A6DB2418ECB800235774 /* ImagePickerAction.swift in Sources */,
 				E0A9A6D42418ECB800235774 /* Announcement.swift in Sources */,
 				E09B2CB32449D5830051F39F /* ThemeManager.swift in Sources */,
 				E0A9A7022418F41D00235774 /* INSPhotosViewController.swift in Sources */,
+				E0477EEA245B51A500632AA9 /* ViewPlaceholder.swift in Sources */,
 				E095ADF023FE826C0068A4AA /* GeneralTabBarController.swift in Sources */,
 				E0A9A7042418F41D00235774 /* INSPhotosInteractionAnimator.swift in Sources */,
+				E0477EF2245B545E00632AA9 /* User.swift in Sources */,
+				E0477EE8245B51A500632AA9 /* ContactsFetcher.swift in Sources */,
 				E0A9A6F02418ECB800235774 /* UserDefaultsManager.swift in Sources */,
+				E0477EE7245B51A500632AA9 /* CurrentUserTableViewCell.swift in Sources */,
+				E0477EF3245B545E00632AA9 /* MediaObject.swift in Sources */,
 				E0A9A6E62418ECB800235774 /* EnterPhoneNumberController.swift in Sources */,
 				E0A9A6ED2418ECB800235774 /* RevealableCollectionViewCell.swift in Sources */,
 				E0A9A7032418F41D00235774 /* INSPhotosTransitionAnimator.swift in Sources */,
 				E0A9A70A2418F41D00235774 /* UIVIew+INSPhotoViewer.swift in Sources */,
 				E0A9A6DF2418ECB800235774 /* ImagePickerTrayController.swift in Sources */,
 				E0A9A6F22418ECB800235774 /* CenteredCollectionViewFlowLayout.swift in Sources */,
+				E0477EF0245B545E00632AA9 /* Conversation.swift in Sources */,
 				E0A9A6EE2418ECB800235774 /* RevealableView.swift in Sources */,
 				E0E71A5924585887004922F6 /* AccountSettingsController.swift in Sources */,
 				E0A9A6EF2418ECB800235774 /* UICollectionView+Extension.swift in Sources */,

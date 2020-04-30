@@ -90,6 +90,17 @@ let deletionErrorMessage = "There was a problem when deleting. Try again later."
 let cameraNotExistsMessage = "You don't have camera"
 let thumbnailUploadError = "Failed to upload your image to database. Please, check your internet connection and try again."
 
+extension String {
+  
+  var digits: String {
+    return components(separatedBy: CharacterSet.decimalDigits.inverted)
+      .joined()
+  }
+  
+  var doubleValue: Double {
+    return Double(self) ?? 0
+  }
+}
 
 
 extension Bool {
@@ -290,6 +301,75 @@ func uploadAvatarForUserToFirebaseStorageUsingImage(_ image: UIImage, quality: C
     }
   }
 }
+func timeAgoSinceDate(_ date:Date, numericDates:Bool = false) -> String {
+  let calendar = NSCalendar.current
+  let unitFlags: Set<Calendar.Component> = [.minute, .hour, .day, .weekOfYear, .month, .year, .second]
+  let now = Date()
+  let earliest = now < date ? now : date
+  let latest = (earliest == now) ? date : now
+  let components = calendar.dateComponents(unitFlags, from: earliest,  to: latest)
+  
+  if (components.year! >= 2) {
+    return "\(components.year!) years ago"
+  } else if (components.year! >= 1){
+    if (numericDates){
+      return "1 year ago"
+    } else {
+      return "last year"
+    }
+  } else if (components.month! >= 2) {
+    return "\(components.month!) months ago"
+  } else if (components.month! >= 1){
+    if (numericDates){
+      return "1 month ago"
+    } else {
+      return "last month"
+    }
+  } else if (components.weekOfYear! >= 2) {
+    return "\(components.weekOfYear!) weeks ago"
+  } else if (components.weekOfYear! >= 1){
+    if (numericDates){
+      return "1 week ago"
+    } else {
+      return "last week"
+    }
+  } else if (components.day! >= 2) {
+    return "\(components.day!) days ago"
+  } else if (components.day! >= 1){
+    if (numericDates){
+      return "1 day ago"
+    } else {
+      return "yesterday at \(date.getTimeStringFromUTC())"
+    }
+  } else if (components.hour! >= 2) {
+    return "\(components.hour!) hours ago"
+  } else if (components.hour! >= 1){
+    if (numericDates){
+      return "1 hour ago"
+    } else {
+      return "an hour ago"
+    }
+  } else if (components.minute! >= 2) {
+    return "\(components.minute!) minutes ago"
+  } else if (components.minute! >= 1){
+    if (numericDates){
+      return "1 minute ago"
+    } else {
+      return "a minute ago"
+    }
+  } else if (components.second! >= 3) {
+    return "just now"//"\(components.second!) seconds ago"
+  } else {
+    return "just now"
+  }
+}
+public func rearrange<T>(array: Array<T>, fromIndex: Int, toIndex: Int) -> Array<T>{
+  var arr = array
+  let element = arr.remove(at: fromIndex)
+  arr.insert(element, at: toIndex)
+  
+  return arr
+}
 
 private var backgroundView: UIView = {
   let backgroundView = UIView()
@@ -311,6 +391,45 @@ private var activityIndicator: UIActivityIndicatorView = {
   
   return activityIndicator
 }()
+
+extension Date {
+  
+  func getShortDateStringFromUTC() -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = .medium
+    dateFormatter.dateFormat = "dd/MM/yy"
+    return dateFormatter.string(from: self)
+  }
+  
+  func getTimeStringFromUTC() -> String {
+    let dateFormatter = DateFormatter()
+    let locale = Locale(identifier: "en_US_POSIX")
+    dateFormatter.locale = locale
+    dateFormatter.dateStyle = .medium
+    dateFormatter.dateFormat = "hh:mm a"
+    dateFormatter.amSymbol = "AM"
+    dateFormatter.pmSymbol = "PM"
+    return dateFormatter.string(from: self)
+  }
+
+  func dayOfWeek() -> String {
+    let dateFormatter = DateFormatter()
+    let locale = Locale(identifier: "en_US_POSIX")
+    dateFormatter.locale = locale
+    dateFormatter.dateFormat = "E"
+    return dateFormatter.string(from: self).capitalized
+  }
+  
+  func dayNumberOfWeek() -> Int {
+    return Calendar.current.dateComponents([.weekday], from: self).weekday!
+  }
+  func monthNumber() -> Int {
+    return Calendar.current.dateComponents([.month], from: self).month!
+  }
+  func yearNumber() -> Int {
+    return Calendar.current.dateComponents([.year], from: self).year!
+  }
+}
 
 
 extension UIImageView {
