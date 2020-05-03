@@ -2,8 +2,8 @@
 //  UserCell+ConfigureCell.swift
 //  TDT-project
 //
-//  Created by Roma Babajanyan on 03.05.2020.
-//  Copyright © 2020 Danila Zykin. All rights reserved.
+//  Created by Roman Babajanyan on 03.05.2020.
+//  Copyright © 2020 Roman Babajanyan. All rights reserved.
 //
 
 import UIKit
