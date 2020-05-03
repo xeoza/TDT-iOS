@@ -15,12 +15,13 @@ class UserProfileController: UIViewController {
   let userProfileContainerView = UserProfileContainerView()
   let avatarOpener = AvatarOpener()
   let userProfileDataDatabaseUpdater = UserProfileDataDatabaseUpdater()
+
   typealias CompletionHandler = (_ success: Bool) -> Void
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
         view.addSubview(userProfileContainerView)
       
         configureNavigationBar()
@@ -44,13 +45,13 @@ class UserProfileController: UIViewController {
     }
   
     fileprivate func configureColorsAccordingToTheme() {
-      userProfileContainerView.profileImageView.layer.borderColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0).cgColor
-      userProfileContainerView.userData.layer.borderColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0).cgColor
-      userProfileContainerView.name.textColor = UIColor.black
-      userProfileContainerView.bio.layer.borderColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0).cgColor
-      userProfileContainerView.bio.textColor = UIColor.black
-      userProfileContainerView.bio.keyboardAppearance = .default
-      userProfileContainerView.name.keyboardAppearance = .default
+      userProfileContainerView.profileImageView.layer.borderColor = ThemeManager.currentTheme().inputTextViewColor.cgColor
+      userProfileContainerView.userData.layer.borderColor = ThemeManager.currentTheme().inputTextViewColor.cgColor
+      userProfileContainerView.name.textColor = ThemeManager.currentTheme().generalTitleColor
+      userProfileContainerView.bio.layer.borderColor = ThemeManager.currentTheme().inputTextViewColor.cgColor
+      userProfileContainerView.bio.textColor = ThemeManager.currentTheme().generalTitleColor
+      userProfileContainerView.bio.keyboardAppearance = ThemeManager.currentTheme().keyboardAppearance
+      userProfileContainerView.name.keyboardAppearance = ThemeManager.currentTheme().keyboardAppearance
     }
   
   override func viewWillLayoutSubviews() {
@@ -136,7 +137,26 @@ extension UserProfileController {
 }
 
 extension UserProfileController: UITextViewDelegate {
+  
+  func textViewDidBeginEditing(_ textView: UITextView) {
+    userProfileContainerView.bioPlaceholderLabel.isHidden = true
+    userProfileContainerView.countLabel.text = "\(userProfileContainerView.bioMaxCharactersCount - userProfileContainerView.bio.text.count)"
+    userProfileContainerView.countLabel.isHidden = false
+  }
+  
+  func textViewDidEndEditing(_ textView: UITextView) {
+    userProfileContainerView.bioPlaceholderLabel.isHidden = !textView.text.isEmpty
+    userProfileContainerView.countLabel.isHidden = true
+  }
 
+  func textViewDidChange(_ textView: UITextView) {
+    if textView.isFirstResponder && textView.text == "" {
+      userProfileContainerView.bioPlaceholderLabel.isHidden = true
+    } else {
+      userProfileContainerView.bioPlaceholderLabel.isHidden = !textView.text.isEmpty
+    }
+    userProfileContainerView.countLabel.text = "\(userProfileContainerView.bioMaxCharactersCount - textView.text.count)"
+  }
 
   func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
     
@@ -149,4 +169,9 @@ extension UserProfileController: UITextViewDelegate {
   }
 }
 
-extension UserProfileController: UITextFieldDelegate { }
+extension UserProfileController: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
+  }
+}

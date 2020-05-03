@@ -17,13 +17,14 @@ class UserDefaultsManager: NSObject {
   fileprivate let defaults = UserDefaults.standard
   
   let authVerificationID = "authVerificationID"
+  let changeNumberAuthVerificationID = "ChangeNumberAuthVerificationID"
+  let selectedTheme = "SelectedTheme"
   let hasRunBefore = "hasRunBefore"
   let biometricType = "biometricType"
   let inAppNotifications = "In-AppNotifications"
   let inAppSounds = "In-AppSounds"
   let inAppVibration = "In-AppVibration"
   let biometricalAuth = "BiometricalAuth"
-  let selectedTheme = "SelectedTheme"
   
   //updating
   func updateObject(for key: String, with data: Any?) {
@@ -43,7 +44,6 @@ class UserDefaultsManager: NSObject {
     return defaults.string(forKey: key)
   }
   
-  
   func currentIntObjectState(for key: String) -> Int? {
     return defaults.integer(forKey: key)
   }
@@ -51,7 +51,7 @@ class UserDefaultsManager: NSObject {
   func currentBoolObjectState(for key: String) -> Bool {
     return defaults.bool(forKey: key)
   }
-  
+  //
   
   // other
   func configureInitialLaunch() {

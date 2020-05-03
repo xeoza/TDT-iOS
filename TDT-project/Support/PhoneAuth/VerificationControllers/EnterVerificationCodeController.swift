@@ -19,7 +19,7 @@ class EnterVerificationCodeController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
       
-    view.backgroundColor = UIColor.white
+    view.backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
     view.addSubview(enterVerificationContainerView)
     enterVerificationContainerView.frame = view.bounds
     enterVerificationContainerView.resend.addTarget(self, action: #selector(sendSMSConfirmation), for: .touchUpInside)
@@ -64,6 +64,49 @@ class EnterVerificationCodeController: UIViewController {
   }
   
   @objc func rightBarButtonDidTap () {}
+  
+  func changeNumber () {
+    enterVerificationContainerView.verificationCode.resignFirstResponder()
+   
+    let verificationID = userDefaults.currentStringObjectState(for: userDefaults.changeNumberAuthVerificationID)
+    let verificationCode = enterVerificationContainerView.verificationCode.text
+    
+    if verificationID == nil {
+      self.enterVerificationContainerView.verificationCode.shake()
+      return
+    }
+    
+    if currentReachabilityStatus == .notReachable {
+      basicErrorAlertWith(title: "No internet connection", message: noInternetError, controller: self)
+      return
+    }
+    
+    ARSLineProgress.ars_showOnView(self.view)
+    
+    let credential = PhoneAuthProvider.provider().credential (withVerificationID: verificationID!, verificationCode: verificationCode!)
+    
+    Auth.auth().currentUser?.updatePhoneNumber(credential, completion: { (error) in
+      if error != nil {
+        ARSLineProgress.hide()
+        basicErrorAlertWith(title: "Error", message: error?.localizedDescription ?? "Number changing process failed. Please try again later.", controller: self)
+        return
+      }
+      
+      let userReference = Database.database().reference().child("users").child(Auth.auth().currentUser!.uid)
+      userReference.updateChildValues(["phoneNumber" : self.enterVerificationContainerView.titleNumber.text! ]) { (error, reference) in
+        if error != nil {
+          ARSLineProgress.hide()
+          basicErrorAlertWith(title: "Error", message: error?.localizedDescription ?? "Number changing process failed. Please try again later.", controller: self)
+          return
+        }
+        
+        ARSLineProgress.showSuccess()
+        self.dismiss(animated: true) {
+          AppUtility.lockOrientation(.allButUpsideDown)
+        }
+      }
+    })
+  }
   
   func authenticate() {
     print("tapped")
@@ -112,3 +155,4 @@ class EnterVerificationCodeController: UIViewController {
     }
   }
 }
+

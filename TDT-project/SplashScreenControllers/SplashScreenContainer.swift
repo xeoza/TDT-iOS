@@ -33,7 +33,7 @@ class SplashScreenContainer: UIView {
   
   var navigationBar: UINavigationBar = {
     var navigationBar = UINavigationBar()
-	navigationBar.barTintColor = ThemeManager.currentTheme().generalBackgroundColor
+    navigationBar.barTintColor = ThemeManager.currentTheme().generalBackgroundColor
     navigationBar.translatesAutoresizingMaskIntoConstraints = false
     
     return navigationBar
@@ -41,7 +41,7 @@ class SplashScreenContainer: UIView {
 
   override init(frame: CGRect) {
     super.init(frame: frame)
-	backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
+    backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
     addSubview(navigationBar)
     addSubview(viewForSatausbarSafeArea)
     doesDeviceHaveBiometrics()
@@ -65,7 +65,7 @@ class SplashScreenContainer: UIView {
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)!
   }
-
+  
   func doesDeviceHaveBiometrics() {
     let type = SplashScreenContainer.biometricType()
     userDefaults.updateObject(for: userDefaults.biometricType, with: type.rawValue)
@@ -82,12 +82,12 @@ class SplashScreenContainer: UIView {
         return .touch
       case .faceID:
         return .face
-      @unknown default:
-        fatalError()
-      }
+			@unknown default:
+				fatalError()
+			}
     } else {
-	      return authContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) ? .touch : .none
-	}
+      return authContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) ? .touch : .none
+    }
   }
 
   func configureSplashForBiometrics() {
