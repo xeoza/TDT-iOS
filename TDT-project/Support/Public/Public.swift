@@ -135,6 +135,8 @@ func libraryAccessChecking() -> Bool {
 }
 
 public let statusOnline = "Online"
+public let userMessagesFirebaseFolder = "userMessages"
+public let messageMetaDataFirebaseFolder = "metaData"
 
 func setOnlineStatus()  {
   
@@ -301,6 +303,16 @@ func uploadAvatarForUserToFirebaseStorageUsingImage(_ image: UIImage, quality: C
     }
   }
 }
+
+func timestampOfChatLogMessage(_ date: Date) -> String {
+  let now = Date()
+  if now.getShortDateStringFromUTC() != date.getShortDateStringFromUTC() {
+    return "\(date.getShortDateStringFromUTC())\n\(date.getTimeStringFromUTC())"
+  } else {
+    return date.getTimeStringFromUTC()
+  }
+}
+
 func timeAgoSinceDate(_ date:Date, numericDates:Bool = false) -> String {
   let calendar = NSCalendar.current
   let unitFlags: Set<Calendar.Component> = [.minute, .hour, .day, .weekOfYear, .month, .year, .second]
