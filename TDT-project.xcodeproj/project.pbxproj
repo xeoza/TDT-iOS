@@ -81,6 +81,8 @@
 		E0BEDD41245EF3A4006B98A7 /* InAppNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD40245EF3A4006B98A7 /* InAppNotificationManager.swift */; };
 		E0BEDD43245EF514006B98A7 /* ConversationsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD42245EF514006B98A7 /* ConversationsFetcher.swift */; };
 		E0BEDD47245F1783006B98A7 /* ChatsTableViewController+SearchHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD46245F1783006B98A7 /* ChatsTableViewController+SearchHandlers.swift */; };
+		E0BEDD4A245F47C7006B98A7 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD49245F47C7006B98A7 /* UserCell.swift */; };
+		E0BEDD4C245F48C6006B98A7 /* UserCell+ConfigureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD4B245F48C6006B98A7 /* UserCell+ConfigureCell.swift */; };
 		E0E71A46245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */; };
 		E0E71A5324585755004922F6 /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5224585755004922F6 /* ContactsController.swift */; };
 		E0E71A5724585826004922F6 /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5624585826004922F6 /* ChatsTableViewController.swift */; };
@@ -181,6 +183,8 @@
 		E0BEDD40245EF3A4006B98A7 /* InAppNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppNotificationManager.swift; sourceTree = "<group>"; };
 		E0BEDD42245EF514006B98A7 /* ConversationsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsFetcher.swift; sourceTree = "<group>"; };
 		E0BEDD46245F1783006B98A7 /* ChatsTableViewController+SearchHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatsTableViewController+SearchHandlers.swift"; sourceTree = "<group>"; };
+		E0BEDD49245F47C7006B98A7 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		E0BEDD4B245F48C6006B98A7 /* UserCell+ConfigureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCell+ConfigureCell.swift"; sourceTree = "<group>"; };
 		E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashScreenContainer+BiometricalControl.swift"; sourceTree = "<group>"; };
 		E0E71A5224585755004922F6 /* ContactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
 		E0E71A5624585826004922F6 /* ChatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
@@ -514,9 +518,19 @@
 			path = NavigationItemActivityIndicator;
 			sourceTree = "<group>";
 		};
+		E0BEDD48245F478B006B98A7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E0BEDD49245F47C7006B98A7 /* UserCell.swift */,
+				E0BEDD4B245F48C6006B98A7 /* UserCell+ConfigureCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		E0E71A4E245855D2004922F6 /* ChatsControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E0BEDD48245F478B006B98A7 /* Cells */,
 				E0E71A5524585809004922F6 /* Controllers */,
 			);
 			path = ChatsControllers;
@@ -737,6 +751,7 @@
 				E0A9A6D52418ECB800235774 /* AnnouncementFactory.swift in Sources */,
 				E0477EDB245B518000632AA9 /* ContactsDetailController.swift in Sources */,
 				E0477EE5245B51A500632AA9 /* FalconUsersTableViewCell.swift in Sources */,
+				E0BEDD4C245F48C6006B98A7 /* UserCell+ConfigureCell.swift in Sources */,
 				E0BEDD43245EF514006B98A7 /* ConversationsFetcher.swift in Sources */,
 				E0A9A6682418E61900235774 /* UserProfileAvatarOpenerDelegate.swift in Sources */,
 				E0477EE9245B51A500632AA9 /* FalconUsersFetcher.swift in Sources */,
@@ -754,6 +769,7 @@
 				E0E71A5724585826004922F6 /* ChatsTableViewController.swift in Sources */,
 				E0A9A6662418E61900235774 /* UserProfileController+keyboardHandlers.swift in Sources */,
 				E0A9A6DB2418ECB800235774 /* ImagePickerAction.swift in Sources */,
+				E0BEDD4A245F47C7006B98A7 /* UserCell.swift in Sources */,
 				E0A9A6D42418ECB800235774 /* Announcement.swift in Sources */,
 				E09B2CB32449D5830051F39F /* ThemeManager.swift in Sources */,
 				E0A9A7022418F41D00235774 /* INSPhotosViewController.swift in Sources */,
