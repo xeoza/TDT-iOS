@@ -41,6 +41,9 @@ class ChatsTableViewController: UITableViewController {
 
 	weak var delegate: ManageAppearance?
 
+	var searchBar: UISearchBar?
+	var searchChatsController: UISearchController?
+	
 	var conversations = [Conversation]()
 	var filtededConversations = [Conversation]()
 	var pinnedConversations = [Conversation]()
@@ -56,6 +59,7 @@ class ChatsTableViewController: UITableViewController {
 		super.viewDidLoad()
 
 		configureTableView()
+		setupSearchController()
 		addObservers()
 	}
 	
@@ -115,7 +119,26 @@ class ChatsTableViewController: UITableViewController {
 	@objc fileprivate func newChat() {
 		
 	}
-	
+
+	fileprivate func setupSearchController() {
+
+		if #available(iOS 11.0, *) {
+			searchChatsController = UISearchController(searchResultsController: nil)
+			searchChatsController?.searchResultsUpdater = self
+			searchChatsController?.obscuresBackgroundDuringPresentation = false
+			searchChatsController?.searchBar.delegate = self
+			searchChatsController?.definesPresentationContext = true
+			navigationItem.searchController = searchChatsController
+		} else {
+			searchBar = UISearchBar()
+			searchBar?.delegate = self
+			searchBar?.placeholder = "Search"
+			searchBar?.searchBarStyle = .minimal
+			searchBar?.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
+			tableView.tableHeaderView = searchBar
+		}
+	}
+
 	fileprivate func managePresense() {
 		
 		if currentReachabilityStatus == .notReachable {
@@ -207,6 +230,15 @@ class ChatsTableViewController: UITableViewController {
 		guard !isAppLoaded else { return }
 		delegate?.manageAppearance(self, didFinishLoadingWith: true)
 		isAppLoaded = true
+	}
+
+	func handleReloadTableAfterSearch() {
+		filtededConversations.sort { (conversation1, conversation2) -> Bool in
+			return conversation1.lastMessage?.timestamp?.int64Value > conversation2.lastMessage?.timestamp?.int64Value
+		}
+		DispatchQueue.main.async {
+			self.tableView.reloadData()
+		}
 	}
 
 	// MARK: - Table view data source
