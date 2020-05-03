@@ -100,7 +100,7 @@ class ChatsTableViewController: UITableViewController {
 	}
 
 	fileprivate func configureTableView() {
-//		tableView.register(UserCell.self, forCellReuseIdentifier: userCellID) -- uncomment after TDT-iOS#39 is in develop
+		tableView.register(UserCell.self, forCellReuseIdentifier: userCellID)
 		tableView.allowsMultipleSelectionDuringEditing = false
 		view.backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
 		tableView.indicatorStyle = ThemeManager.currentTheme().scrollBarStyle
@@ -301,7 +301,15 @@ class ChatsTableViewController: UITableViewController {
 	}
 
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		return UITableViewCell()
+		let cell = tableView.dequeueReusableCell(withIdentifier: userCellID, for: indexPath) as? UserCell ?? UserCell()
+		
+		if indexPath.section == 0 {
+			cell.configureCell(for: indexPath, conversations: filteredPinnedConversations)
+		} else {
+			cell.configureCell(for: indexPath, conversations: filtededConversations)
+		}
+		
+		return cell
 	}
 	
 //	var chatLogController: ChatLogController? = nil
