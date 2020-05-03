@@ -117,7 +117,17 @@ class ChatsTableViewController: UITableViewController {
 	}
 	
 	@objc fileprivate func newChat() {
-		
+
+		let destination = SelectChatTableViewController()
+		destination.hidesBottomBarWhenPushed = true
+		let isContactsAccessGranted = destination.checkContactsAuthorizationStatus()
+		if isContactsAccessGranted {
+			destination.users = globalUsers
+			destination.filteredUsers = globalUsers
+			destination.setUpCollation()
+			destination.checkNumberOfContacts()
+		}
+		navigationController?.pushViewController(destination, animated: true)
 	}
 
 	fileprivate func setupSearchController() {
