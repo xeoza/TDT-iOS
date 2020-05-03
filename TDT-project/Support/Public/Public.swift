@@ -135,6 +135,8 @@ func libraryAccessChecking() -> Bool {
 }
 
 public let statusOnline = "Online"
+public let userMessagesFirebaseFolder = "userMessages"
+public let messageMetaDataFirebaseFolder = "metaData"
 
 func setOnlineStatus()  {
   
@@ -301,6 +303,16 @@ func uploadAvatarForUserToFirebaseStorageUsingImage(_ image: UIImage, quality: C
     }
   }
 }
+
+func timestampOfChatLogMessage(_ date: Date) -> String {
+  let now = Date()
+  if now.getShortDateStringFromUTC() != date.getShortDateStringFromUTC() {
+    return "\(date.getShortDateStringFromUTC())\n\(date.getTimeStringFromUTC())"
+  } else {
+    return date.getTimeStringFromUTC()
+  }
+}
+
 func timeAgoSinceDate(_ date:Date, numericDates:Bool = false) -> String {
   let calendar = NSCalendar.current
   let unitFlags: Set<Calendar.Component> = [.minute, .hour, .day, .weekOfYear, .month, .year, .second]
@@ -508,5 +520,55 @@ extension NSObject: Utilities {
     else {
       return .notReachable
     }
+  }
+}
+
+extension Int {
+  func toString() -> String {
+    let myString = String(self)
+    return myString
+  }
+}
+
+extension UIImage {
+  var asJPEGData: Data? {
+	//	self.jpegData(compressionQuality: 1)
+    return self.jpegData(compressionQuality: 1)   // QUALITY min = 0 / max = 1
+  }
+  var asPNGData: Data? {
+    return self.pngData()
+  }
+}
+
+extension SystemSoundID {
+  static func playFileNamed(fileName: String, withExtenstion fileExtension: String) {
+    var sound: SystemSoundID = 0
+    if let soundURL = Bundle.main.url(forResource: fileName, withExtension: fileExtension) {
+      AudioServicesCreateSystemSoundID(soundURL as CFURL, &sound)
+      AudioServicesPlaySystemSound(sound)
+    }
+  }
+}
+
+extension Array {
+  public func stablePartition(by condition: (Element) throws -> Bool) rethrows -> ([Element], [Element]) {
+    var indexes = Set<Int>()
+    for (index, element) in self.enumerated() {
+      if try condition(element) {
+        indexes.insert(index)
+      }
+    }
+    var matching = [Element]()
+    matching.reserveCapacity(indexes.count)
+    var nonMatching = [Element]()
+    nonMatching.reserveCapacity(self.count - indexes.count)
+    for (index, element) in self.enumerated() {
+      if indexes.contains(index) {
+        matching.append(element)
+      } else {
+        nonMatching.append(element)
+      }
+    }
+    return (matching, nonMatching)
   }
 }
