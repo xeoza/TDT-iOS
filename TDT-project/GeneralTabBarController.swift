@@ -104,3 +104,17 @@ class GeneralTabBarController: UITabBarController {
     present(newNavigationController, animated: false, completion: nil)
   }
 }
+
+extension GeneralTabBarController: ManageAppearance {
+  func manageAppearance(_ chatsController: ChatsTableViewController, didFinishLoadingWith state: Bool) {
+    let isBiometricalAuthEnabled = userDefaults.currentBoolObjectState(for: userDefaults.biometricalAuth)
+    _ = contactsController.view
+    _ = settingsController.view
+    guard state else { return }
+    if isBiometricalAuthEnabled {
+      splashContainer.authenticationWithTouchID()
+    } else {
+      self.splashContainer.showSecuredData()
+    }
+  }
+}
