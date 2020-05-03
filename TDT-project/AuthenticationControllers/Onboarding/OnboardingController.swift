@@ -15,7 +15,7 @@ class OnboardingController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    view.backgroundColor = UIColor.white
+    view.backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
     view.addSubview(onboardingContainerView)
     onboardingContainerView.frame = view.bounds
     setColorsAccordingToTheme()

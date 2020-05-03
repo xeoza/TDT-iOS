@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 enum Tabs: Int {
   case contacts = 0
@@ -26,7 +27,7 @@ class GeneralTabBarController: UITabBarController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
+	chatsController.delegate = self
     configureTabBar()
 	setOnlineStatus()
   }
@@ -51,6 +52,7 @@ class GeneralTabBarController: UITabBarController {
       splashContainer.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
       splashContainer.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
+    
     onceToken = 1
  }
   //MARK: - TabBarController set up
@@ -93,6 +95,7 @@ class GeneralTabBarController: UITabBarController {
   }
 
   func presentOnboardingController() {
+	guard Auth.auth().currentUser == nil else { return }
     let destination = OnboardingController()
     let newNavigationController = UINavigationController(rootViewController: destination)
     newNavigationController.navigationBar.shadowImage = UIImage()
