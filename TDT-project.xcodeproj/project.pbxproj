@@ -112,6 +112,10 @@
 		E0BEDD962460022A006B98A7 /* InputBlockerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD952460022A006B98A7 /* InputBlockerContainerView.swift */; };
 		E0BEDD99246009CB006B98A7 /* SwiftSiriWaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD98246009CB006B98A7 /* SwiftSiriWaveformView.swift */; };
 		E0BEDD9D24600A5D006B98A7 /* PlayerCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD9C24600A5D006B98A7 /* PlayerCellView.swift */; };
+		E0BEDDC0246010AD006B98A7 /* BaseMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDBF246010AD006B98A7 /* BaseMessageCell.swift */; };
+		E0BEDDC22460119B006B98A7 /* BaseMessageCell+CellDeletionHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDC12460119B006B98A7 /* BaseMessageCell+CellDeletionHandlers.swift */; };
+		E0BEDDC42460125F006B98A7 /* BaseVoiceMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDC32460125F006B98A7 /* BaseVoiceMessageCell.swift */; };
+		E0BEDDC624601280006B98A7 /* BaseMediaMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDC524601280006B98A7 /* BaseMediaMessageCell.swift */; };
 		E0E71A46245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */; };
 		E0E71A5324585755004922F6 /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5224585755004922F6 /* ContactsController.swift */; };
 		E0E71A5724585826004922F6 /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5624585826004922F6 /* ChatsTableViewController.swift */; };
@@ -243,6 +247,10 @@
 		E0BEDD952460022A006B98A7 /* InputBlockerContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBlockerContainerView.swift; sourceTree = "<group>"; };
 		E0BEDD98246009CB006B98A7 /* SwiftSiriWaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSiriWaveformView.swift; sourceTree = "<group>"; };
 		E0BEDD9C24600A5D006B98A7 /* PlayerCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCellView.swift; sourceTree = "<group>"; };
+		E0BEDDBF246010AD006B98A7 /* BaseMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMessageCell.swift; sourceTree = "<group>"; };
+		E0BEDDC12460119B006B98A7 /* BaseMessageCell+CellDeletionHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseMessageCell+CellDeletionHandlers.swift"; sourceTree = "<group>"; };
+		E0BEDDC32460125F006B98A7 /* BaseVoiceMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVoiceMessageCell.swift; sourceTree = "<group>"; };
+		E0BEDDC524601280006B98A7 /* BaseMediaMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMediaMessageCell.swift; sourceTree = "<group>"; };
 		E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashScreenContainer+BiometricalControl.swift"; sourceTree = "<group>"; };
 		E0E71A5224585755004922F6 /* ContactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
 		E0E71A5624585826004922F6 /* ChatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
@@ -745,6 +753,10 @@
 			isa = PBXGroup;
 			children = (
 				E0BEDD9C24600A5D006B98A7 /* PlayerCellView.swift */,
+				E0BEDDBF246010AD006B98A7 /* BaseMessageCell.swift */,
+				E0BEDDC12460119B006B98A7 /* BaseMessageCell+CellDeletionHandlers.swift */,
+				E0BEDDC32460125F006B98A7 /* BaseVoiceMessageCell.swift */,
+				E0BEDDC524601280006B98A7 /* BaseMediaMessageCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -915,6 +927,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-TDT-project/Pods-TDT-project-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ARSLineProgress/ARSLineProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/CropViewController/CropViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/FTPopOverMenu_Swift/FTPopOverMenu_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
@@ -927,6 +940,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARSLineProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CropViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FTPopOverMenu_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
@@ -989,6 +1003,7 @@
 				E0E71A5324585755004922F6 /* ContactsController.swift in Sources */,
 				E0BEDD63245F59AD006B98A7 /* SelectChatTableViewController+SearchHandlers.swift in Sources */,
 				E0A9A6672418E61900235774 /* UserProfileController.swift in Sources */,
+				E0BEDDC22460119B006B98A7 /* BaseMessageCell+CellDeletionHandlers.swift in Sources */,
 				E0A9A6E32418ECB800235774 /* EnterVerificationCodeController.swift in Sources */,
 				E0477EE6245B51A500632AA9 /* ContactsTableViewCell.swift in Sources */,
 				E0A9A7082418F41D00235774 /* INSPhotoViewController.swift in Sources */,
@@ -1015,6 +1030,7 @@
 				E0A9A6E62418ECB800235774 /* EnterPhoneNumberController.swift in Sources */,
 				E0A9A6ED2418ECB800235774 /* RevealableCollectionViewCell.swift in Sources */,
 				E0A9A7032418F41D00235774 /* INSPhotosTransitionAnimator.swift in Sources */,
+				E0BEDDC42460125F006B98A7 /* BaseVoiceMessageCell.swift in Sources */,
 				E0A9A70A2418F41D00235774 /* UIVIew+INSPhotoViewer.swift in Sources */,
 				E0BEDD5F245F589E006B98A7 /* SelectedParticipantsCollectionView.swift in Sources */,
 				E0A9A6DF2418ECB800235774 /* ImagePickerTrayController.swift in Sources */,
@@ -1035,6 +1051,7 @@
 				E0A9A7072418F41D00235774 /* INSPhotosOverlayView.swift in Sources */,
 				4B4F452F1F32230C00A6FF96 /* AppDelegate.swift in Sources */,
 				E0BEDD86245FF8E4006B98A7 /* SelectedMediaCollectionCell.swift in Sources */,
+				E0BEDDC624601280006B98A7 /* BaseMediaMessageCell.swift in Sources */,
 				E0BEDD41245EF3A4006B98A7 /* InAppNotificationManager.swift in Sources */,
 				E0BEDD55245F56E6006B98A7 /* SelectParticipantsTableView.swift in Sources */,
 				E0BEDD8E245FFA4E006B98A7 /* VoiceRecordingContainerView.swift in Sources */,
@@ -1053,6 +1070,7 @@
 				E0A9A6F52418ECB800235774 /* AvatarOpenerOverlay.swift in Sources */,
 				E0A9A6DE2418ECB800235774 /* UIImageExtensions.swift in Sources */,
 				E0A9A6D22418ECB800235774 /* UIView+Extensions.swift in Sources */,
+				E0BEDDC0246010AD006B98A7 /* BaseMessageCell.swift in Sources */,
 				E0A9A6D82418ECB800235774 /* CameraCell.swift in Sources */,
 				E0A9A6D72418ECB800235774 /* ActionCell.swift in Sources */,
 				E0BEDD71245FECB0006B98A7 /* MessagesFetcher.swift in Sources */,
