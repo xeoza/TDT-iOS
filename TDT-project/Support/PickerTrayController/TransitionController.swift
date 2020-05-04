@@ -17,6 +17,7 @@ class TransitionController: NSObject {
     
     fileprivate let gestureRecognizer = UIPanGestureRecognizer()
     fileprivate var interactiveTransition: UIPercentDrivenInteractiveTransition?
+    fileprivate var panDirection: CGFloat = 0
   
   
   deinit {
