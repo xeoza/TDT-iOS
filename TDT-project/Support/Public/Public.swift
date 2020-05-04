@@ -19,10 +19,6 @@ struct ScreenSize {
   static let frame = CGRect(x: 0, y: 0, width: ScreenSize.width, height: ScreenSize.height)
 }
 
-struct DeviceType {
-  static let iPhoneX = UIDevice.current.userInterfaceIdiom == .phone && (ScreenSize.maxLength == 812.0 || ScreenSize.maxLength == 896.0)
-}
-
 extension UIApplication {
   class func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
     if let navigationController = controller as? UINavigationController {
@@ -78,9 +74,11 @@ func topViewController(rootViewController: UIViewController?) -> UIViewControlle
 
 let cameraAccessDeniedMessage = "TDT needs access to your camera to take photos and videos.\n\nPlease go to Settings –– Privacy –– Camera –– and set TDT to ON."
 let photoLibraryAccessDeniedMessage = "TDT needs access to your photo library to send photos and videos.\n\nPlease go to Settings –– Privacy –– Photos –– and set TDT to ON."
-
+let microphoneAccessDeniedMessage = "Falcon needs access to your microphone to record audio messages.\n\nPlease go to Settings –– Privacy –– Microphone –– and set Falcon to ON."
 let cameraAccessDeniedMessageProfilePicture = "TDT needs access to your camera to take photo for your profile.\n\nPlease go to Settings –– Privacy –– Camera –– and set TDT to ON."
 let photoLibraryAccessDeniedMessageProfilePicture = "TDT needs access to your photo library to select photo for your profile.\n\nPlease go to Settings –– Privacy –– Photos –– and set TDT to ON."
+
+let videoRecordedButLibraryUnavailableError = "To send a recorded video, it has to be saved to your photo library first. Please go to Settings –– Privacy –– Photos –– and set Falcon to ON."
 
 let basicErrorTitleForAlert = "Error"
 let basicTitleForAccessError = "Please Allow Access"
@@ -669,4 +667,56 @@ extension UITableView {
 		let indexPath = self.indexPathForRow(at: viewCenter)
 		return indexPath
 	}
+}
+
+struct DeviceType {
+  static let iPhone4orLess = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.maxLength < 568.0
+  static let iPhone5orSE = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.maxLength == 568.0
+  static let iPhone678 = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.maxLength == 667.0
+  static let iPhone678p = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.maxLength == 736.0
+  static let iPhoneX = UIDevice.current.userInterfaceIdiom == .phone && (ScreenSize.maxLength == 812.0 || ScreenSize.maxLength == 896.0)
+  
+  static let IS_IPAD = UIDevice.current.userInterfaceIdiom == .pad && ScreenSize.maxLength == 1024.0
+  static let IS_IPAD_PRO = UIDevice.current.userInterfaceIdiom == .pad && ScreenSize.maxLength == 1366.0
+}
+
+func dataFromAsset(asset: PHAsset) -> Data? {
+  
+  var finalData: Data?
+  let manager = PHImageManager.default()
+  let options = PHImageRequestOptions()
+  options.version = .current
+  options.deliveryMode = .fastFormat
+  options.isSynchronous = true
+  options.resizeMode = .exact
+  options.normalizedCropRect = CGRect(x: 0, y: 0, width: 1000, height: 1000)
+  manager.requestImageData(for: asset, options: options) { data, _, _, _ in
+    finalData = data
+  }
+  
+  return finalData
+}
+
+func uiImageFromAsset(phAsset: PHAsset) -> UIImage? {
+  
+  var img: UIImage?
+  let manager = PHImageManager.default()
+  let options = PHImageRequestOptions()
+  options.version = .current
+  options.deliveryMode = .fastFormat
+  options.resizeMode = .exact
+  options.isSynchronous = true
+  manager.requestImageData(for: phAsset, options: options) { data, _, _, _ in
+    
+    if let data = data {
+      img = UIImage(data: data)
+    }
+  }
+  return img
+}
+
+extension Data {
+  var asUIImage: UIImage? {
+    return UIImage(data: self)
+  }
 }
