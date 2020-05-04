@@ -77,7 +77,6 @@
 		E0A9A7092418F41D00235774 /* INSPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A9A6FF2418F41D00235774 /* INSPhoto.swift */; };
 		E0A9A70A2418F41D00235774 /* UIVIew+INSPhotoViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A9A7002418F41D00235774 /* UIVIew+INSPhotoViewer.swift */; };
 		E0BEDD3B245EDC1C006B98A7 /* NavigationItemActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD3A245EDC1C006B98A7 /* NavigationItemActivityIndicator.swift */; };
-		E0BEDD3F245EE608006B98A7 /* MessagesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD3E245EE608006B98A7 /* MessagesFetcher.swift */; };
 		E0BEDD41245EF3A4006B98A7 /* InAppNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD40245EF3A4006B98A7 /* InAppNotificationManager.swift */; };
 		E0BEDD43245EF514006B98A7 /* ConversationsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD42245EF514006B98A7 /* ConversationsFetcher.swift */; };
 		E0BEDD47245F1783006B98A7 /* ChatsTableViewController+SearchHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD46245F1783006B98A7 /* ChatsTableViewController+SearchHandlers.swift */; };
@@ -96,6 +95,12 @@
 		E0BEDD67245F5BA3006B98A7 /* GroupProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD66245F5BA3006B98A7 /* GroupProfileTableViewController.swift */; };
 		E0BEDD69245F5C8C006B98A7 /* GroupProfileTableHeaderContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD68245F5C8C006B98A7 /* GroupProfileTableHeaderContainer.swift */; };
 		E0BEDD6B245F5CBF006B98A7 /* GroupPictureAvatarOpenerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD6A245F5CBF006B98A7 /* GroupPictureAvatarOpenerDelegate.swift */; };
+		E0BEDD71245FECB0006B98A7 /* MessagesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD70245FECB0006B98A7 /* MessagesFetcher.swift */; };
+		E0BEDD73245FED3A006B98A7 /* ChatLogHistoryFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD72245FED3A006B98A7 /* ChatLogHistoryFetcher.swift */; };
+		E0BEDD75245FED62006B98A7 /* GroupMembersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD74245FED61006B98A7 /* GroupMembersManager.swift */; };
+		E0BEDD79245FEDBF006B98A7 /* typingindicatorDark.gif in Resources */ = {isa = PBXBuildFile; fileRef = E0BEDD77245FEDBF006B98A7 /* typingindicatorDark.gif */; };
+		E0BEDD7A245FEDBF006B98A7 /* typingIndicator.gif in Resources */ = {isa = PBXBuildFile; fileRef = E0BEDD78245FEDBF006B98A7 /* typingIndicator.gif */; };
+		E0BEDD7D245FEDFE006B98A7 /* AutoSizingCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDD7C245FEDFE006B98A7 /* AutoSizingCollectionViewFlowLayout.swift */; };
 		E0E71A46245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */; };
 		E0E71A5324585755004922F6 /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5224585755004922F6 /* ContactsController.swift */; };
 		E0E71A5724585826004922F6 /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5624585826004922F6 /* ChatsTableViewController.swift */; };
@@ -192,7 +197,6 @@
 		E0A9A6FF2418F41D00235774 /* INSPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INSPhoto.swift; sourceTree = "<group>"; };
 		E0A9A7002418F41D00235774 /* UIVIew+INSPhotoViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVIew+INSPhotoViewer.swift"; sourceTree = "<group>"; };
 		E0BEDD3A245EDC1C006B98A7 /* NavigationItemActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItemActivityIndicator.swift; sourceTree = "<group>"; };
-		E0BEDD3E245EE608006B98A7 /* MessagesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesFetcher.swift; sourceTree = "<group>"; };
 		E0BEDD40245EF3A4006B98A7 /* InAppNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppNotificationManager.swift; sourceTree = "<group>"; };
 		E0BEDD42245EF514006B98A7 /* ConversationsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsFetcher.swift; sourceTree = "<group>"; };
 		E0BEDD46245F1783006B98A7 /* ChatsTableViewController+SearchHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatsTableViewController+SearchHandlers.swift"; sourceTree = "<group>"; };
@@ -211,6 +215,12 @@
 		E0BEDD66245F5BA3006B98A7 /* GroupProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProfileTableViewController.swift; sourceTree = "<group>"; };
 		E0BEDD68245F5C8C006B98A7 /* GroupProfileTableHeaderContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProfileTableHeaderContainer.swift; sourceTree = "<group>"; };
 		E0BEDD6A245F5CBF006B98A7 /* GroupPictureAvatarOpenerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPictureAvatarOpenerDelegate.swift; sourceTree = "<group>"; };
+		E0BEDD70245FECB0006B98A7 /* MessagesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesFetcher.swift; sourceTree = "<group>"; };
+		E0BEDD72245FED3A006B98A7 /* ChatLogHistoryFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogHistoryFetcher.swift; sourceTree = "<group>"; };
+		E0BEDD74245FED61006B98A7 /* GroupMembersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMembersManager.swift; sourceTree = "<group>"; };
+		E0BEDD77245FEDBF006B98A7 /* typingindicatorDark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = typingindicatorDark.gif; sourceTree = "<group>"; };
+		E0BEDD78245FEDBF006B98A7 /* typingIndicator.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = typingIndicator.gif; sourceTree = "<group>"; };
+		E0BEDD7C245FEDFE006B98A7 /* AutoSizingCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSizingCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashScreenContainer+BiometricalControl.swift"; sourceTree = "<group>"; };
 		E0E71A5224585755004922F6 /* ContactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
 		E0E71A5624585826004922F6 /* ChatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
@@ -254,6 +264,7 @@
 				E0E71A50245855F9004922F6 /* SettingsControllers */,
 				E0E71A4F245855ED004922F6 /* ContactsControllers */,
 				E0E71A4E245855D2004922F6 /* ChatsControllers */,
+				E0BEDD6E245FEC8D006B98A7 /* ChatLogControllers */,
 				E09734782430DDFD001D64B5 /* SplashScreenControllers */,
 				E0A9A66A2418ECB800235774 /* Support */,
 				E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */,
@@ -388,7 +399,6 @@
 				E0A9A6B22418ECB800235774 /* UserDefaultsManager */,
 				E0A9A6B62418ECB800235774 /* CenteredCollectionViewFlowLayout */,
 				E0A9A6BA2418ECB800235774 /* UserProfilePictureOpener */,
-				E0BEDD3E245EE608006B98A7 /* MessagesFetcher.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -597,6 +607,43 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		E0BEDD6E245FEC8D006B98A7 /* ChatLogControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0BEDD6F245FEC98006B98A7 /* Support */,
+				E0BEDD76245FED81006B98A7 /* Media */,
+				E0BEDD7B245FEDD0006B98A7 /* Layout */,
+			);
+			path = ChatLogControllers;
+			sourceTree = "<group>";
+		};
+		E0BEDD6F245FEC98006B98A7 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				E0BEDD70245FECB0006B98A7 /* MessagesFetcher.swift */,
+				E0BEDD72245FED3A006B98A7 /* ChatLogHistoryFetcher.swift */,
+				E0BEDD74245FED61006B98A7 /* GroupMembersManager.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		E0BEDD76245FED81006B98A7 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				E0BEDD78245FEDBF006B98A7 /* typingIndicator.gif */,
+				E0BEDD77245FEDBF006B98A7 /* typingindicatorDark.gif */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		E0BEDD7B245FEDD0006B98A7 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				E0BEDD7C245FEDFE006B98A7 /* AutoSizingCollectionViewFlowLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		E0E71A4E245855D2004922F6 /* ChatsControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -722,6 +769,8 @@
 				E0A9A7052418F41D00235774 /* INSPhotoGallery.bundle in Resources */,
 				4B4F45381F32230C00A6FF96 /* Assets.xcassets in Resources */,
 				E0A9A6E92418ECB800235774 /* CallingCodes.plist in Resources */,
+				E0BEDD7A245FEDBF006B98A7 /* typingIndicator.gif in Resources */,
+				E0BEDD79245FEDBF006B98A7 /* typingindicatorDark.gif in Resources */,
 				E097347A2430DE12001D64B5 /* LaunchScreen.storyboard in Resources */,
 				E04E67FC23FFE30B008CB5F4 /* GoogleService-Info.plist in Resources */,
 			);
@@ -863,18 +912,20 @@
 				E0BEDD5F245F589E006B98A7 /* SelectedParticipantsCollectionView.swift in Sources */,
 				E0A9A6DF2418ECB800235774 /* ImagePickerTrayController.swift in Sources */,
 				E0BEDD59245F5742006B98A7 /* ParticipantTableViewCell.swift in Sources */,
+				E0BEDD7D245FEDFE006B98A7 /* AutoSizingCollectionViewFlowLayout.swift in Sources */,
 				E0A9A6F22418ECB800235774 /* CenteredCollectionViewFlowLayout.swift in Sources */,
 				E0477EF0245B545E00632AA9 /* Conversation.swift in Sources */,
 				E0A9A6EE2418ECB800235774 /* RevealableView.swift in Sources */,
+				E0BEDD75245FED62006B98A7 /* GroupMembersManager.swift in Sources */,
 				E0E71A5924585887004922F6 /* AccountSettingsController.swift in Sources */,
 				E0BEDD69245F5C8C006B98A7 /* GroupProfileTableHeaderContainer.swift in Sources */,
 				E0A9A6EF2418ECB800235774 /* UICollectionView+Extension.swift in Sources */,
 				E0A9A7062418F41D00235774 /* INSScalingImageView.swift in Sources */,
 				E0A9A6E82418ECB800235774 /* Country.swift in Sources */,
+				E0BEDD73245FED3A006B98A7 /* ChatLogHistoryFetcher.swift in Sources */,
 				E0A9A6D62418ECB800235774 /* CameraOverlayView.swift in Sources */,
 				E0A9A7072418F41D00235774 /* INSPhotosOverlayView.swift in Sources */,
 				4B4F452F1F32230C00A6FF96 /* AppDelegate.swift in Sources */,
-				E0BEDD3F245EE608006B98A7 /* MessagesFetcher.swift in Sources */,
 				E0BEDD41245EF3A4006B98A7 /* InAppNotificationManager.swift in Sources */,
 				E0BEDD55245F56E6006B98A7 /* SelectParticipantsTableView.swift in Sources */,
 				E0BEDD61245F5962006B98A7 /* SelectChatTableViewController.swift in Sources */,
@@ -892,6 +943,7 @@
 				E0A9A6D22418ECB800235774 /* UIView+Extensions.swift in Sources */,
 				E0A9A6D82418ECB800235774 /* CameraCell.swift in Sources */,
 				E0A9A6D72418ECB800235774 /* ActionCell.swift in Sources */,
+				E0BEDD71245FECB0006B98A7 /* MessagesFetcher.swift in Sources */,
 				E0A9A6D32418ECB800235774 /* AnnouncementShowing.swift in Sources */,
 				E0A9A7012418F41D00235774 /* INSPhotosDataSource.swift in Sources */,
 				E0BEDD50245F5618006B98A7 /* SelectParticipantsViewController.swift in Sources */,
