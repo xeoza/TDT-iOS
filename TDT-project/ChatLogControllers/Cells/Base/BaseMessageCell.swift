@@ -11,7 +11,7 @@ import UIKit
 class BaseMessageCell: RevealableCollectionViewCell {
   
   weak var message: Message?
-//  weak var chatLogController: ChatLogController?
+  weak var chatLogController: ChatLogController?
   
   let grayBubbleImage = ThemeManager.currentTheme().incomingBubble
   let blueBubbleImage = ThemeManager.currentTheme().outgoingBubble
@@ -90,12 +90,12 @@ class BaseMessageCell: RevealableCollectionViewCell {
   }
   
   func setupTimestampView(message: Message, isOutgoing: Bool) {
-//    DispatchQueue.main.async {
-////      let view = self.chatLogController?.collectionView?.dequeueReusableRevealableView(withIdentifier: "timestamp") as? TimestampView ?? TimestampView()
-//      view.titleLabel.text = message.convertedTimestamp
-//      let style: RevealStyle = isOutgoing ? .slide : .over
-//      self.setRevealableView(view, style: style, direction: .left)
-//    }
+    DispatchQueue.main.async {
+      let view = self.chatLogController?.collectionView?.dequeueReusableRevealableView(withIdentifier: "timestamp") as? TimestampView ?? TimestampView()
+      view.titleLabel.text = message.convertedTimestamp
+      let style: RevealStyle = isOutgoing ? .slide : .over
+      self.setRevealableView(view, style: style, direction: .left)
+    }
   }
 
   func setupViews() {

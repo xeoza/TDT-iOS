@@ -44,13 +44,13 @@ class ChatInputContainerView: UIView {
   weak var mediaPickerController: MediaPickerControllerNew?
   var maxTextViewHeight: CGFloat = 0.0
   
-//  weak var chatLogController: ChatLogController? {
-//    didSet {
-//      sendButton.addTarget(chatLogController, action: #selector(ChatLogController.handleSend), for: .touchUpInside)
-//      attachButton.addTarget(chatLogController, action: #selector(ChatLogController.togglePhoto), for: .touchDown)
-//      recordVoiceButton.addTarget(chatLogController, action: #selector(ChatLogController.toggleVoiceRecording), for: .touchDown)
-//    }
-//  }
+  weak var chatLogController: ChatLogController? {
+    didSet {
+      sendButton.addTarget(chatLogController, action: #selector(ChatLogController.handleSend), for: .touchUpInside)
+      attachButton.addTarget(chatLogController, action: #selector(ChatLogController.togglePhoto), for: .touchDown)
+      recordVoiceButton.addTarget(chatLogController, action: #selector(ChatLogController.toggleVoiceRecording), for: .touchDown)
+    }
+  }
   
   override var intrinsicContentSize: CGSize {
     get {
@@ -313,16 +313,16 @@ extension ChatInputContainerView: UITextViewDelegate {
   }
   
   func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-//    if text == "\n" {
-//      if chatLogController!.collectionView!.contentOffset.y >= (chatLogController!.collectionView!.contentSize.height - chatLogController!.collectionView!.frame.size.height - 200) {
-//        
-//        if chatLogController?.collectionView?.numberOfSections == 2 {
-//          chatLogController?.scrollToBottomOfTypingIndicator()
-//        } else {
-//          chatLogController?.scrollToBottom(at: .bottom)
-//        }
-//      }
-//    }
+    if text == "\n" {
+      if chatLogController!.collectionView!.contentOffset.y >= (chatLogController!.collectionView!.contentSize.height - chatLogController!.collectionView!.frame.size.height - 200) {
+        
+        if chatLogController?.collectionView?.numberOfSections == 2 {
+          chatLogController?.scrollToBottomOfTypingIndicator()
+        } else {
+          chatLogController?.scrollToBottom(at: .bottom)
+        }
+      }
+    }
     return true
   }
 }

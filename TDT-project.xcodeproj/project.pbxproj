@@ -128,6 +128,9 @@
 		E0BEDDE124617CA9006B98A7 /* TimestampView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0BEDDE024617CA9006B98A7 /* TimestampView.xib */; };
 		E0BEDDE324617D00006B98A7 /* TimestampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDE224617D00006B98A7 /* TimestampView.swift */; };
 		E0BEDDE824617EB8006B98A7 /* InformationMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDE724617EB8006B98A7 /* InformationMessageCell.swift */; };
+		E0BEDDEB2461857E006B98A7 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDEA2461857E006B98A7 /* ChatLogController.swift */; };
+		E0BEDDED24618A09006B98A7 /* ChatLogController+MediaPickerHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDEC24618A09006B98A7 /* ChatLogController+MediaPickerHandlers.swift */; };
+		E0BEDDF2246195F9006B98A7 /* ChatLogController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDF1246195F9006B98A7 /* ChatLogController+DataSource.swift */; };
 		E0E71A46245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */; };
 		E0E71A5324585755004922F6 /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5224585755004922F6 /* ContactsController.swift */; };
 		E0E71A5724585826004922F6 /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5624585826004922F6 /* ChatsTableViewController.swift */; };
@@ -275,6 +278,9 @@
 		E0BEDDE024617CA9006B98A7 /* TimestampView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimestampView.xib; sourceTree = "<group>"; };
 		E0BEDDE224617D00006B98A7 /* TimestampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampView.swift; sourceTree = "<group>"; };
 		E0BEDDE724617EB8006B98A7 /* InformationMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationMessageCell.swift; sourceTree = "<group>"; };
+		E0BEDDEA2461857E006B98A7 /* ChatLogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
+		E0BEDDEC24618A09006B98A7 /* ChatLogController+MediaPickerHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatLogController+MediaPickerHandlers.swift"; sourceTree = "<group>"; };
+		E0BEDDF1246195F9006B98A7 /* ChatLogController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatLogController+DataSource.swift"; sourceTree = "<group>"; };
 		E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashScreenContainer+BiometricalControl.swift"; sourceTree = "<group>"; };
 		E0E71A5224585755004922F6 /* ContactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
 		E0E71A5624585826004922F6 /* ChatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
@@ -672,6 +678,7 @@
 				E0BEDD7B245FEDD0006B98A7 /* Layout */,
 				E0BEDD7F245FF74D006B98A7 /* Views */,
 				E0BEDD9A24600A39006B98A7 /* Cells */,
+				E0BEDDE9246184F2006B98A7 /* Controllers */,
 			);
 			path = ChatLogControllers;
 			sourceTree = "<group>";
@@ -851,6 +858,24 @@
 				E0BEDDE724617EB8006B98A7 /* InformationMessageCell.swift */,
 			);
 			path = Information;
+			sourceTree = "<group>";
+		};
+		E0BEDDE9246184F2006B98A7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0BEDDEE246195C9006B98A7 /* ChatLogController+DataSource+Delegate */,
+				E0BEDDEA2461857E006B98A7 /* ChatLogController.swift */,
+				E0BEDDEC24618A09006B98A7 /* ChatLogController+MediaPickerHandlers.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E0BEDDEE246195C9006B98A7 /* ChatLogController+DataSource+Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				E0BEDDF1246195F9006B98A7 /* ChatLogController+DataSource.swift */,
+			);
+			path = "ChatLogController+DataSource+Delegate";
 			sourceTree = "<group>";
 		};
 		E0E71A4E245855D2004922F6 /* ChatsControllers */ = {
@@ -1137,10 +1162,12 @@
 				E0A9A70A2418F41D00235774 /* UIVIew+INSPhotoViewer.swift in Sources */,
 				E0BEDD5F245F589E006B98A7 /* SelectedParticipantsCollectionView.swift in Sources */,
 				E0A9A6DF2418ECB800235774 /* ImagePickerTrayController.swift in Sources */,
+				E0BEDDEB2461857E006B98A7 /* ChatLogController.swift in Sources */,
 				E0BEDD59245F5742006B98A7 /* ParticipantTableViewCell.swift in Sources */,
 				E0BEDD7D245FEDFE006B98A7 /* AutoSizingCollectionViewFlowLayout.swift in Sources */,
 				E0A9A6F22418ECB800235774 /* CenteredCollectionViewFlowLayout.swift in Sources */,
 				E0477EF0245B545E00632AA9 /* Conversation.swift in Sources */,
+				E0BEDDED24618A09006B98A7 /* ChatLogController+MediaPickerHandlers.swift in Sources */,
 				E0A9A6EE2418ECB800235774 /* RevealableView.swift in Sources */,
 				E0BEDD75245FED62006B98A7 /* GroupMembersManager.swift in Sources */,
 				E0E71A5924585887004922F6 /* AccountSettingsController.swift in Sources */,
@@ -1159,6 +1186,7 @@
 				E0BEDD55245F56E6006B98A7 /* SelectParticipantsTableView.swift in Sources */,
 				E0BEDDD324617762006B98A7 /* FalconTextView.swift in Sources */,
 				E0BEDD8E245FFA4E006B98A7 /* VoiceRecordingContainerView.swift in Sources */,
+				E0BEDDF2246195F9006B98A7 /* ChatLogController+DataSource.swift in Sources */,
 				E0BEDD61245F5962006B98A7 /* SelectChatTableViewController.swift in Sources */,
 				E0A9A6E42418ECB800235774 /* EnterVerificationContainerView.swift in Sources */,
 				E0A9A6E72418ECB800235774 /* EnterPhoneNumberContainerView.swift in Sources */,
