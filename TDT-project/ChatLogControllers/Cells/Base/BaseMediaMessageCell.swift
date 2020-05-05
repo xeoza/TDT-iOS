@@ -34,12 +34,12 @@ class BaseMediaMessageCell: BaseMessageCell {
     return messageImageView
   }()
   
-//  var progressView: CircleProgress = {
-//    let progressView = CircleProgress()
-//    progressView.translatesAutoresizingMaskIntoConstraints = false
-//    
-//    return progressView
-//  }()
+  var progressView: CircleProgress = {
+    let progressView = CircleProgress()
+    progressView.translatesAutoresizingMaskIntoConstraints = false
+    
+    return progressView
+  }()
   
   func setupImageFromLocalData(message: Message, image: UIImage) {
     messageImageView.image = image
@@ -49,24 +49,24 @@ class BaseMediaMessageCell: BaseMessageCell {
   }
   
   func setupImageFromURL(message: Message, messageImageUrl: URL) {
-//    progressView.startLoading()
-//    progressView.isHidden = false
+    progressView.startLoading()
+    progressView.isHidden = false
     let options:SDWebImageOptions = [.continueInBackground, .lowPriority, .scaleDownLargeImages]
     messageImageView.sd_setImage(with: messageImageUrl, placeholderImage: nil, options: options, progress: { (_, _, _) in
       
       DispatchQueue.main.async {
-//        self.progressView.progress = self.messageImageView.sd_imageProgress.fractionCompleted
+        self.progressView.progress = self.messageImageView.sd_imageProgress.fractionCompleted
       }
       
     }, completed: { (_, error, _, _) in
       
       if error != nil {
-//        self.progressView.isHidden = false
+        self.progressView.isHidden = false
         self.messageImageView.isUserInteractionEnabled = false
         self.playButton.isHidden = true
         return
       }
-//      self.progressView.isHidden = true
+      self.progressView.isHidden = true
       self.messageImageView.isUserInteractionEnabled = true
       self.playButton.isHidden = message.videoUrl == nil && message.localVideoUrl == nil
     })

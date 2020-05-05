@@ -116,6 +116,11 @@
 		E0BEDDC22460119B006B98A7 /* BaseMessageCell+CellDeletionHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDC12460119B006B98A7 /* BaseMessageCell+CellDeletionHandlers.swift */; };
 		E0BEDDC42460125F006B98A7 /* BaseVoiceMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDC32460125F006B98A7 /* BaseVoiceMessageCell.swift */; };
 		E0BEDDC624601280006B98A7 /* BaseMediaMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDC524601280006B98A7 /* BaseMediaMessageCell.swift */; };
+		E0BEDDC924617121006B98A7 /* RoundProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDC824617121006B98A7 /* RoundProgressView.swift */; };
+		E0BEDDCC246173EB006B98A7 /* IncomingPhotoMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDCB246173EB006B98A7 /* IncomingPhotoMessageCell.swift */; };
+		E0BEDDCE246176C6006B98A7 /* IncomingVoiceMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDCD246176C6006B98A7 /* IncomingVoiceMessageCell.swift */; };
+		E0BEDDD024617707006B98A7 /* IncomingTextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDCF24617707006B98A7 /* IncomingTextMessageCell.swift */; };
+		E0BEDDD324617762006B98A7 /* FalconTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDD224617762006B98A7 /* FalconTextView.swift */; };
 		E0E71A46245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */; };
 		E0E71A5324585755004922F6 /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5224585755004922F6 /* ContactsController.swift */; };
 		E0E71A5724585826004922F6 /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5624585826004922F6 /* ChatsTableViewController.swift */; };
@@ -251,6 +256,11 @@
 		E0BEDDC12460119B006B98A7 /* BaseMessageCell+CellDeletionHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseMessageCell+CellDeletionHandlers.swift"; sourceTree = "<group>"; };
 		E0BEDDC32460125F006B98A7 /* BaseVoiceMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVoiceMessageCell.swift; sourceTree = "<group>"; };
 		E0BEDDC524601280006B98A7 /* BaseMediaMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMediaMessageCell.swift; sourceTree = "<group>"; };
+		E0BEDDC824617121006B98A7 /* RoundProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundProgressView.swift; sourceTree = "<group>"; };
+		E0BEDDCB246173EB006B98A7 /* IncomingPhotoMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingPhotoMessageCell.swift; sourceTree = "<group>"; };
+		E0BEDDCD246176C6006B98A7 /* IncomingVoiceMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingVoiceMessageCell.swift; sourceTree = "<group>"; };
+		E0BEDDCF24617707006B98A7 /* IncomingTextMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingTextMessageCell.swift; sourceTree = "<group>"; };
+		E0BEDDD224617762006B98A7 /* FalconTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconTextView.swift; sourceTree = "<group>"; };
 		E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashScreenContainer+BiometricalControl.swift"; sourceTree = "<group>"; };
 		E0E71A5224585755004922F6 /* ContactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
 		E0E71A5624585826004922F6 /* ChatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
@@ -417,6 +427,8 @@
 		E0A9A66A2418ECB800235774 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				E0BEDDD12461773B006B98A7 /* FalconTextView */,
+				E0BEDDC7246170D1006B98A7 /* RoundProgressView */,
 				E0BEDD97246009A7006B98A7 /* WaveformView */,
 				E0BEDD4E245F55C9006B98A7 /* MultipleSelectionControllers */,
 				E0BEDD39245EDBFC006B98A7 /* NavigationItemActivityIndicator */,
@@ -744,6 +756,7 @@
 		E0BEDD9A24600A39006B98A7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E0BEDDCA246173C2006B98A7 /* Incoming */,
 				E0BEDD9B24600A48006B98A7 /* Base */,
 			);
 			path = Cells;
@@ -759,6 +772,32 @@
 				E0BEDDC524601280006B98A7 /* BaseMediaMessageCell.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		E0BEDDC7246170D1006B98A7 /* RoundProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				E0BEDDC824617121006B98A7 /* RoundProgressView.swift */,
+			);
+			path = RoundProgressView;
+			sourceTree = "<group>";
+		};
+		E0BEDDCA246173C2006B98A7 /* Incoming */ = {
+			isa = PBXGroup;
+			children = (
+				E0BEDDCB246173EB006B98A7 /* IncomingPhotoMessageCell.swift */,
+				E0BEDDCD246176C6006B98A7 /* IncomingVoiceMessageCell.swift */,
+				E0BEDDCF24617707006B98A7 /* IncomingTextMessageCell.swift */,
+			);
+			path = Incoming;
+			sourceTree = "<group>";
+		};
+		E0BEDDD12461773B006B98A7 /* FalconTextView */ = {
+			isa = PBXGroup;
+			children = (
+				E0BEDDD224617762006B98A7 /* FalconTextView.swift */,
+			);
+			path = FalconTextView;
 			sourceTree = "<group>";
 		};
 		E0E71A4E245855D2004922F6 /* ChatsControllers */ = {
@@ -983,6 +1022,7 @@
 				E0A9A6E02418ECB800235774 /* Public.swift in Sources */,
 				E0477EDC245B518000632AA9 /* ContactsController+SearchHandlers.swift in Sources */,
 				E0E71A46245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift in Sources */,
+				E0BEDDCE246176C6006B98A7 /* IncomingVoiceMessageCell.swift in Sources */,
 				E0BEDD47245F1783006B98A7 /* ChatsTableViewController+SearchHandlers.swift in Sources */,
 				E0BEDD53245F5683006B98A7 /* CollectionViewLeftAlignFlowLayout.swift in Sources */,
 				E0A9A6D92418ECB800235774 /* ImageCell.swift in Sources */,
@@ -994,6 +1034,7 @@
 				E0477EE5245B51A500632AA9 /* FalconUsersTableViewCell.swift in Sources */,
 				E0BEDD4C245F48C6006B98A7 /* UserCell+ConfigureCell.swift in Sources */,
 				E0BEDD43245EF514006B98A7 /* ConversationsFetcher.swift in Sources */,
+				E0BEDDD024617707006B98A7 /* IncomingTextMessageCell.swift in Sources */,
 				E0A9A6682418E61900235774 /* UserProfileAvatarOpenerDelegate.swift in Sources */,
 				E0477EE9245B51A500632AA9 /* FalconUsersFetcher.swift in Sources */,
 				4BAEE48621272C4F0045AB10 /* OnboardingController.swift in Sources */,
@@ -1015,6 +1056,7 @@
 				E0BEDD99246009CB006B98A7 /* SwiftSiriWaveformView.swift in Sources */,
 				E0BEDD4A245F47C7006B98A7 /* UserCell.swift in Sources */,
 				E0A9A6D42418ECB800235774 /* Announcement.swift in Sources */,
+				E0BEDDC924617121006B98A7 /* RoundProgressView.swift in Sources */,
 				E09B2CB32449D5830051F39F /* ThemeManager.swift in Sources */,
 				E0A9A7022418F41D00235774 /* INSPhotosViewController.swift in Sources */,
 				E0477EEA245B51A500632AA9 /* ViewPlaceholder.swift in Sources */,
@@ -1054,6 +1096,7 @@
 				E0BEDDC624601280006B98A7 /* BaseMediaMessageCell.swift in Sources */,
 				E0BEDD41245EF3A4006B98A7 /* InAppNotificationManager.swift in Sources */,
 				E0BEDD55245F56E6006B98A7 /* SelectParticipantsTableView.swift in Sources */,
+				E0BEDDD324617762006B98A7 /* FalconTextView.swift in Sources */,
 				E0BEDD8E245FFA4E006B98A7 /* VoiceRecordingContainerView.swift in Sources */,
 				E0BEDD61245F5962006B98A7 /* SelectChatTableViewController.swift in Sources */,
 				E0A9A6E42418ECB800235774 /* EnterVerificationContainerView.swift in Sources */,
@@ -1062,6 +1105,7 @@
 				E0A9A6DC2418ECB800235774 /* TransitionController.swift in Sources */,
 				E0BEDD5B245F57F1006B98A7 /* SelectParticipantsViewController+SearchHandlers.swift in Sources */,
 				E0A9A6DD2418ECB800235774 /* UIEdgeInsetsExtensions.swift in Sources */,
+				E0BEDDCC246173EB006B98A7 /* IncomingPhotoMessageCell.swift in Sources */,
 				E0BEDD82245FF7E0006B98A7 /* ChatInputContainerView.swift in Sources */,
 				E0A9A6E22418ECB800235774 /* EnterVerificationContainerView+timerHandlers.swift in Sources */,
 				E0BEDD9D24600A5D006B98A7 /* PlayerCellView.swift in Sources */,
@@ -1228,7 +1272,7 @@
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				INFOPLIST_FILE = "TDT-project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "tdt-project-";
+				PRODUCT_BUNDLE_IDENTIFIER = "ios-tdt-";
 				PRODUCT_NAME = TDT;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1261,7 +1305,7 @@
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				INFOPLIST_FILE = "TDT-project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "tdt-project-";
+				PRODUCT_BUNDLE_IDENTIFIER = "ios-tdt-";
 				PRODUCT_NAME = TDT;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
