@@ -11,6 +11,13 @@ import Photos
 
 fileprivate let itemSpacing: CGFloat = 1
 
+/// The media type an instance of ImagePickerSheetController can display
+public enum ImagePickerMediaType {
+    case image
+    case video
+    case imageAndVideo
+}
+
 @objc public protocol ImagePickerTrayControllerDelegate: class {
     
     @objc optional func controller(_ controller: ImagePickerTrayController, willSelectAsset asset: PHAsset, at indexPath: IndexPath)
@@ -29,6 +36,11 @@ public let ImagePickerTrayDidShow: Notification.Name = Notification.Name(rawValu
 
 public let ImagePickerTrayWillHide: Notification.Name = Notification.Name(rawValue: "ch.laurinbrandner.ImagePickerTrayWillHide")
 public let ImagePickerTrayDidHide: Notification.Name = Notification.Name(rawValue: "ch.laurinbrandner.ImagePickerTrayDidHide")
+
+public let ImagePickerTrayFrameUserInfoKey = "ImagePickerTrayFrame"
+public let ImagePickerTrayAnimationDurationUserInfoKey = "ImagePickerTrayAnimationDuration"
+
+fileprivate let animationDuration: TimeInterval = 0.2
 
 public class ImagePickerTrayController: UIViewController {
     
@@ -116,6 +128,14 @@ public class ImagePickerTrayController: UIViewController {
     
     public weak var delegate: ImagePickerTrayControllerDelegate?
   
+    public var allowsInteractivePresentation: Bool {
+        get {
+            return transitionController?.allowsInteractiveTransition ?? false
+        }
+        set {
+            transitionController?.allowsInteractiveTransition = newValue
+        }
+    }
     private var transitionController: TransitionController?
     
     // MARK: - Initialization
@@ -185,6 +205,42 @@ public class ImagePickerTrayController: UIViewController {
    
   typealias CompletionHandler = (_ success: Bool) -> Void
   
+  func reFetchAssets(completionHandler: @escaping CompletionHandler) {
+    self.assets.removeAll()
+    let options = PHFetchOptions()
+    options.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+    options.fetchLimit = 100
+    
+    let result = PHAsset.fetchAssets(with: options)
+    result.enumerateObjects({ asset, index, stop in
+      self.assets.append(asset)
+    })
+    
+   let selectedIndexPaths = self.collectionView.indexPathsForSelectedItems
+    
+  var newSelectedIndexPaths = [IndexPath]()
+    
+    for newIndexPath in selectedIndexPaths! {
+      
+      let indexPath = IndexPath(item: newIndexPath.item + 1 , section: newIndexPath.section)
+      
+      newSelectedIndexPaths.append(indexPath)
+    }
+    
+    self.collectionView.reloadData()
+    
+    for indexPathForSelection in newSelectedIndexPaths {
+      UIView.performWithoutAnimation {
+				self.collectionView.selectItem(at: indexPathForSelection, animated: false, scrollPosition: UICollectionView.ScrollPosition.bottom )
+      }
+     
+    }
+    self.collectionView.selectItem(at: IndexPath(item: 0, section: 2), animated: false, scrollPosition: .bottom)
+   
+    completionHandler(true)
+  }
+  
+  
     func fetchAssets() {
       
         let options = PHFetchOptions()
@@ -212,6 +268,11 @@ public class ImagePickerTrayController: UIViewController {
               completion(image)
             }
         }
+    }
+    
+    fileprivate func prefetchImages(for asset: PHAsset) {
+      let size = CGSize(width: 200, height: 200)
+      imageManager?.startCachingImages(for: [asset], targetSize: size, contentMode: .aspectFill, options: requestOptions)
     }
   
   
@@ -261,6 +322,16 @@ extension ImagePickerTrayController: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sections[section]
     }
+  
+//  public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+  //  if let cell = cell as? CameraCell {
+     
+   //   cell.cameraView = self.cameraController.view
+    //  DispatchQueue.main.async {
+      //  cell.cameraOverlayView = self.cameraController.cameraOverlayView
+    //  }
+//    }
+ // }
   
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {

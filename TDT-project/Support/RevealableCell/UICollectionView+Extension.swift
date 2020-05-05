@@ -128,6 +128,71 @@ extension UICollectionView: UIGestureRecognizerDelegate {
             }()
     }
     
+    public func registerNib(_ nib: UINib, forRevealableViewReuseIdentifier identifier: String) {
+        let regs = registrations
+        
+        guard regs[identifier] == nil else {
+            print("A revealableView with the identifier '\(identifier)' already exists -- '\(String(describing: regs[identifier]))'")
+            return
+        }
+        
+        regs[identifier] = nib
+    }
+    
+    public func registerClass(revealableViewClass viewClass: AnyClass, forRevealableViewReuseIdentifier identifier: String) {
+        let regs = registrations
+        
+        guard regs[identifier] == nil else {
+            print("A revealableView with the identifier '\(identifier)' already exists -- '\(String(describing: regs[identifier]))'")
+            return
+        }
+        
+        guard viewClass is RevealableView.Type else {
+            print("The viewClass '\(viewClass)' is not a subclass of RevealableView!")
+            return
+        }
+        
+        regs[identifier] = viewClass
+    }
+    
+    public func dequeueReusableRevealableView(withIdentifier identifier: String) -> RevealableView? {
+        let queue = reuseQueues.queueForIdentifier(identifier)
+      
+        if let view = queue.dequeueView() {
+            return view
+        }
+      
+        let regs = registrations
+        
+        if let nib = regs[identifier] as? UINib {
+            guard let view = nib.instantiate(withOwner: nil, options: nil).first as? RevealableView else {
+                print("The view returned from NIB: '\(nib)' is not a subclass of RevealableView!")
+                return nil
+            }
+            
+            view.reuseIdentifier = identifier
+            view.tableView = self
+            
+            addGestureRecognizer(revealPanGesture)
+            return view
+        }
+        
+        if let viewClass = regs[identifier] as? NSObject.Type {
+            guard let view = viewClass.init() as? RevealableView  else {
+                print("The view instantiated from Class: '\(viewClass)' is not a subclass of RevealableView!")
+                return nil
+            }
+            
+            view.reuseIdentifier = identifier
+            view.tableView = self
+            
+            addGestureRecognizer(revealPanGesture)
+            return view
+        }
+        
+        return nil
+    }
+    
     internal func prepareRevealableViewForReuse(_ view: RevealableView) {
         view.removeFromSuperview()
        
@@ -169,6 +234,17 @@ private final class RevealableViewsReuseQueue: NSObject {
     
     fileprivate func enqueue(_ view: RevealableView) {
         views.append(view)
+    }
+    
+    fileprivate func dequeueView() -> RevealableView? {
+        guard views.count > 0 else {
+            return nil
+        }
+        
+        let view = views.first
+        views.removeFirst()
+        
+        return view
     }
     
 }

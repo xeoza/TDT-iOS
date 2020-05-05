@@ -19,10 +19,6 @@ struct ScreenSize {
   static let frame = CGRect(x: 0, y: 0, width: ScreenSize.width, height: ScreenSize.height)
 }
 
-struct DeviceType {
-  static let iPhoneX = UIDevice.current.userInterfaceIdiom == .phone && (ScreenSize.maxLength == 812.0 || ScreenSize.maxLength == 896.0)
-}
-
 extension UIApplication {
   class func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
     if let navigationController = controller as? UINavigationController {
@@ -76,19 +72,27 @@ func topViewController(rootViewController: UIViewController?) -> UIViewControlle
   }
 }
 
+public let messageStatusRead = "Read"
+public let messageStatusSending = "Sending"
+public let messageStatusDelivered = "Delivered"
+
 let cameraAccessDeniedMessage = "TDT needs access to your camera to take photos and videos.\n\nPlease go to Settings –– Privacy –– Camera –– and set TDT to ON."
 let photoLibraryAccessDeniedMessage = "TDT needs access to your photo library to send photos and videos.\n\nPlease go to Settings –– Privacy –– Photos –– and set TDT to ON."
-
+let microphoneAccessDeniedMessage = "Falcon needs access to your microphone to record audio messages.\n\nPlease go to Settings –– Privacy –– Microphone –– and set Falcon to ON."
 let cameraAccessDeniedMessageProfilePicture = "TDT needs access to your camera to take photo for your profile.\n\nPlease go to Settings –– Privacy –– Camera –– and set TDT to ON."
 let photoLibraryAccessDeniedMessageProfilePicture = "TDT needs access to your photo library to select photo for your profile.\n\nPlease go to Settings –– Privacy –– Photos –– and set TDT to ON."
+
+let videoRecordedButLibraryUnavailableError = "To send a recorded video, it has to be saved to your photo library first. Please go to Settings –– Privacy –– Photos –– and set Falcon to ON."
 
 let basicErrorTitleForAlert = "Error"
 let basicTitleForAccessError = "Please Allow Access"
 let noInternetError = "Internet is not available. Please try again later"
+let copyingImageError = "You cannot copy not downloaded image, please wait until downloading finished"
 
 let deletionErrorMessage = "There was a problem when deleting. Try again later."
 let cameraNotExistsMessage = "You don't have camera"
 let thumbnailUploadError = "Failed to upload your image to database. Please, check your internet connection and try again."
+let fullsizePictureUploadError = "Failed to upload fullsize image to database. Please, check your internet connection and try again. Despite this error, thumbnail version of this picture has been uploaded, but you still should re-upload your fullsize image."
 
 extension String {
   
@@ -669,4 +673,82 @@ extension UITableView {
 		let indexPath = self.indexPathForRow(at: viewCenter)
 		return indexPath
 	}
+}
+
+struct DeviceType {
+  static let iPhone4orLess = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.maxLength < 568.0
+  static let iPhone5orSE = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.maxLength == 568.0
+  static let iPhone678 = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.maxLength == 667.0
+  static let iPhone678p = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.maxLength == 736.0
+  static let iPhoneX = UIDevice.current.userInterfaceIdiom == .phone && (ScreenSize.maxLength == 812.0 || ScreenSize.maxLength == 896.0)
+  
+  static let IS_IPAD = UIDevice.current.userInterfaceIdiom == .pad && ScreenSize.maxLength == 1024.0
+  static let IS_IPAD_PRO = UIDevice.current.userInterfaceIdiom == .pad && ScreenSize.maxLength == 1366.0
+}
+
+func dataFromAsset(asset: PHAsset) -> Data? {
+  
+  var finalData: Data?
+  let manager = PHImageManager.default()
+  let options = PHImageRequestOptions()
+  options.version = .current
+  options.deliveryMode = .fastFormat
+  options.isSynchronous = true
+  options.resizeMode = .exact
+  options.normalizedCropRect = CGRect(x: 0, y: 0, width: 1000, height: 1000)
+  manager.requestImageData(for: asset, options: options) { data, _, _, _ in
+    finalData = data
+  }
+  
+  return finalData
+}
+
+func uiImageFromAsset(phAsset: PHAsset) -> UIImage? {
+  
+  var img: UIImage?
+  let manager = PHImageManager.default()
+  let options = PHImageRequestOptions()
+  options.version = .current
+  options.deliveryMode = .fastFormat
+  options.resizeMode = .exact
+  options.isSynchronous = true
+  manager.requestImageData(for: phAsset, options: options) { data, _, _, _ in
+    
+    if let data = data {
+      img = UIImage(data: data)
+    }
+  }
+  return img
+}
+
+extension Data {
+  var asUIImage: UIImage? {
+    return UIImage(data: self)
+  }
+}
+
+extension UICollectionView {
+  func deselectAllItems(animated: Bool = false) {
+    for indexPath in self.indexPathsForSelectedItems ?? [] {
+      self.deselectItem(at: indexPath, animated: animated)
+    }
+  }
+}
+
+extension Array {
+  func insertionIndexOf(elem: Element, isOrderedBefore: (Element, Element) -> Bool) -> Int {
+    var lo = 0
+    var hi = self.count - 1
+    while lo <= hi {
+      let mid = (lo + hi)/2
+      if isOrderedBefore(self[mid], elem) {
+        lo = mid + 1
+      } else if isOrderedBefore(elem, self[mid]) {
+        hi = mid - 1
+      } else {
+        return mid // found at position mid
+      }
+    }
+    return lo // not found, would be inserted at position lo
+  }
 }
