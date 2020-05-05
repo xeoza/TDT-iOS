@@ -726,3 +726,11 @@ extension Data {
     return UIImage(data: self)
   }
 }
+
+extension UICollectionView {
+  func deselectAllItems(animated: Bool = false) {
+    for indexPath in self.indexPathsForSelectedItems ?? [] {
+      self.deselectItem(at: indexPath, animated: animated)
+    }
+  }
+}

@@ -131,6 +131,11 @@
 		E0BEDDEB2461857E006B98A7 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDEA2461857E006B98A7 /* ChatLogController.swift */; };
 		E0BEDDED24618A09006B98A7 /* ChatLogController+MediaPickerHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDEC24618A09006B98A7 /* ChatLogController+MediaPickerHandlers.swift */; };
 		E0BEDDF2246195F9006B98A7 /* ChatLogController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDF1246195F9006B98A7 /* ChatLogController+DataSource.swift */; };
+		E0BEDDF62461AFAF006B98A7 /* UploadProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDF52461AFAF006B98A7 /* UploadProgress.swift */; };
+		E0BEDDF82461AFD5006B98A7 /* InformationMessageSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDF72461AFD5006B98A7 /* InformationMessageSender.swift */; };
+		E0BEDDFA2461B005006B98A7 /* MessageSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDF92461B005006B98A7 /* MessageSender.swift */; };
+		E0BEDDFC2461B031006B98A7 /* StorageMediaUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDFB2461B031006B98A7 /* StorageMediaUploader.swift */; };
+		E0BEDDFF2461B1CB006B98A7 /* ChatLogController+MessageSenderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDFE2461B1CB006B98A7 /* ChatLogController+MessageSenderDelegate.swift */; };
 		E0E71A46245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */; };
 		E0E71A5324585755004922F6 /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5224585755004922F6 /* ContactsController.swift */; };
 		E0E71A5724585826004922F6 /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5624585826004922F6 /* ChatsTableViewController.swift */; };
@@ -281,6 +286,11 @@
 		E0BEDDEA2461857E006B98A7 /* ChatLogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
 		E0BEDDEC24618A09006B98A7 /* ChatLogController+MediaPickerHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatLogController+MediaPickerHandlers.swift"; sourceTree = "<group>"; };
 		E0BEDDF1246195F9006B98A7 /* ChatLogController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatLogController+DataSource.swift"; sourceTree = "<group>"; };
+		E0BEDDF52461AFAF006B98A7 /* UploadProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadProgress.swift; sourceTree = "<group>"; };
+		E0BEDDF72461AFD5006B98A7 /* InformationMessageSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationMessageSender.swift; sourceTree = "<group>"; };
+		E0BEDDF92461B005006B98A7 /* MessageSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSender.swift; sourceTree = "<group>"; };
+		E0BEDDFB2461B031006B98A7 /* StorageMediaUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageMediaUploader.swift; sourceTree = "<group>"; };
+		E0BEDDFE2461B1CB006B98A7 /* ChatLogController+MessageSenderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatLogController+MessageSenderDelegate.swift"; sourceTree = "<group>"; };
 		E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashScreenContainer+BiometricalControl.swift"; sourceTree = "<group>"; };
 		E0E71A5224585755004922F6 /* ContactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
 		E0E71A5624585826004922F6 /* ChatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
@@ -863,6 +873,8 @@
 		E0BEDDE9246184F2006B98A7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E0BEDDF32461AF83006B98A7 /* MessageSender */,
+				E0BEDDFD2461B1A3006B98A7 /* ChatLogController+Delegate */,
 				E0BEDDEE246195C9006B98A7 /* ChatLogController+DataSource+Delegate */,
 				E0BEDDEA2461857E006B98A7 /* ChatLogController.swift */,
 				E0BEDDEC24618A09006B98A7 /* ChatLogController+MediaPickerHandlers.swift */,
@@ -876,6 +888,33 @@
 				E0BEDDF1246195F9006B98A7 /* ChatLogController+DataSource.swift */,
 			);
 			path = "ChatLogController+DataSource+Delegate";
+			sourceTree = "<group>";
+		};
+		E0BEDDF32461AF83006B98A7 /* MessageSender */ = {
+			isa = PBXGroup;
+			children = (
+				E0BEDDF42461AF94006B98A7 /* Model */,
+				E0BEDDF72461AFD5006B98A7 /* InformationMessageSender.swift */,
+				E0BEDDF92461B005006B98A7 /* MessageSender.swift */,
+				E0BEDDFB2461B031006B98A7 /* StorageMediaUploader.swift */,
+			);
+			path = MessageSender;
+			sourceTree = "<group>";
+		};
+		E0BEDDF42461AF94006B98A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E0BEDDF52461AFAF006B98A7 /* UploadProgress.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E0BEDDFD2461B1A3006B98A7 /* ChatLogController+Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				E0BEDDFE2461B1CB006B98A7 /* ChatLogController+MessageSenderDelegate.swift */,
+			);
+			path = "ChatLogController+Delegate";
 			sourceTree = "<group>";
 		};
 		E0E71A4E245855D2004922F6 /* ChatsControllers */ = {
@@ -1148,6 +1187,7 @@
 				E095ADF023FE826C0068A4AA /* GeneralTabBarController.swift in Sources */,
 				E0BEDD88245FF965006B98A7 /* SelectedMediaCollectionCell+timerHandlers.swift in Sources */,
 				E0A9A7042418F41D00235774 /* INSPhotosInteractionAnimator.swift in Sources */,
+				E0BEDDF82461AFD5006B98A7 /* InformationMessageSender.swift in Sources */,
 				E0477EF2245B545E00632AA9 /* User.swift in Sources */,
 				E0477EE8245B51A500632AA9 /* ContactsFetcher.swift in Sources */,
 				E0A9A6F02418ECB800235774 /* UserDefaultsManager.swift in Sources */,
@@ -1172,6 +1212,7 @@
 				E0BEDD75245FED62006B98A7 /* GroupMembersManager.swift in Sources */,
 				E0E71A5924585887004922F6 /* AccountSettingsController.swift in Sources */,
 				E0BEDD84245FF87B006B98A7 /* ChatInputContainer+AttachedImagesCollectionConfig.swift in Sources */,
+				E0BEDDF62461AFAF006B98A7 /* UploadProgress.swift in Sources */,
 				E0BEDD69245F5C8C006B98A7 /* GroupProfileTableHeaderContainer.swift in Sources */,
 				E0A9A6EF2418ECB800235774 /* UICollectionView+Extension.swift in Sources */,
 				E0A9A7062418F41D00235774 /* INSScalingImageView.swift in Sources */,
@@ -1180,13 +1221,16 @@
 				E0A9A6D62418ECB800235774 /* CameraOverlayView.swift in Sources */,
 				E0A9A7072418F41D00235774 /* INSPhotosOverlayView.swift in Sources */,
 				4B4F452F1F32230C00A6FF96 /* AppDelegate.swift in Sources */,
+				E0BEDDFC2461B031006B98A7 /* StorageMediaUploader.swift in Sources */,
 				E0BEDD86245FF8E4006B98A7 /* SelectedMediaCollectionCell.swift in Sources */,
 				E0BEDDC624601280006B98A7 /* BaseMediaMessageCell.swift in Sources */,
+				E0BEDDFF2461B1CB006B98A7 /* ChatLogController+MessageSenderDelegate.swift in Sources */,
 				E0BEDD41245EF3A4006B98A7 /* InAppNotificationManager.swift in Sources */,
 				E0BEDD55245F56E6006B98A7 /* SelectParticipantsTableView.swift in Sources */,
 				E0BEDDD324617762006B98A7 /* FalconTextView.swift in Sources */,
 				E0BEDD8E245FFA4E006B98A7 /* VoiceRecordingContainerView.swift in Sources */,
 				E0BEDDF2246195F9006B98A7 /* ChatLogController+DataSource.swift in Sources */,
+				E0BEDDFA2461B005006B98A7 /* MessageSender.swift in Sources */,
 				E0BEDD61245F5962006B98A7 /* SelectChatTableViewController.swift in Sources */,
 				E0A9A6E42418ECB800235774 /* EnterVerificationContainerView.swift in Sources */,
 				E0A9A6E72418ECB800235774 /* EnterPhoneNumberContainerView.swift in Sources */,

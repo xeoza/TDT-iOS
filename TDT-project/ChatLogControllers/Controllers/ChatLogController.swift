@@ -590,7 +590,24 @@ class ChatLogController: UICollectionViewController {
 		return true
 	}
 
-	@objc func handleSend() {}
+	@objc func handleSend() {
+
+		guard currentReachabilityStatus != .notReachable else {
+			basicErrorAlertWith(title: basicErrorTitleForAlert, message: noInternetError, controller: self)
+			return
+		}
+
+		isTyping = false
+		let text = inputContainerView.inputTextView.text
+		let media = inputContainerView.selectedMedia
+		if mediaPickerController != nil {
+			mediaPickerController.collectionView.deselectAllItems()
+		}
+		inputContainerView.prepareForSend()
+		let messageSender = MessageSender(conversation, text: text, media: media)
+		messageSender.delegate = self
+		messageSender.sendMessage()
+	}
 
 	// MARK: - Internal
 
