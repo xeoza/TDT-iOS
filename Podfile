@@ -9,6 +9,7 @@ target 'TDT-project' do
   
   pod 'SDWebImage', :modular_headers => true
   pod 'PhoneNumberKit'
+	pod 'FLAnimatedImage', :modular_headers => true
 	pod 'FTPopOverMenu_Swift', '~> 0.2.1'
   pod 'CropViewController'
   pod 'ARSLineProgress'

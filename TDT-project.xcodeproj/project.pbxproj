@@ -121,6 +121,13 @@
 		E0BEDDCE246176C6006B98A7 /* IncomingVoiceMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDCD246176C6006B98A7 /* IncomingVoiceMessageCell.swift */; };
 		E0BEDDD024617707006B98A7 /* IncomingTextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDCF24617707006B98A7 /* IncomingTextMessageCell.swift */; };
 		E0BEDDD324617762006B98A7 /* FalconTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDD224617762006B98A7 /* FalconTextView.swift */; };
+		E0BEDDD6246178AF006B98A7 /* OutgoingTextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDD5246178AF006B98A7 /* OutgoingTextMessageCell.swift */; };
+		E0BEDDD824617973006B98A7 /* OutgoingVoiceMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDD724617973006B98A7 /* OutgoingVoiceMessageCell.swift */; };
+		E0BEDDDB24617A3D006B98A7 /* OutgoingPhotoMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDDA24617A3D006B98A7 /* OutgoingPhotoMessageCell.swift */; };
+		E0BEDDDE24617C19006B98A7 /* TypingIndicatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDDD24617C19006B98A7 /* TypingIndicatorCell.swift */; };
+		E0BEDDE124617CA9006B98A7 /* TimestampView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0BEDDE024617CA9006B98A7 /* TimestampView.xib */; };
+		E0BEDDE324617D00006B98A7 /* TimestampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDE224617D00006B98A7 /* TimestampView.swift */; };
+		E0BEDDE824617EB8006B98A7 /* InformationMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDE724617EB8006B98A7 /* InformationMessageCell.swift */; };
 		E0E71A46245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */; };
 		E0E71A5324585755004922F6 /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5224585755004922F6 /* ContactsController.swift */; };
 		E0E71A5724585826004922F6 /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5624585826004922F6 /* ChatsTableViewController.swift */; };
@@ -261,6 +268,13 @@
 		E0BEDDCD246176C6006B98A7 /* IncomingVoiceMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingVoiceMessageCell.swift; sourceTree = "<group>"; };
 		E0BEDDCF24617707006B98A7 /* IncomingTextMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingTextMessageCell.swift; sourceTree = "<group>"; };
 		E0BEDDD224617762006B98A7 /* FalconTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconTextView.swift; sourceTree = "<group>"; };
+		E0BEDDD5246178AF006B98A7 /* OutgoingTextMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingTextMessageCell.swift; sourceTree = "<group>"; };
+		E0BEDDD724617973006B98A7 /* OutgoingVoiceMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingVoiceMessageCell.swift; sourceTree = "<group>"; };
+		E0BEDDDA24617A3D006B98A7 /* OutgoingPhotoMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingPhotoMessageCell.swift; sourceTree = "<group>"; };
+		E0BEDDDD24617C19006B98A7 /* TypingIndicatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingIndicatorCell.swift; sourceTree = "<group>"; };
+		E0BEDDE024617CA9006B98A7 /* TimestampView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimestampView.xib; sourceTree = "<group>"; };
+		E0BEDDE224617D00006B98A7 /* TimestampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampView.swift; sourceTree = "<group>"; };
+		E0BEDDE724617EB8006B98A7 /* InformationMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationMessageCell.swift; sourceTree = "<group>"; };
 		E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashScreenContainer+BiometricalControl.swift"; sourceTree = "<group>"; };
 		E0E71A5224585755004922F6 /* ContactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
 		E0E71A5624585826004922F6 /* ChatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
@@ -756,6 +770,10 @@
 		E0BEDD9A24600A39006B98A7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E0BEDDE424617E95006B98A7 /* Information */,
+				E0BEDDDF24617C68006B98A7 /* RevealableCell */,
+				E0BEDDDC24617BF3006B98A7 /* TypingIndicator */,
+				E0BEDDD42461786E006B98A7 /* Outgoing */,
 				E0BEDDCA246173C2006B98A7 /* Incoming */,
 				E0BEDD9B24600A48006B98A7 /* Base */,
 			);
@@ -798,6 +816,41 @@
 				E0BEDDD224617762006B98A7 /* FalconTextView.swift */,
 			);
 			path = FalconTextView;
+			sourceTree = "<group>";
+		};
+		E0BEDDD42461786E006B98A7 /* Outgoing */ = {
+			isa = PBXGroup;
+			children = (
+				E0BEDDD5246178AF006B98A7 /* OutgoingTextMessageCell.swift */,
+				E0BEDDD724617973006B98A7 /* OutgoingVoiceMessageCell.swift */,
+				E0BEDDDA24617A3D006B98A7 /* OutgoingPhotoMessageCell.swift */,
+			);
+			path = Outgoing;
+			sourceTree = "<group>";
+		};
+		E0BEDDDC24617BF3006B98A7 /* TypingIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				E0BEDDDD24617C19006B98A7 /* TypingIndicatorCell.swift */,
+			);
+			path = TypingIndicator;
+			sourceTree = "<group>";
+		};
+		E0BEDDDF24617C68006B98A7 /* RevealableCell */ = {
+			isa = PBXGroup;
+			children = (
+				E0BEDDE024617CA9006B98A7 /* TimestampView.xib */,
+				E0BEDDE224617D00006B98A7 /* TimestampView.swift */,
+			);
+			path = RevealableCell;
+			sourceTree = "<group>";
+		};
+		E0BEDDE424617E95006B98A7 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				E0BEDDE724617EB8006B98A7 /* InformationMessageCell.swift */,
+			);
+			path = Information;
 			sourceTree = "<group>";
 		};
 		E0E71A4E245855D2004922F6 /* ChatsControllers */ = {
@@ -923,6 +976,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0A9A7052418F41D00235774 /* INSPhotoGallery.bundle in Resources */,
+				E0BEDDE124617CA9006B98A7 /* TimestampView.xib in Resources */,
 				4B4F45381F32230C00A6FF96 /* Assets.xcassets in Resources */,
 				E0A9A6E92418ECB800235774 /* CallingCodes.plist in Resources */,
 				E0BEDD7A245FEDBF006B98A7 /* typingIndicator.gif in Resources */,
@@ -966,6 +1020,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-TDT-project/Pods-TDT-project-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ARSLineProgress/ARSLineProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/CropViewController/CropViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/FTPopOverMenu_Swift/FTPopOverMenu_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -979,6 +1034,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARSLineProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CropViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FTPopOverMenu_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -1024,6 +1080,7 @@
 				E0E71A46245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift in Sources */,
 				E0BEDDCE246176C6006B98A7 /* IncomingVoiceMessageCell.swift in Sources */,
 				E0BEDD47245F1783006B98A7 /* ChatsTableViewController+SearchHandlers.swift in Sources */,
+				E0BEDDE824617EB8006B98A7 /* InformationMessageCell.swift in Sources */,
 				E0BEDD53245F5683006B98A7 /* CollectionViewLeftAlignFlowLayout.swift in Sources */,
 				E0A9A6D92418ECB800235774 /* ImageCell.swift in Sources */,
 				4BAEE48721272C4F0045AB10 /* OnboardingContainerView.swift in Sources */,
@@ -1034,6 +1091,7 @@
 				E0477EE5245B51A500632AA9 /* FalconUsersTableViewCell.swift in Sources */,
 				E0BEDD4C245F48C6006B98A7 /* UserCell+ConfigureCell.swift in Sources */,
 				E0BEDD43245EF514006B98A7 /* ConversationsFetcher.swift in Sources */,
+				E0BEDDD824617973006B98A7 /* OutgoingVoiceMessageCell.swift in Sources */,
 				E0BEDDD024617707006B98A7 /* IncomingTextMessageCell.swift in Sources */,
 				E0A9A6682418E61900235774 /* UserProfileAvatarOpenerDelegate.swift in Sources */,
 				E0477EE9245B51A500632AA9 /* FalconUsersFetcher.swift in Sources */,
@@ -1044,6 +1102,7 @@
 				E0E71A5324585755004922F6 /* ContactsController.swift in Sources */,
 				E0BEDD63245F59AD006B98A7 /* SelectChatTableViewController+SearchHandlers.swift in Sources */,
 				E0A9A6672418E61900235774 /* UserProfileController.swift in Sources */,
+				E0BEDDE324617D00006B98A7 /* TimestampView.swift in Sources */,
 				E0BEDDC22460119B006B98A7 /* BaseMessageCell+CellDeletionHandlers.swift in Sources */,
 				E0A9A6E32418ECB800235774 /* EnterVerificationCodeController.swift in Sources */,
 				E0477EE6245B51A500632AA9 /* ContactsTableViewCell.swift in Sources */,
@@ -1057,6 +1116,7 @@
 				E0BEDD4A245F47C7006B98A7 /* UserCell.swift in Sources */,
 				E0A9A6D42418ECB800235774 /* Announcement.swift in Sources */,
 				E0BEDDC924617121006B98A7 /* RoundProgressView.swift in Sources */,
+				E0BEDDD6246178AF006B98A7 /* OutgoingTextMessageCell.swift in Sources */,
 				E09B2CB32449D5830051F39F /* ThemeManager.swift in Sources */,
 				E0A9A7022418F41D00235774 /* INSPhotosViewController.swift in Sources */,
 				E0477EEA245B51A500632AA9 /* ViewPlaceholder.swift in Sources */,
@@ -1066,6 +1126,7 @@
 				E0477EF2245B545E00632AA9 /* User.swift in Sources */,
 				E0477EE8245B51A500632AA9 /* ContactsFetcher.swift in Sources */,
 				E0A9A6F02418ECB800235774 /* UserDefaultsManager.swift in Sources */,
+				E0BEDDDE24617C19006B98A7 /* TypingIndicatorCell.swift in Sources */,
 				E0477EE7245B51A500632AA9 /* CurrentUserTableViewCell.swift in Sources */,
 				E0BEDD6B245F5CBF006B98A7 /* GroupPictureAvatarOpenerDelegate.swift in Sources */,
 				E0477EF3245B545E00632AA9 /* MediaObject.swift in Sources */,
@@ -1120,6 +1181,7 @@
 				E0BEDD71245FECB0006B98A7 /* MessagesFetcher.swift in Sources */,
 				E0A9A6D32418ECB800235774 /* AnnouncementShowing.swift in Sources */,
 				E0BEDD8C245FF9FB006B98A7 /* VoiceRecordingViewController.swift in Sources */,
+				E0BEDDDB24617A3D006B98A7 /* OutgoingPhotoMessageCell.swift in Sources */,
 				E0A9A7012418F41D00235774 /* INSPhotosDataSource.swift in Sources */,
 				E0BEDD91245FFD75006B98A7 /* MediaPickerControllerNew.swift in Sources */,
 				E0BEDD50245F5618006B98A7 /* SelectParticipantsViewController.swift in Sources */,
