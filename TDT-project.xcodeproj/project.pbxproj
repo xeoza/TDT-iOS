@@ -136,6 +136,12 @@
 		E0BEDDFA2461B005006B98A7 /* MessageSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDF92461B005006B98A7 /* MessageSender.swift */; };
 		E0BEDDFC2461B031006B98A7 /* StorageMediaUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDFB2461B031006B98A7 /* StorageMediaUploader.swift */; };
 		E0BEDDFF2461B1CB006B98A7 /* ChatLogController+MessageSenderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDDFE2461B1CB006B98A7 /* ChatLogController+MessageSenderDelegate.swift */; };
+		E0BEDE012461B74F006B98A7 /* ChatLogController+GroupMembersDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE002461B74F006B98A7 /* ChatLogController+GroupMembersDelegate.swift */; };
+		E0BEDE032461B77E006B98A7 /* ChatLogController+ChatHistoryFetcherDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE022461B77E006B98A7 /* ChatLogController+ChatHistoryFetcherDelegate.swift */; };
+		E0BEDE052461B7A5006B98A7 /* ChatLogController+CollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE042461B7A5006B98A7 /* ChatLogController+CollectionDelegate.swift */; };
+		E0BEDE072461B7EB006B98A7 /* ChatLogController+PhotoEditorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE062461B7EB006B98A7 /* ChatLogController+PhotoEditorDelegate.swift */; };
+		E0BEDE092461B84F006B98A7 /* ChatLogController+VoiceRecordingHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE082461B84F006B98A7 /* ChatLogController+VoiceRecordingHandlers.swift */; };
+		E0BEDE0B2461B874006B98A7 /* ChatLogController+ImageZoomHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE0A2461B874006B98A7 /* ChatLogController+ImageZoomHandlers.swift */; };
 		E0E71A46245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */; };
 		E0E71A5324585755004922F6 /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5224585755004922F6 /* ContactsController.swift */; };
 		E0E71A5724585826004922F6 /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5624585826004922F6 /* ChatsTableViewController.swift */; };
@@ -291,6 +297,12 @@
 		E0BEDDF92461B005006B98A7 /* MessageSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSender.swift; sourceTree = "<group>"; };
 		E0BEDDFB2461B031006B98A7 /* StorageMediaUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageMediaUploader.swift; sourceTree = "<group>"; };
 		E0BEDDFE2461B1CB006B98A7 /* ChatLogController+MessageSenderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatLogController+MessageSenderDelegate.swift"; sourceTree = "<group>"; };
+		E0BEDE002461B74F006B98A7 /* ChatLogController+GroupMembersDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatLogController+GroupMembersDelegate.swift"; sourceTree = "<group>"; };
+		E0BEDE022461B77E006B98A7 /* ChatLogController+ChatHistoryFetcherDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatLogController+ChatHistoryFetcherDelegate.swift"; sourceTree = "<group>"; };
+		E0BEDE042461B7A5006B98A7 /* ChatLogController+CollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatLogController+CollectionDelegate.swift"; sourceTree = "<group>"; };
+		E0BEDE062461B7EB006B98A7 /* ChatLogController+PhotoEditorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatLogController+PhotoEditorDelegate.swift"; sourceTree = "<group>"; };
+		E0BEDE082461B84F006B98A7 /* ChatLogController+VoiceRecordingHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatLogController+VoiceRecordingHandlers.swift"; sourceTree = "<group>"; };
+		E0BEDE0A2461B874006B98A7 /* ChatLogController+ImageZoomHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatLogController+ImageZoomHandlers.swift"; sourceTree = "<group>"; };
 		E0E71A45245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashScreenContainer+BiometricalControl.swift"; sourceTree = "<group>"; };
 		E0E71A5224585755004922F6 /* ContactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
 		E0E71A5624585826004922F6 /* ChatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
@@ -878,6 +890,8 @@
 				E0BEDDEE246195C9006B98A7 /* ChatLogController+DataSource+Delegate */,
 				E0BEDDEA2461857E006B98A7 /* ChatLogController.swift */,
 				E0BEDDEC24618A09006B98A7 /* ChatLogController+MediaPickerHandlers.swift */,
+				E0BEDE082461B84F006B98A7 /* ChatLogController+VoiceRecordingHandlers.swift */,
+				E0BEDE0A2461B874006B98A7 /* ChatLogController+ImageZoomHandlers.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -913,6 +927,10 @@
 			isa = PBXGroup;
 			children = (
 				E0BEDDFE2461B1CB006B98A7 /* ChatLogController+MessageSenderDelegate.swift */,
+				E0BEDE002461B74F006B98A7 /* ChatLogController+GroupMembersDelegate.swift */,
+				E0BEDE022461B77E006B98A7 /* ChatLogController+ChatHistoryFetcherDelegate.swift */,
+				E0BEDE042461B7A5006B98A7 /* ChatLogController+CollectionDelegate.swift */,
+				E0BEDE062461B7EB006B98A7 /* ChatLogController+PhotoEditorDelegate.swift */,
 			);
 			path = "ChatLogController+Delegate";
 			sourceTree = "<group>";
@@ -1141,6 +1159,8 @@
 				E0A9A6652418E61900235774 /* UserProfileDataDatabaseUpdater.swift in Sources */,
 				E0A9A6E02418ECB800235774 /* Public.swift in Sources */,
 				E0477EDC245B518000632AA9 /* ContactsController+SearchHandlers.swift in Sources */,
+				E0BEDE072461B7EB006B98A7 /* ChatLogController+PhotoEditorDelegate.swift in Sources */,
+				E0BEDE052461B7A5006B98A7 /* ChatLogController+CollectionDelegate.swift in Sources */,
 				E0E71A46245826F7004922F6 /* SplashScreenContainer+BiometricalControl.swift in Sources */,
 				E0BEDDCE246176C6006B98A7 /* IncomingVoiceMessageCell.swift in Sources */,
 				E0BEDD47245F1783006B98A7 /* ChatsTableViewController+SearchHandlers.swift in Sources */,
@@ -1184,6 +1204,7 @@
 				E09B2CB32449D5830051F39F /* ThemeManager.swift in Sources */,
 				E0A9A7022418F41D00235774 /* INSPhotosViewController.swift in Sources */,
 				E0477EEA245B51A500632AA9 /* ViewPlaceholder.swift in Sources */,
+				E0BEDE092461B84F006B98A7 /* ChatLogController+VoiceRecordingHandlers.swift in Sources */,
 				E095ADF023FE826C0068A4AA /* GeneralTabBarController.swift in Sources */,
 				E0BEDD88245FF965006B98A7 /* SelectedMediaCollectionCell+timerHandlers.swift in Sources */,
 				E0A9A7042418F41D00235774 /* INSPhotosInteractionAnimator.swift in Sources */,
@@ -1208,6 +1229,7 @@
 				E0A9A6F22418ECB800235774 /* CenteredCollectionViewFlowLayout.swift in Sources */,
 				E0477EF0245B545E00632AA9 /* Conversation.swift in Sources */,
 				E0BEDDED24618A09006B98A7 /* ChatLogController+MediaPickerHandlers.swift in Sources */,
+				E0BEDE012461B74F006B98A7 /* ChatLogController+GroupMembersDelegate.swift in Sources */,
 				E0A9A6EE2418ECB800235774 /* RevealableView.swift in Sources */,
 				E0BEDD75245FED62006B98A7 /* GroupMembersManager.swift in Sources */,
 				E0E71A5924585887004922F6 /* AccountSettingsController.swift in Sources */,
@@ -1217,6 +1239,7 @@
 				E0A9A6EF2418ECB800235774 /* UICollectionView+Extension.swift in Sources */,
 				E0A9A7062418F41D00235774 /* INSScalingImageView.swift in Sources */,
 				E0A9A6E82418ECB800235774 /* Country.swift in Sources */,
+				E0BEDE032461B77E006B98A7 /* ChatLogController+ChatHistoryFetcherDelegate.swift in Sources */,
 				E0BEDD73245FED3A006B98A7 /* ChatLogHistoryFetcher.swift in Sources */,
 				E0A9A6D62418ECB800235774 /* CameraOverlayView.swift in Sources */,
 				E0A9A7072418F41D00235774 /* INSPhotosOverlayView.swift in Sources */,
@@ -1247,6 +1270,7 @@
 				E0A9A6F52418ECB800235774 /* AvatarOpenerOverlay.swift in Sources */,
 				E0A9A6DE2418ECB800235774 /* UIImageExtensions.swift in Sources */,
 				E0A9A6D22418ECB800235774 /* UIView+Extensions.swift in Sources */,
+				E0BEDE0B2461B874006B98A7 /* ChatLogController+ImageZoomHandlers.swift in Sources */,
 				E0BEDDC0246010AD006B98A7 /* BaseMessageCell.swift in Sources */,
 				E0A9A6D82418ECB800235774 /* CameraCell.swift in Sources */,
 				E0A9A6D72418ECB800235774 /* ActionCell.swift in Sources */,

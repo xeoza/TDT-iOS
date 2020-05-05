@@ -322,7 +322,7 @@ class ChatsTableViewController: UITableViewController {
 		return cell
 	}
 	
-//	var chatLogController: ChatLogController? = nil
+	var chatLogController: ChatLogController? = nil
 	var messagesFetcher: MessagesFetcher? = nil
 
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -336,6 +336,7 @@ class ChatsTableViewController: UITableViewController {
 		conversation = unpinnedConversation
 		}
 	
+		chatLogController = ChatLogController(collectionViewLayout: AutoSizingCollectionViewFlowLayout())
 		messagesFetcher = MessagesFetcher()
 		messagesFetcher?.delegate = self
 		messagesFetcher?.loadMessagesData(for: conversation)
@@ -345,11 +346,32 @@ class ChatsTableViewController: UITableViewController {
 extension ChatsTableViewController: MessagesDelegate {
   
   func messages(shouldChangeMessageStatusToReadAt reference: DatabaseReference) {
-    
+    chatLogController?.updateMessageStatus(messageRef: reference)
   }
   
   func messages(shouldBeUpdatedTo messages: [Message], conversation: Conversation) {
+	  chatLogController?.hidesBottomBarWhenPushed = true
+	  chatLogController?.messagesFetcher = messagesFetcher
+	  chatLogController?.messages = messages
+	  chatLogController?.conversation = conversation
    
+	  if let membersIDs = conversation.chatParticipantsIDs, let uid = Auth.auth().currentUser?.uid, membersIDs.contains(uid) {
+		chatLogController?.observeTypingIndicator()
+		chatLogController?.configureTitleViewWithOnlineStatus()
+	  }
+	  
+	  chatLogController?.messagesFetcher.collectionDelegate = chatLogController
+	  guard let destination = chatLogController else { return }
+	  
+	  if #available(iOS 11.0, *) {
+	  } else {
+		self.chatLogController?.startCollectionViewAtBottom()
+	  }
+	  
+	  navigationController?.pushViewController(destination, animated: true)
+	  chatLogController = nil
+	  messagesFetcher?.delegate = nil
+	  messagesFetcher = nil
   }
 }
 

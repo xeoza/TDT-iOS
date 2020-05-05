@@ -402,8 +402,8 @@ class ChatLogController: UICollectionViewController {
 																   action: #selector(ChatLogController.toggleTextView))
 		inputTextViewTapGestureRecognizer.delegate = inputContainerView
 
-//	  chatLogHistoryFetcher.delegate = self
-//	  groupMembersManager.delegate = self
+		chatLogHistoryFetcher.delegate = self
+		groupMembersManager.delegate = self
 		groupMembersManager.observeMembersChanges(conversation)
 
 		view.backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
