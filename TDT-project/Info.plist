@@ -40,7 +40,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>To take photos and videos and send them via messages </string>
 	<key>NSContactsUsageDescription</key>
-	<string>To find your friends who also use Falcon.</string>
+	<string>To find your friends who also use TDT.</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>To get access to your chats</string>
 	<key>NSMicrophoneUsageDescription</key>

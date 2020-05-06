@@ -460,6 +460,33 @@ extension Date {
   }
 }
 
+extension UITableViewCell {
+  var selectionColor: UIColor {
+    set {
+      let view = UIView()
+      view.backgroundColor = newValue
+
+      self.selectedBackgroundView = view
+    }
+    get {
+      return self.selectedBackgroundView?.backgroundColor ?? UIColor.clear
+    }
+  }
+}
+
+extension FileManager {
+  func clearTemp() {
+    do {
+      let tmpDirectory = try FileManager.default.contentsOfDirectory(atPath: NSTemporaryDirectory())
+      try tmpDirectory.forEach { file in
+        let path = String.init(format: "%@%@", NSTemporaryDirectory(), file)
+        try FileManager.default.removeItem(atPath: path)
+      }
+    } catch {
+      print(error)
+    }
+  }
+}
 
 extension UIImageView {
   

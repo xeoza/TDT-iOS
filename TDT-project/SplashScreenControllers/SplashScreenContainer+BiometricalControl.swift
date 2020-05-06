@@ -36,7 +36,7 @@ extension SplashScreenContainer {
   
   @objc func authenticationWithTouchID() {
     var authError: NSError?
-    let reason = "To get access to the Falcon Messenger"
+    let reason = "To get access to the TDT Messenger"
     temporaryDisableNotifications()
     
     guard localAuthenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError) else {
