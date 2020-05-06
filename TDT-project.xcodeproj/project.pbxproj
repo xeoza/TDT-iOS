@@ -12,6 +12,7 @@
 		4B4F45381F32230C00A6FF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B4F45371F32230C00A6FF96 /* Assets.xcassets */; };
 		4BAEE48621272C4F0045AB10 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEE47D21272C4F0045AB10 /* OnboardingController.swift */; };
 		4BAEE48721272C4F0045AB10 /* OnboardingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEE47E21272C4F0045AB10 /* OnboardingContainerView.swift */; };
+		B1BB468BEEFE7EA8EA8A02A3 /* libPods-TDTTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F24AC5B42A93478A5728CCAA /* libPods-TDTTests.a */; };
 		E0477EDB245B518000632AA9 /* ContactsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477ED9245B517F00632AA9 /* ContactsDetailController.swift */; };
 		E0477EDC245B518000632AA9 /* ContactsController+SearchHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477EDA245B518000632AA9 /* ContactsController+SearchHandlers.swift */; };
 		E0477EE5245B51A500632AA9 /* FalconUsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477EDE245B51A500632AA9 /* FalconUsersTableViewCell.swift */; };
@@ -142,6 +143,7 @@
 		E0BEDE072461B7EB006B98A7 /* ChatLogController+PhotoEditorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE062461B7EB006B98A7 /* ChatLogController+PhotoEditorDelegate.swift */; };
 		E0BEDE092461B84F006B98A7 /* ChatLogController+VoiceRecordingHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE082461B84F006B98A7 /* ChatLogController+VoiceRecordingHandlers.swift */; };
 		E0BEDE0B2461B874006B98A7 /* ChatLogController+ImageZoomHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE0A2461B874006B98A7 /* ChatLogController+ImageZoomHandlers.swift */; };
+		E0BEDE21246238DB006B98A7 /* TDTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE20246238DB006B98A7 /* TDTTests.swift */; };
 		E0E2A7FD2461E47700F1C763 /* AccountSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E2A7EA2461E47700F1C763 /* AccountSettingsTableViewCell.swift */; };
 		E0E2A7FE2461E47700F1C763 /* AccountSettingsController+nameEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E2A7EB2461E47700F1C763 /* AccountSettingsController+nameEditing.swift */; };
 		E0E2A7FF2461E47700F1C763 /* AccountSettingsAvatarOpenerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E2A7EC2461E47700F1C763 /* AccountSettingsAvatarOpenerDelegate.swift */; };
@@ -160,6 +162,16 @@
 		E0E71A5924585887004922F6 /* AccountSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E71A5824585887004922F6 /* AccountSettingsController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E0BEDE23246238DB006B98A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B4F45231F32230C00A6FF96 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B4F452A1F32230C00A6FF96;
+			remoteInfo = "TDT-project";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		4B9AF38E1F3B9B6E00A3934D /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -174,6 +186,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		075F9A63F026C2A21B127115 /* Pods-TDTTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDTTests.release.xcconfig"; path = "Target Support Files/Pods-TDTTests/Pods-TDTTests.release.xcconfig"; sourceTree = "<group>"; };
 		4B4F452B1F32230C00A6FF96 /* TDT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4F452E1F32230C00A6FF96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B4F45371F32230C00A6FF96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -315,6 +328,9 @@
 		E0BEDE062461B7EB006B98A7 /* ChatLogController+PhotoEditorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatLogController+PhotoEditorDelegate.swift"; sourceTree = "<group>"; };
 		E0BEDE082461B84F006B98A7 /* ChatLogController+VoiceRecordingHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatLogController+VoiceRecordingHandlers.swift"; sourceTree = "<group>"; };
 		E0BEDE0A2461B874006B98A7 /* ChatLogController+ImageZoomHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatLogController+ImageZoomHandlers.swift"; sourceTree = "<group>"; };
+		E0BEDE1E246238DB006B98A7 /* TDTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0BEDE20246238DB006B98A7 /* TDTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDTTests.swift; sourceTree = "<group>"; };
+		E0BEDE22246238DB006B98A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0E2A7EA2461E47700F1C763 /* AccountSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		E0E2A7EB2461E47700F1C763 /* AccountSettingsController+nameEditing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccountSettingsController+nameEditing.swift"; sourceTree = "<group>"; };
 		E0E2A7EC2461E47700F1C763 /* AccountSettingsAvatarOpenerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSettingsAvatarOpenerDelegate.swift; sourceTree = "<group>"; };
@@ -331,6 +347,8 @@
 		E0E71A5224585755004922F6 /* ContactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
 		E0E71A5624585826004922F6 /* ChatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
 		E0E71A5824585887004922F6 /* AccountSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsController.swift; sourceTree = "<group>"; };
+		F24AC5B42A93478A5728CCAA /* libPods-TDTTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TDTTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3BC92A9E30DEB97D5722747 /* Pods-TDTTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDTTests.debug.xcconfig"; path = "Target Support Files/Pods-TDTTests/Pods-TDTTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +360,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E0BEDE1B246238DB006B98A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1BB468BEEFE7EA8EA8A02A3 /* libPods-TDTTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -349,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				4B4F452D1F32230C00A6FF96 /* TDT-project */,
+				E0BEDE1F246238DB006B98A7 /* TDTTests */,
 				4B4F452C1F32230C00A6FF96 /* Products */,
 				7E8FA8B62C065E105C730F2E /* Pods */,
 				CFD73E72E9C03971DE331AEF /* Frameworks */,
@@ -359,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				4B4F452B1F32230C00A6FF96 /* TDT.app */,
+				E0BEDE1E246238DB006B98A7 /* TDTTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -408,6 +436,8 @@
 			children = (
 				A7E91611BD823692429B49F2 /* Pods-TDT-project.debug.xcconfig */,
 				A254D4D6ED95219C8036E043 /* Pods-TDT-project.release.xcconfig */,
+				F3BC92A9E30DEB97D5722747 /* Pods-TDTTests.debug.xcconfig */,
+				075F9A63F026C2A21B127115 /* Pods-TDTTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -416,6 +446,7 @@
 			isa = PBXGroup;
 			children = (
 				809B26A98B43F0D86F89BEF8 /* Pods_TDT_project.framework */,
+				F24AC5B42A93478A5728CCAA /* libPods-TDTTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -959,6 +990,15 @@
 			path = "ChatLogController+Delegate";
 			sourceTree = "<group>";
 		};
+		E0BEDE1F246238DB006B98A7 /* TDTTests */ = {
+			isa = PBXGroup;
+			children = (
+				E0BEDE20246238DB006B98A7 /* TDTTests.swift */,
+				E0BEDE22246238DB006B98A7 /* Info.plist */,
+			);
+			path = TDTTests;
+			sourceTree = "<group>";
+		};
 		E0E2A7ED2461E47700F1C763 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -1100,13 +1140,32 @@
 			productReference = 4B4F452B1F32230C00A6FF96 /* TDT.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E0BEDE1D246238DB006B98A7 /* TDTTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0BEDE27246238DB006B98A7 /* Build configuration list for PBXNativeTarget "TDTTests" */;
+			buildPhases = (
+				E11BCF52440D5FC335E570AC /* [CP] Check Pods Manifest.lock */,
+				E0BEDE1A246238DB006B98A7 /* Sources */,
+				E0BEDE1B246238DB006B98A7 /* Frameworks */,
+				E0BEDE1C246238DB006B98A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0BEDE24246238DB006B98A7 /* PBXTargetDependency */,
+			);
+			name = TDTTests;
+			productName = TDTTests;
+			productReference = E0BEDE1E246238DB006B98A7 /* TDTTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		4B4F45231F32230C00A6FF96 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Danila Zykin";
 				TargetAttributes = {
@@ -1124,6 +1183,12 @@
 							};
 						};
 					};
+					E0BEDE1D246238DB006B98A7 = {
+						CreatedOnToolsVersion = 11.4.1;
+						DevelopmentTeam = 934LRL6GBZ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4B4F452A1F32230C00A6FF96;
+					};
 				};
 			};
 			buildConfigurationList = 4B4F45261F32230C00A6FF96 /* Build configuration list for PBXProject "TDT-project" */;
@@ -1140,6 +1205,7 @@
 			projectRoot = "";
 			targets = (
 				4B4F452A1F32230C00A6FF96 /* TDT-project */,
+				E0BEDE1D246238DB006B98A7 /* TDTTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1157,6 +1223,13 @@
 				E0BEDD79245FEDBF006B98A7 /* typingindicatorDark.gif in Resources */,
 				E097347A2430DE12001D64B5 /* LaunchScreen.storyboard in Resources */,
 				E04E67FC23FFE30B008CB5F4 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0BEDE1C246238DB006B98A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1240,6 +1313,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nfile=\"unused.rb\"\nif [ -f \"$file\" ]\nthen\necho \"$file found.\"\nruby unused.rb xcode\nelse\necho \"unused.rb doesn't exist\"\nfi\n";
+		};
+		E11BCF52440D5FC335E570AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TDTTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1393,7 +1488,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E0BEDE1A246238DB006B98A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0BEDE21246238DB006B98A7 /* TDTTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E0BEDE24246238DB006B98A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B4F452A1F32230C00A6FF96 /* TDT-project */;
+			targetProxy = E0BEDE23246238DB006B98A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4B4F453D1F32230C00A6FF96 /* Debug */ = {
@@ -1582,6 +1693,56 @@
 			};
 			name = Release;
 		};
+		E0BEDE25246238DB006B98A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3BC92A9E30DEB97D5722747 /* Pods-TDTTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 934LRL6GBZ;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "${PODS_ROOT}/Firebase/CoreOnly/Sources";
+				INFOPLIST_FILE = TDTTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = cbrs.TDTTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDT.app/TDT";
+			};
+			name = Debug;
+		};
+		E0BEDE26246238DB006B98A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 075F9A63F026C2A21B127115 /* Pods-TDTTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 934LRL6GBZ;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = "${PODS_ROOT}/Firebase/CoreOnly/Sources";
+				INFOPLIST_FILE = TDTTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = cbrs.TDTTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDT.app/TDT";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1599,6 +1760,15 @@
 			buildConfigurations = (
 				4B4F45401F32230C00A6FF96 /* Debug */,
 				4B4F45411F32230C00A6FF96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0BEDE27246238DB006B98A7 /* Build configuration list for PBXNativeTarget "TDTTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0BEDE25246238DB006B98A7 /* Debug */,
+				E0BEDE26246238DB006B98A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

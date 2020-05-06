@@ -14,3 +14,7 @@ target 'TDT-project' do
   pod 'CropViewController'
   pod 'ARSLineProgress'
 end
+
+target 'TDTTests' do
+	inherit! :search_paths
+end
