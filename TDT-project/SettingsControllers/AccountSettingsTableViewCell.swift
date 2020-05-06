@@ -1,6 +1,6 @@
 //
 //  AccountSettingsTableViewCell.swift
-//  Avalon-Print
+//  TDT-project
 //
 //  Created by Danila Zykin on 05.05.2020.
 //  Copyright © 2020 Danila Zykin. All rights reserved.

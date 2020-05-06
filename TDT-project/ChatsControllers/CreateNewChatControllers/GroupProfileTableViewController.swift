@@ -2,8 +2,8 @@
 //  GroupProfileTableViewController.swift
 //  TDT-project
 //
-//  Created by Roman Babajanyan on 03.05.2020.
-//  Copyright © 2020 Roman Babajanyan. All rights reserved.
+//  Created by Danila Zykin on 06.05.2020.
+//  Copyright © 2020 Danila Zykin. All rights reserved.
 //
 
 import UIKit
@@ -18,7 +18,7 @@ class GroupProfileTableViewController: UITableViewController {
   let groupProfileTableHeaderContainer = GroupProfileTableHeaderContainer()
   let avatarOpener = AvatarOpener()
   let chatCreatingGroup = DispatchGroup()
-//  let informationMessageSender = InformationMessageSender()
+  let informationMessageSender = InformationMessageSender()
 
   
   override func viewDidLoad() {
@@ -75,7 +75,7 @@ class GroupProfileTableViewController: UITableViewController {
       basicErrorAlertWith(title: basicErrorTitleForAlert, message: noInternetError, controller: self)
       return
     }
-    avatarOpener.delegate = self
+    avatarOpener.delegate = self 
     avatarOpener.handleAvatarOpening(avatarView: groupProfileTableHeaderContainer.profileImageView, at: self,
                                      isEditButtonEnabled: true, title: .group)
   }
@@ -140,7 +140,7 @@ extension GroupProfileTableViewController {
     chatCreatingGroup.notify(queue: DispatchQueue.main, execute: {
       self.hideActivityIndicator()
       print("Chat creating finished...")
-//      self.informationMessageSender.sendInformatoinMessage(chatID: chatID, membersIDs: membersIDs.0, text: "New group has been created")
+      self.informationMessageSender.sendInformatoinMessage(chatID: chatID, membersIDs: membersIDs.0, text: "New group has been created")
       self.navigationController?.backToViewController(viewController: ChatsTableViewController.self)
     })
   }
