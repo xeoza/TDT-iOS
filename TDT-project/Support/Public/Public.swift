@@ -78,11 +78,11 @@ public let messageStatusDelivered = "Delivered"
 
 let cameraAccessDeniedMessage = "TDT needs access to your camera to take photos and videos.\n\nPlease go to Settings –– Privacy –– Camera –– and set TDT to ON."
 let photoLibraryAccessDeniedMessage = "TDT needs access to your photo library to send photos and videos.\n\nPlease go to Settings –– Privacy –– Photos –– and set TDT to ON."
-let microphoneAccessDeniedMessage = "Falcon needs access to your microphone to record audio messages.\n\nPlease go to Settings –– Privacy –– Microphone –– and set Falcon to ON."
+let contactsAccessDeniedMessage = "TDT needs access to your contacts to create new ones.\n\nPlease go to Settings –– Privacy –– Contacts –– and set TDT to ON."
+let microphoneAccessDeniedMessage = "TDT needs access to your microphone to record audio messages.\n\nPlease go to Settings –– Privacy –– Microphone –– and set TDT to ON."
 let cameraAccessDeniedMessageProfilePicture = "TDT needs access to your camera to take photo for your profile.\n\nPlease go to Settings –– Privacy –– Camera –– and set TDT to ON."
 let photoLibraryAccessDeniedMessageProfilePicture = "TDT needs access to your photo library to select photo for your profile.\n\nPlease go to Settings –– Privacy –– Photos –– and set TDT to ON."
-
-let videoRecordedButLibraryUnavailableError = "To send a recorded video, it has to be saved to your photo library first. Please go to Settings –– Privacy –– Photos –– and set Falcon to ON."
+let videoRecordedButLibraryUnavailableError = "To send a recorded video, it has to be saved to your photo library first. Please go to Settings –– Privacy –– Photos –– and set TDT to ON."
 
 let basicErrorTitleForAlert = "Error"
 let basicTitleForAccessError = "Please Allow Access"
@@ -106,6 +106,19 @@ extension String {
   }
 }
 
+extension UITableViewCell {
+  var selectionColor: UIColor {
+    set {
+      let view = UIView()
+      view.backgroundColor = newValue
+
+      self.selectedBackgroundView = view
+    }
+    get {
+      return self.selectedBackgroundView?.backgroundColor ?? UIColor.clear
+    }
+  }
+}
 
 extension Bool {
   init<T: BinaryInteger>(_ num: T) {

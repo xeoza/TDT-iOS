@@ -2,11 +2,12 @@
 //  GroupProfileTableHeaderContainer.swift
 //  TDT-project
 //
-//  Created by Roman Babajanyan on 03.05.2020.
-//  Copyright © 2020 Roman Babajanyan. All rights reserved.
+//  Created by Danila Zykin on 06.05.2020.
+//  Copyright © 2020 Danila Zykin. All rights reserved.
 //
 
 import UIKit
+
 
 class GroupProfileTableHeaderContainer: UIView {
   

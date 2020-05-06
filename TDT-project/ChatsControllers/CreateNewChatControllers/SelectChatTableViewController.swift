@@ -2,8 +2,8 @@
 //  SelectChatTableViewController.swift
 //  TDT-project
 //
-//  Created by Roman Babajanyan on 03.05.2020.
-//  Copyright © 2020 Roman Babajanyan. All rights reserved.
+//  Created by Danila Zykin on 06.05.2020.
+//  Copyright © 2020 Danila Zykin. All rights reserved.
 //
 
 import UIKit
@@ -207,7 +207,7 @@ class SelectChatTableViewController: UITableViewController {
     return cell
   }
   
-//  var chatLogController: ChatLogController? = nil
+  var chatLogController: ChatLogController? = nil
   var messagesFetcher: MessagesFetcher? = nil
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -230,7 +230,7 @@ class SelectChatTableViewController: UITableViewController {
       
       let conversation = Conversation(dictionary: conversationDictionary)
       
-//      chatLogController = ChatLogController(collectionViewLayout: AutoSizingCollectionViewFlowLayout())
+      chatLogController = ChatLogController(collectionViewLayout: AutoSizingCollectionViewFlowLayout())
       
       messagesFetcher = MessagesFetcher()
       messagesFetcher?.delegate = self
@@ -242,10 +242,29 @@ class SelectChatTableViewController: UITableViewController {
 extension SelectChatTableViewController: MessagesDelegate {
   
   func messages(shouldChangeMessageStatusToReadAt reference: DatabaseReference) {
-
+    chatLogController?.updateMessageStatus(messageRef: reference)
   }
   
   func messages(shouldBeUpdatedTo messages: [Message], conversation: Conversation) {
-
+    
+    chatLogController?.hidesBottomBarWhenPushed = true
+    chatLogController?.messagesFetcher = messagesFetcher
+    chatLogController?.messages = messages
+    chatLogController?.conversation = conversation
+    chatLogController?.observeTypingIndicator()
+    chatLogController?.configureTitleViewWithOnlineStatus()
+    //chatLogController?.observeMembersChanges()
+    chatLogController?.messagesFetcher.collectionDelegate = chatLogController
+    guard let destination = chatLogController else { return }
+    
+    if #available(iOS 11.0, *) {
+    } else {
+      chatLogController?.startCollectionViewAtBottom()
+    }
+    
+    navigationController?.pushViewController(destination, animated: true)
+    chatLogController = nil
+    messagesFetcher?.delegate = nil
+    messagesFetcher = nil
   }
 }
