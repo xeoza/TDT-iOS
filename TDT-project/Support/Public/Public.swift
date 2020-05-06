@@ -460,17 +460,10 @@ extension Date {
   }
 }
 
-extension UITableViewCell {
-  var selectionColor: UIColor {
-    set {
-      let view = UIView()
-      view.backgroundColor = newValue
-
-      self.selectedBackgroundView = view
-    }
-    get {
-      return self.selectedBackgroundView?.backgroundColor ?? UIColor.clear
-    }
+extension Collection {
+  func insertionIndex(of element: Self.Iterator.Element,
+                      using areInIncreasingOrder: (Self.Iterator.Element, Self.Iterator.Element) -> Bool) -> Index {
+        return firstIndex(where: { !areInIncreasingOrder($0, element) }) ?? endIndex
   }
 }
 
