@@ -539,13 +539,13 @@ class ChatLogController: UICollectionViewController {
 		}
 
 		navigationItem.rightBarButtonItem = infoBarButtonItem
-		navigationItem.rightBarButtonItem?.isEnabled = true
+//		navigationItem.rightBarButtonItem?.isEnabled = true
 
-//		if isCurrentUserMemberOfCurrentGroup() {
-//			navigationItem.rightBarButtonItem?.isEnabled = true
-//		} else {
-//			navigationItem.rightBarButtonItem?.isEnabled = false
-//		}
+		if isCurrentUserMemberOfCurrentGroup() {
+			navigationItem.rightBarButtonItem?.isEnabled = true
+		} else {
+			navigationItem.rightBarButtonItem?.isEnabled = false
+		}
 	}
 
 	@objc func getInfoAction() {}
@@ -606,7 +606,7 @@ class ChatLogController: UICollectionViewController {
 		inputContainerView.prepareForSend()
 		let messageSender = MessageSender(conversation, text: text, media: media)
 		messageSender.delegate = self
-		messageSender.sendMessage()
+		messageSender.sendMessage(nil)
 	}
 
 	// MARK: - Internal

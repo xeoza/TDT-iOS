@@ -31,22 +31,30 @@ class MessageSender: NSObject {
 		attachedMedia = media
 	}
 
-	public func sendMessage() {
+	public func sendMessage(_ completionHandler: ((String) -> Void)?) {
 		syncronizeMediaSending()
-		sendTextMessage()
-		attachedMedia.forEach { (mediaObject) in
-			let isVoiceMessage = mediaObject.audioObject != nil
-			let isPhotoMessage = (mediaObject.phAsset?.mediaType == PHAssetMediaType.image || mediaObject.phAsset == nil) && mediaObject.audioObject == nil
-			let isVideoMessage = mediaObject.phAsset?.mediaType == PHAssetMediaType.video
+		sendTextMessage { [weak self] (referenceUrl)  in
+			
+			guard let self = self else { return }
+			
+			self.attachedMedia.forEach { (mediaObject) in
+				let isVoiceMessage = mediaObject.audioObject != nil
+				let isPhotoMessage = (mediaObject.phAsset?.mediaType == PHAssetMediaType.image || mediaObject.phAsset == nil) && mediaObject.audioObject == nil
+				let isVideoMessage = mediaObject.phAsset?.mediaType == PHAssetMediaType.video
 
-			if isVoiceMessage {
-				sendVoiceMessage(object: mediaObject)
-			} else if isPhotoMessage {
-				sendPhotoMessage(object: mediaObject)
-			} else if isVideoMessage {
-				sendVideoMessage(object: mediaObject)
+				if isVoiceMessage {
+					self.sendVoiceMessage(object: mediaObject)
+				} else if isPhotoMessage {
+					self.sendPhotoMessage(object: mediaObject)
+				} else if isVideoMessage {
+					self.sendVideoMessage(object: mediaObject)
+				}
 			}
+			
+			completionHandler?(referenceUrl)
 		}
+
+
 	}
 
 	fileprivate var mediaUploadGroup = DispatchGroup()
@@ -78,7 +86,7 @@ class MessageSender: NSObject {
 
 	// MARK: TEXT MESSAGE
 
-	fileprivate func sendTextMessage() {
+	fileprivate func sendTextMessage(refHandler: ((String) -> Void)?) {
 		guard let toID = conversation?.chatID, let fromID = Auth.auth().currentUser?.uid, let text = self.text else {
 			mediaCount -= 1
 			mediaUploadGroup.leave()
@@ -110,6 +118,8 @@ class MessageSender: NSObject {
 		mediaUploadGroup.leave()
 		progress.setProgress(1.0, id: messageUID)
 		updateProgress(progress, mediaCount: mediaCount)
+		
+		refHandler?(reference.url)
 	}
 
 	// MARK: PHOTO MESSAGE
@@ -260,6 +270,7 @@ class MessageSender: NSObject {
 	}
 
 	fileprivate func updateDatabase(at reference: DatabaseReference, with values: [String: AnyObject], toID: String, fromID: String) {
+		
 		reference.updateChildValues(values) { (error, _) in
 			guard error == nil else { return }
 			guard let messageID = reference.key else { return }

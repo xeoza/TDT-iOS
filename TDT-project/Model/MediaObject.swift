@@ -31,4 +31,8 @@ class MediaObject: NSObject {
     filename = dictionary["filename"] as? String
     fileURL = dictionary["fileURL"] as? String
   }
+//
+//  init(_ test: String = "test") {
+//    super.init()
+//  }
 }

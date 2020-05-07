@@ -144,6 +144,7 @@
 		E0BEDE092461B84F006B98A7 /* ChatLogController+VoiceRecordingHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE082461B84F006B98A7 /* ChatLogController+VoiceRecordingHandlers.swift */; };
 		E0BEDE0B2461B874006B98A7 /* ChatLogController+ImageZoomHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE0A2461B874006B98A7 /* ChatLogController+ImageZoomHandlers.swift */; };
 		E0BEDE21246238DB006B98A7 /* TDTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE20246238DB006B98A7 /* TDTTests.swift */; };
+		E0BEDE2924623C3C006B98A7 /* TDTTests_MessageSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE2824623C3C006B98A7 /* TDTTests_MessageSender.swift */; };
 		E0E2A7FD2461E47700F1C763 /* AccountSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E2A7EA2461E47700F1C763 /* AccountSettingsTableViewCell.swift */; };
 		E0E2A7FE2461E47700F1C763 /* AccountSettingsController+nameEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E2A7EB2461E47700F1C763 /* AccountSettingsController+nameEditing.swift */; };
 		E0E2A7FF2461E47700F1C763 /* AccountSettingsAvatarOpenerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E2A7EC2461E47700F1C763 /* AccountSettingsAvatarOpenerDelegate.swift */; };
@@ -331,6 +332,7 @@
 		E0BEDE1E246238DB006B98A7 /* TDTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0BEDE20246238DB006B98A7 /* TDTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDTTests.swift; sourceTree = "<group>"; };
 		E0BEDE22246238DB006B98A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0BEDE2824623C3C006B98A7 /* TDTTests_MessageSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDTTests_MessageSender.swift; sourceTree = "<group>"; };
 		E0E2A7EA2461E47700F1C763 /* AccountSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		E0E2A7EB2461E47700F1C763 /* AccountSettingsController+nameEditing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccountSettingsController+nameEditing.swift"; sourceTree = "<group>"; };
 		E0E2A7EC2461E47700F1C763 /* AccountSettingsAvatarOpenerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSettingsAvatarOpenerDelegate.swift; sourceTree = "<group>"; };
@@ -994,6 +996,7 @@
 			isa = PBXGroup;
 			children = (
 				E0BEDE20246238DB006B98A7 /* TDTTests.swift */,
+				E0BEDE2824623C3C006B98A7 /* TDTTests_MessageSender.swift */,
 				E0BEDE22246238DB006B98A7 /* Info.plist */,
 			);
 			path = TDTTests;
@@ -1171,7 +1174,7 @@
 				TargetAttributes = {
 					4B4F452A1F32230C00A6FF96 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 934LRL6GBZ;
+						DevelopmentTeam = AC6BECBQCN;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -1492,6 +1495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0BEDE2924623C3C006B98A7 /* TDTTests_MessageSender.swift in Sources */,
 				E0BEDE21246238DB006B98A7 /* TDTTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1638,14 +1642,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 934LRL6GBZ;
+				DEVELOPMENT_TEAM = AC6BECBQCN;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				INFOPLIST_FILE = "TDT-project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ios-tdt-";
+				PRODUCT_BUNDLE_IDENTIFIER = "tdt-project-new";
 				PRODUCT_NAME = TDT;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1671,14 +1675,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 934LRL6GBZ;
+				DEVELOPMENT_TEAM = AC6BECBQCN;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				INFOPLIST_FILE = "TDT-project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ios-tdt-";
+				PRODUCT_BUNDLE_IDENTIFIER = "tdt-project-new";
 				PRODUCT_NAME = TDT;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
