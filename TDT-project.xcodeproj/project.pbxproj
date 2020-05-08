@@ -1208,7 +1208,7 @@
 				TargetAttributes = {
 					4B4F452A1F32230C00A6FF96 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 53J8SQKY56;
+						DevelopmentTeam = AC6BECBQCN;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -1619,11 +1619,12 @@
 			baseConfigurationReference = 08331862A66C7D48C41440A7 /* Pods-TDT-project.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53J8SQKY56;
+				DEVELOPMENT_TEAM = AC6BECBQCN;
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = "TDT-project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1643,6 +1644,7 @@
 			baseConfigurationReference = 2735E0EC066ABE56217117B7 /* Pods-TDT-project.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
