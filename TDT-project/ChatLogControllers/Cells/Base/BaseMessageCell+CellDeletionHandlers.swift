@@ -39,7 +39,7 @@ extension BaseMessageCell {
       contextMenuItems = [ContextMenuItems.deleteItem]
       cell.bubbleView.image = BaseMessageCell.selectedIncomingBubble
     }
-    if let cell = self.chatLogController?.collectionView?.cellForItem(at: indexPath) as? OutgoingPhotoMessageCell {
+    if let cell = self.chatLogController?.collectionView?.cellForItem(at: indexPath) as? PhotoMessageCell {
       cell.bubbleView.image = BaseMessageCell.selectedOutgoingBubble
       if !cell.playButton.isHidden {
         contextMenuItems = [ContextMenuItems.copyPreviewItem, ContextMenuItems.deleteItem]
@@ -80,7 +80,7 @@ extension BaseMessageCell {
       if contextMenuItems[selectedIndex] == ContextMenuItems.copyItem ||
         contextMenuItems[selectedIndex] == ContextMenuItems.copyPreviewItem {
         self.chatLogController?.collectionView?.reloadItems(at: [indexPath])
-        if let cell = self.chatLogController?.collectionView?.cellForItem(at: indexPath) as? OutgoingPhotoMessageCell {
+        if let cell = self.chatLogController?.collectionView?.cellForItem(at: indexPath) as? PhotoMessageCell {
           if cell.messageImageView.image == nil {
             guard let controllerToDisplayOn = self.chatLogController else { return }
             basicErrorAlertWith(title: basicErrorTitleForAlert,

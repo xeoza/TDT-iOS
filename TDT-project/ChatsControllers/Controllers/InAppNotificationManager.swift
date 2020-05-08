@@ -65,6 +65,7 @@ class InAppNotificationManager: NSObject {
     
     if UIApplication.topViewController() is SFSafariViewController ||
       UIApplication.topViewController() is CropViewController ||
+      UIApplication.topViewController() is ChatLogController ||
       UIApplication.topViewController() is INSPhotosViewController { return }
     
 		if let index = conversations.firstIndex(where: { (conv) -> Bool in

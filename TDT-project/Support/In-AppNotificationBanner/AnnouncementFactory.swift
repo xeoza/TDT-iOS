@@ -9,6 +9,7 @@ open class ShoutView: UIView {
     public static let indicatorWidth: CGFloat = 50
     public static let imageSize: CGFloat = 48
     public static let imageOffset: CGFloat = 18
+    public static var textOffset: CGFloat = 75
     public static var touchOffset: CGFloat = 40
   }
 

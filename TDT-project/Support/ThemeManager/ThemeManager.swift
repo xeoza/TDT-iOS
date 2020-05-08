@@ -6,6 +6,8 @@
 //  Copyright © 2020 Roman Babajanyan. All rights reserved.
 //
 
+
+
 import UIKit
 
 let SelectedThemeKey = "SelectedTheme"
@@ -25,7 +27,7 @@ struct ThemeManager {
     UINavigationBar.appearance().barTintColor = theme.barBackgroundColor
     UITabBar.appearance().barTintColor = theme.barBackgroundColor
     UITableViewCell.appearance().selectionColor = ThemeManager.currentTheme().cellSelectionColor
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: theme.generalTitleColor]
+		UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: theme.generalTitleColor]
     
     NotificationCenter.default.post(name: .themeUpdated, object: nil)
   }
@@ -171,18 +173,18 @@ enum Theme: Int {
   var incomingBubble: UIImage {
     switch self {
     case .Default:
-            return UIImage(named: "DarkTDTBubbleIncomingFull")!.resizableImage(withCapInsets: UIEdgeInsets(top: 14, left: 22, bottom: 17, right: 20))//UIImage(named: "TDTBubbleIncomingFull")!.resizableImage(withCapInsets: UIEdgeInsetsMake(14, 22, 17, 20))
+			return UIImage(named: "DarkTDTBubbleIncomingFull")!.resizableImage(withCapInsets: UIEdgeInsets(top: 14, left: 22, bottom: 17, right: 20))//UIImage(named: "TDTBubbleIncomingFull")!.resizableImage(withCapInsets: UIEdgeInsetsMake(14, 22, 17, 20))
     case .Dark:
-            return UIImage(named: "DarkTDTBubbleIncomingFull")!.resizableImage(withCapInsets: UIEdgeInsets(top: 14, left: 22, bottom: 17, right: 20))
+			return UIImage(named: "DarkTDTBubbleIncomingFull")!.resizableImage(withCapInsets: UIEdgeInsets(top: 14, left: 22, bottom: 17, right: 20))
     }
   }
   
   var outgoingBubble: UIImage {
     switch self {
     case .Default:
-            return UIImage(named: "TDTBubbleOutgoingFull")!.resizableImage(withCapInsets: UIEdgeInsets(top: 14, left: 14, bottom: 17, right: 28))
+			return UIImage(named: "TDTBubbleOutgoingFull")!.resizableImage(withCapInsets: UIEdgeInsets(top: 14, left: 14, bottom: 17, right: 28))
     case .Dark: //DarkTDTBubbleOutgoingFull
-            return UIImage(named: "TDTBubbleOutgoingFull")!.resizableImage(withCapInsets: UIEdgeInsets(top: 14, left: 14, bottom: 17, right: 28))
+			return UIImage(named: "TDTBubbleOutgoingFull")!.resizableImage(withCapInsets: UIEdgeInsets(top: 14, left: 14, bottom: 17, right: 28))
     }
   }
   
@@ -213,7 +215,7 @@ enum Theme: Int {
     }
   }
   
-    var scrollBarStyle: UIScrollView.IndicatorStyle {
+	var scrollBarStyle: UIScrollView.IndicatorStyle {
     switch self {
     case .Default:
       return .default
@@ -247,4 +249,3 @@ struct FalconPalette {
   static let dismissRed = UIColor(red:1.00, green:0.23, blue:0.19, alpha:1.0)
   static let appStoreGrey = UIColor(red:0.94, green:0.94, blue:0.96, alpha:1.0)
 }
-

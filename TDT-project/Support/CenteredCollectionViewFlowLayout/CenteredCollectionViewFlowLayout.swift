@@ -175,4 +175,37 @@ open class CenteredCollectionViewFlowLayout: UICollectionViewFlowLayout {
 		}
 	}
 	
+	/// Programatically scrolls to a page at a specified index.
+	///
+	/// - Parameters:
+	///   - index: The index of the page to scroll to.
+	///   - animated: Whether the scroll should be performed animated.
+	public func scrollToPage(index: Int, animated: Bool) {
+		guard let collectionView = collectionView else { return }
+		
+		let pageOffset: CGFloat
+		let proposedContentOffset: CGPoint
+		let shouldAnimate: Bool
+		switch scrollDirection {
+		case .horizontal:
+			pageOffset = CGFloat(index) * pageWidth - collectionView.contentInset.left
+			proposedContentOffset = CGPoint(x: pageOffset, y: 0)
+			shouldAnimate = abs(collectionView.contentOffset.x - pageOffset) > 1 ? animated : false
+		case .vertical:
+			pageOffset = CGFloat(index) * pageWidth - collectionView.contentInset.top
+			proposedContentOffset = CGPoint(x: 0, y: pageOffset)
+			shouldAnimate = abs(collectionView.contentOffset.y - pageOffset) > 1 ? animated : false
+		@unknown default:
+			fatalError()
+		}
+		collectionView.setContentOffset(proposedContentOffset, animated: shouldAnimate)
+	}
+	
+	/// Calculates the current centered page.
+	public var currentCenteredPage: Int? {
+		guard let collectionView = collectionView else { return nil }
+		let currentCenteredPoint = CGPoint(x: collectionView.contentOffset.x + collectionView.bounds.width/2, y: collectionView.contentOffset.y + collectionView.bounds.height/2)
+		let indexPath = collectionView.indexPathForItem(at: currentCenteredPoint)
+		return indexPath?.row
+	}
 }

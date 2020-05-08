@@ -6,6 +6,7 @@
 //  Copyright © 2020 Roman Babajanyan. All rights reserved.
 //
 
+
 import UIKit
 import AVFoundation
 
@@ -274,7 +275,7 @@ extension ChatInputContainerView: UITextViewDelegate {
   
   func textViewDidBeginEditing(_ textView: UITextView) {
     
-//    chatLogController?.scrollToBottom(at: .top)
+    chatLogController?.scrollToBottom(at: .top)
   }
   
   func textViewDidChange(_ textView: UITextView) {
@@ -286,7 +287,7 @@ extension ChatInputContainerView: UITextViewDelegate {
     } else {
       sendButton.isEnabled = true
     }
-//    chatLogController?.isTyping = textView.text != ""
+    chatLogController?.isTyping = textView.text != ""
     
     if textView.text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty {
       sendButton.isEnabled = false
@@ -299,17 +300,17 @@ extension ChatInputContainerView: UITextViewDelegate {
       attachButton.isSelected = false
       recordVoiceButton.isSelected = false
    
-//    if chatLogController?.chatLogAudioPlayer != nil  {
-//      chatLogController?.chatLogAudioPlayer.stop()
-//      chatLogController?.chatLogAudioPlayer = nil
-//    }
-//    guard chatLogController != nil, chatLogController?.voiceRecordingViewController != nil, chatLogController!.voiceRecordingViewController.recorder != nil else {
-//      return
-//    }
-//
-//    if chatLogController!.voiceRecordingViewController.recorder.isRecording {
-//      chatLogController?.voiceRecordingViewController.stop()
-//    }
+    if chatLogController?.chatLogAudioPlayer != nil  {
+      chatLogController?.chatLogAudioPlayer.stop()
+      chatLogController?.chatLogAudioPlayer = nil
+    }
+    guard chatLogController != nil, chatLogController?.voiceRecordingViewController != nil, chatLogController!.voiceRecordingViewController.recorder != nil else {
+      return
+    }
+    
+    if chatLogController!.voiceRecordingViewController.recorder.isRecording {
+      chatLogController?.voiceRecordingViewController.stop()
+    }
   }
   
   func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -328,8 +329,9 @@ extension ChatInputContainerView: UITextViewDelegate {
 }
 
 //extension UIColor {
-//
+//  
 //  convenience init(r: CGFloat, g: CGFloat, b: CGFloat) {
 //    self.init(red: r/255, green: g/255, blue: b/255, alpha: 1)
 //  }
 //}
+

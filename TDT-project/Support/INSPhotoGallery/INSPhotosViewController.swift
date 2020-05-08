@@ -432,5 +432,13 @@ open class INSPhotosViewController: UIViewController, UIPageViewControllerDataSo
         }
         return statusBarHidden
     }
+    
+//    open override var preferredStatusBarStyle: UIStatusBarStyle {
+//        return .lightContent
+//    }
+//
+//    open override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+//        return .fade
+//    }
 }
 

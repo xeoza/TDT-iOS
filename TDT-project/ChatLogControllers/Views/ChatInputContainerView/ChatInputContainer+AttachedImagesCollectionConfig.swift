@@ -9,6 +9,7 @@
 import UIKit
 import Photos
 
+
 private let selectedMediaCollectionCellID = "selectedMediaCollectionCellID"
 
 private let selectedMediaCollectionCellHeight:CGFloat = 145
@@ -122,17 +123,17 @@ extension ChatInputContainerView: UICollectionViewDataSource, UICollectionViewDe
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     
-//    if selectedMedia[indexPath.item].audioObject != nil {
-//      return
-//    }
-//    
-//    if selectedMedia[indexPath.item].phAsset?.mediaType == PHAssetMediaType.image || selectedMedia[indexPath.item].phAsset == nil {
-//      chatLogController?.presentPhotoEditor(forImageAt: indexPath)
-//    }
-//    
-//    if selectedMedia[indexPath.item].phAsset?.mediaType == PHAssetMediaType.video {
-//      chatLogController?.presentVideoPlayer(forUrlAt: indexPath)
-//    }
+    if selectedMedia[indexPath.item].audioObject != nil {
+      return
+    }
+    
+    if selectedMedia[indexPath.item].phAsset?.mediaType == PHAssetMediaType.image || selectedMedia[indexPath.item].phAsset == nil {
+      chatLogController?.presentPhotoEditor(forImageAt: indexPath)
+    }
+    
+    if selectedMedia[indexPath.item].phAsset?.mediaType == PHAssetMediaType.video {
+      chatLogController?.presentVideoPlayer(forUrlAt: indexPath)
+    }
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
