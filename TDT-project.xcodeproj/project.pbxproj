@@ -12,6 +12,8 @@
 		4B4F452F1F32230C00A6FF96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F452E1F32230C00A6FF96 /* AppDelegate.swift */; };
 		4B4F45381F32230C00A6FF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B4F45371F32230C00A6FF96 /* Assets.xcassets */; };
 		E035433A24658358000F7C61 /* TDTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035433924658358000F7C61 /* TDTTests.swift */; };
+		E035434224658CC4000F7C61 /* TDTTests_Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035434124658CC4000F7C61 /* TDTTests_Public.swift */; };
+		E035434424658D46000F7C61 /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E035434324658D46000F7C61 /* TestAssets.xcassets */; };
 		E04E67FC23FFE30B008CB5F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */; };
 		E076E3AD2463285B0075647F /* INSPhotosDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E076E2BD2463285A0075647F /* INSPhotosDataSource.swift */; };
 		E076E3AE2463285B0075647F /* INSPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E076E2BE2463285A0075647F /* INSPhotosViewController.swift */; };
@@ -224,6 +226,8 @@
 		E035433724658358000F7C61 /* TDTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E035433924658358000F7C61 /* TDTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDTTests.swift; sourceTree = "<group>"; };
 		E035433B24658358000F7C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E035434124658CC4000F7C61 /* TDTTests_Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDTTests_Public.swift; sourceTree = "<group>"; };
+		E035434324658D46000F7C61 /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
 		E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E076E2BD2463285A0075647F /* INSPhotosDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INSPhotosDataSource.swift; sourceTree = "<group>"; };
 		E076E2BE2463285A0075647F /* INSPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INSPhotosViewController.swift; sourceTree = "<group>"; };
@@ -479,6 +483,8 @@
 			children = (
 				E035433924658358000F7C61 /* TDTTests.swift */,
 				E035433B24658358000F7C61 /* Info.plist */,
+				E035434124658CC4000F7C61 /* TDTTests_Public.swift */,
+				E035434324658D46000F7C61 /* TestAssets.xcassets */,
 			);
 			path = TDTTests;
 			sourceTree = "<group>";
@@ -1354,6 +1360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E035434424658D46000F7C61 /* TestAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1641,6 +1648,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E035433A24658358000F7C61 /* TDTTests.swift in Sources */,
+				E035434224658CC4000F7C61 /* TDTTests_Public.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
