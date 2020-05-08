@@ -2097,4 +2097,4 @@
 /* End XCConfigurationList section */
 	};
 	rootObject = 4B4F45231F32230C00A6FF96 /* Project object */;
-};
+}
