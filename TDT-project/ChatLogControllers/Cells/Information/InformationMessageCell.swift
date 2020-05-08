@@ -2,8 +2,8 @@
 //  InformationMessageCell.swift
 //  TDT-project
 //
-//  Created by Danila Zykin on 3/25/20.
-//  Copyright © 2020 Danila Zykin. All rights reserved.
+//  Created by Roman Babajanyan on 05.05.2020.
+//  Copyright © 2020 Roman Babajanyan. All rights reserved.
 //
 
 import UIKit
