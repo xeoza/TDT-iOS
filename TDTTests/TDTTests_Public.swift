@@ -2,8 +2,8 @@
 //  TDTTests_Public.swift
 //  TDTTests
 //
-//  Created by Roma Babajanyan on 07.05.2020.
-//  Copyright © 2020 Danila Zykin. All rights reserved.
+//  Created by Roman Babajanyan on 07.05.2020.
+//  Copyright © 2020 Roman Babajanyan. All rights reserved.
 //
 
 import XCTest
@@ -104,7 +104,7 @@ class TDTTests_Public: XCTestCase {
 		let chatLogMsgTimestamp2 = timestampOfChatLogMessage(date2)
 		XCTAssertEqual(chatLogMsgTimestamp2, dateExp2)
 	}
-	
+
 	// MARK: - timeAgoSinceDate
 	
 	func test_timeAgoSinceDate_years() {
@@ -224,6 +224,8 @@ class TDTTests_Public: XCTestCase {
 		XCTAssertEqual(act1, exp1)
 	}
 	
+	// MARK: - PHAsset extensions test cases
+	
 	func test_dataFromAsset() {
 		
 		let assets = fetchAssets()
@@ -234,28 +236,103 @@ class TDTTests_Public: XCTestCase {
 	}
 	
 	func test_uiImageFromAsset() {
-		
-//		let images = [
-//			UIImage(named: "IMG_0006", in: Bundle(for: type(of: self)), compatibleWith: nil)!, UIImage(named: "IMG_0004", in: Bundle(for: type(of: self)), compatibleWith: nil)!, UIImage(named: "IMG_0005", in: Bundle(for: type(of: self)), compatibleWith: nil)!, UIImage(named: "IMG_0003", in: Bundle(for: type(of: self)), compatibleWith: nil)!, UIImage(named: "IMG_0001", in: Bundle(for: type(of: self)), compatibleWith: nil)!, UIImage(named: "IMG_0002", in: Bundle(for: type(of: self)), compatibleWith: nil)!]
-//
+
 		let assets = fetchAssets()
-//		var assets = [PHAsset]()
-		
+
 		assets.enumerateObjects { (asset, _, _) in
 			XCTAssertNotNil(asset)
+			XCTAssertNotNil(uiImageFromAsset(phAsset: asset))
 		}
-				
-//		zip(images, assets).forEach { (img, asset) in
-//
-//			let expImage = uiImageFromAsset(phAsset: asset)
-//			XCTAssertNotNil(expImage)
-//			XCTAssertEqual(img, expImage!)
-//		}
+	}
+	
+	// MARK: - String extensions test cases
+	
+	func test_doubleValue_default() {
 		
+		let exp = 2.0
+		let act = "2.0".doubleValue
+		XCTAssertEqual(act, exp)
+	}
+	
+	func test_doubleValue_failure() {
+		
+		let exp = Double(0)
+		let act = "-".doubleValue
+		XCTAssertEqual(act, exp)
+	}
+	
+	func test_digits_default() {
+
+		let exp1 = ""
+		let act1 = "".digits
+		XCTAssertEqual(act1, exp1)
+		
+		let exp2 = "123456".digits
+		let act2 = "123 hello 456".digits
+		XCTAssertEqual(act2, exp2)
+		
+		let exp3 = "123456".digits
+		let act3 = "123456".digits
+		XCTAssertEqual(act3, exp3)
+	}
+	
+	// MARK: - Array extensions test cases
+	
+	// stablePartition
+	
+	func test_stablePartition_defaultPartition() {
+		
+		let exp = ([2,4,6,8],[1,3,5,7])
+		
+		let (act1, act2) = [1,2,3,4,5,6,7,8].stablePartition { (element) -> Bool in
+			element % 2 == 0 ? true : false
+		}
+		
+		XCTAssertEqual(exp.0, (act1, act2).0)
+		XCTAssertEqual(exp.1, (act1, act2).1)
+	}
+	
+	func test_stablePartition_singlePartition() {
+		
+		let exp = ([Int](),[1,2,3,4])
+		
+		let (act1, act2) = [1,2,3,4].stablePartition { (element) -> Bool in
+			return false
+		}
+		
+		XCTAssertEqual(exp.0, (act1, act2).0)
+		XCTAssertEqual(exp.1, (act1, act2).1)
+	}
+	
+	func test_stablePartition_conversations() {
+		
+		let testConversations = [DummyConversation(isPinned: true, id: 1),
+								 DummyConversation(isPinned: false, id: 2),
+								 DummyConversation(isPinned: false, id: 3),
+								 DummyConversation(isPinned: true, id: 4)]
+		
+		let expected = ([testConversations.first!, testConversations.last!], [testConversations[1],testConversations[2]])
+		
+		let (pinned, notPinned) = testConversations.stablePartition { (conversation) -> Bool in
+			conversation.isPinned
+		}
+		
+		XCTAssertEqual(expected.0, (pinned, notPinned).0)
+		XCTAssertEqual(expected.1, (pinned, notPinned).1)
 	}
 }
 
 extension TDTTests_Public {
+	
+	struct DummyConversation: Equatable {
+		
+		var isPinned: Bool
+		var id: Int
+		
+		static func ==(lhs: DummyConversation, rhs: DummyConversation) -> Bool {
+			return lhs.id == rhs.id && lhs.isPinned == rhs.isPinned
+		}
+	}
 	
 	func fetchAssets() -> PHFetchResult<PHAsset> {
 		

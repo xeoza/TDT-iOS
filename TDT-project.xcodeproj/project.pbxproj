@@ -145,8 +145,6 @@
 		E0BEDE072461B7EB006B98A7 /* ChatLogController+PhotoEditorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE062461B7EB006B98A7 /* ChatLogController+PhotoEditorDelegate.swift */; };
 		E0BEDE092461B84F006B98A7 /* ChatLogController+VoiceRecordingHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE082461B84F006B98A7 /* ChatLogController+VoiceRecordingHandlers.swift */; };
 		E0BEDE0B2461B874006B98A7 /* ChatLogController+ImageZoomHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE0A2461B874006B98A7 /* ChatLogController+ImageZoomHandlers.swift */; };
-		E0BEDE21246238DB006B98A7 /* TDTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE20246238DB006B98A7 /* TDTTests.swift */; };
-		E0BEDE2924623C3C006B98A7 /* TDTTests_MessageSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDE2824623C3C006B98A7 /* TDTTests_MessageSender.swift */; };
 		E0E2A7FD2461E47700F1C763 /* AccountSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E2A7EA2461E47700F1C763 /* AccountSettingsTableViewCell.swift */; };
 		E0E2A7FE2461E47700F1C763 /* AccountSettingsController+nameEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E2A7EB2461E47700F1C763 /* AccountSettingsController+nameEditing.swift */; };
 		E0E2A7FF2461E47700F1C763 /* AccountSettingsAvatarOpenerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E2A7EC2461E47700F1C763 /* AccountSettingsAvatarOpenerDelegate.swift */; };
@@ -334,9 +332,7 @@
 		E0BEDE082461B84F006B98A7 /* ChatLogController+VoiceRecordingHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatLogController+VoiceRecordingHandlers.swift"; sourceTree = "<group>"; };
 		E0BEDE0A2461B874006B98A7 /* ChatLogController+ImageZoomHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatLogController+ImageZoomHandlers.swift"; sourceTree = "<group>"; };
 		E0BEDE1E246238DB006B98A7 /* TDTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0BEDE20246238DB006B98A7 /* TDTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDTTests.swift; sourceTree = "<group>"; };
 		E0BEDE22246238DB006B98A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0BEDE2824623C3C006B98A7 /* TDTTests_MessageSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDTTests_MessageSender.swift; sourceTree = "<group>"; };
 		E0E2A7EA2461E47700F1C763 /* AccountSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		E0E2A7EB2461E47700F1C763 /* AccountSettingsController+nameEditing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccountSettingsController+nameEditing.swift"; sourceTree = "<group>"; };
 		E0E2A7EC2461E47700F1C763 /* AccountSettingsAvatarOpenerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSettingsAvatarOpenerDelegate.swift; sourceTree = "<group>"; };
@@ -999,10 +995,8 @@
 		E0BEDE1F246238DB006B98A7 /* TDTTests */ = {
 			isa = PBXGroup;
 			children = (
-				E0BEDE20246238DB006B98A7 /* TDTTests.swift */,
-				E0BEDE2824623C3C006B98A7 /* TDTTests_MessageSender.swift */,
-				E0BEDE22246238DB006B98A7 /* Info.plist */,
 				E05DF7D52464892E00A977E2 /* TDTTests_Public.swift */,
+				E0BEDE22246238DB006B98A7 /* Info.plist */,
 				E0319E0E2464A115004273F0 /* TestImages.xcassets */,
 			);
 			path = TDTTests;
@@ -1503,8 +1497,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E05DF7D62464892E00A977E2 /* TDTTests_Public.swift in Sources */,
-				E0BEDE2924623C3C006B98A7 /* TDTTests_MessageSender.swift in Sources */,
-				E0BEDE21246238DB006B98A7 /* TDTTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
