@@ -24,7 +24,7 @@ class OnboardingContainerView: UIView {
     welcomeTitle.text = "Welcome to TDT"
     welcomeTitle.font = UIFont.systemFont(ofSize: 20)
     welcomeTitle.textAlignment = .center
-    welcomeTitle.textColor = UIColor.black
+    welcomeTitle.textColor = ThemeManager.currentTheme().generalTitleColor
     return welcomeTitle
   }()
   
@@ -32,7 +32,7 @@ class OnboardingContainerView: UIView {
     let startMessaging = UIButton()
     startMessaging.translatesAutoresizingMaskIntoConstraints = false
     startMessaging.setTitle("Start messaging", for: .normal)
-    startMessaging.setTitleColor(UIColor(red:0.00, green:0.50, blue:1.00, alpha: 1.0), for: .normal)
+    startMessaging.setTitleColor(FalconPalette.defaultBlue, for: .normal)
     startMessaging.titleLabel?.backgroundColor = .clear
     startMessaging.titleLabel?.font = UIFont.systemFont(ofSize: 20)
     startMessaging.addTarget(self, action: #selector(OnboardingController.startMessagingDidTap), for: .touchUpInside)
@@ -44,7 +44,7 @@ class OnboardingContainerView: UIView {
   override init(frame: CGRect) {
     super.init(frame: frame)
     
-    backgroundColor = UIColor.white
+    backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
     addSubview(logoImageView)
     addSubview(welcomeTitle)
     addSubview(startMessaging)
