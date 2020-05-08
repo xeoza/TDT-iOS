@@ -1,6 +1,5 @@
 //
 //  ChatLogController+PhotoEditorDelegate.swift
-//  ChatLogController+PhotoEditor.swift
 //  TDT-project
 //
 //  Created by Roman Babajanyan on 05.05.2020.
