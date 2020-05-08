@@ -9,7 +9,15 @@ before_install:
 install:
   - rm -f Podfile.lock
   - travis_wait 30 pod install --silent 
-script:
-  - xcodebuild -scheme TDT-project -workspace TDT-project.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8 Plus,OS=13.2.2' build | xcpretty -s && exit ${PIPESTATUS[0]}
+jobs:
+include:
+  - stage: "Build"
+	name: "Build"
+	script:
+	  - xcodebuild -scheme TDT-project -workspace TDT-project.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8 Plus,OS=13.2.2' | xcpretty -s && exit ${PIPESTATUS[0]}
+  - stage: "Tests"
+	name: "Tests"
+	script:
+	  - xcodebuild clean build -sdk iphonesimulator -workspace TDT-project.xcworkspace -scheme TDTTests CODE_SIGNING_REQUIRED=NO | xcpretty -s && exit ${PIPESTATUS[0]}
 after_success:
    bash <(curl -s https://codecov.io/bash)
