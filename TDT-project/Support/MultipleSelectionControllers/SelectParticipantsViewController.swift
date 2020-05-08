@@ -125,7 +125,7 @@ class SelectParticipantsViewController: UIViewController {
   }
   
   var chatIDForUsersUpdate = String()
-//  var informationMessageSender = InformationMessageSender()
+  var informationMessageSender = InformationMessageSender()
   
   func addNewMembers() {
     
@@ -152,7 +152,7 @@ class SelectParticipantsViewController: UIViewController {
         let userNamesString = selectedUserNames.joined(separator: ", ")
         let usersTitleString = selectedUserNames.count > 1 ? "users" : "user"
         let text = "Admin added \(usersTitleString) \(userNamesString) to the group"
-//        self.informationMessageSender.sendInformatoinMessage(chatID: self.chatIDForUsersUpdate, membersIDs: membersIDs, text: text)
+        self.informationMessageSender.sendInformatoinMessage(chatID: self.chatIDForUsersUpdate, membersIDs: membersIDs, text: text)
 
         ARSLineProgress.showSuccess()
         self.navigationController?.view.isUserInteractionEnabled = true

@@ -1,10 +1,10 @@
 //
 //  SwiftSiriWaveformView.swift
-//  TDT-project
+//  Pods
 //
-//  Created by Roman Babajanyan on 04.05.2020.
-//  Copyright © 2020 Roman Babajanyan. All rights reserved.
+//  Created by Alankar Misra on 7/23/15.
 //
+//  Swift adaption of: https://github.com/stefanceriu/SCSiriWaveformView (interface incompatible)
 
 import UIKit
 

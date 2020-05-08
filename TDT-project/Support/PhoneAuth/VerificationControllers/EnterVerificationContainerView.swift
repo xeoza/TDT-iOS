@@ -14,7 +14,7 @@ class EnterVerificationContainerView: UIView {
     let titleNumber = UILabel()
     titleNumber.translatesAutoresizingMaskIntoConstraints = false
     titleNumber.textAlignment = .center
-    titleNumber.textColor = UIColor.black
+    titleNumber.textColor = ThemeManager.currentTheme().generalTitleColor
     titleNumber.font = UIFont.systemFont(ofSize: 32)
     
     return titleNumber
@@ -25,7 +25,7 @@ class EnterVerificationContainerView: UIView {
     subtitleText.translatesAutoresizingMaskIntoConstraints = false
     subtitleText.font = UIFont.systemFont(ofSize: 15)
     subtitleText.textAlignment = .center
-    subtitleText.textColor = UIColor.black
+    subtitleText.textColor = ThemeManager.currentTheme().generalTitleColor
     subtitleText.text = "We have sent you an SMS with the code"
     
     return subtitleText
@@ -37,14 +37,14 @@ class EnterVerificationContainerView: UIView {
     verificationCode.translatesAutoresizingMaskIntoConstraints = false
     verificationCode.textAlignment = .center
     verificationCode.keyboardType = .numberPad
-    verificationCode.textColor = UIColor.black
-    verificationCode.keyboardAppearance = .default
+    verificationCode.textColor = ThemeManager.currentTheme().generalTitleColor
+    verificationCode.keyboardAppearance = ThemeManager.currentTheme().keyboardAppearance
     verificationCode.backgroundColor = .clear
     verificationCode.layer.cornerRadius = 25
     verificationCode.layer.borderWidth = 1
 		verificationCode.attributedPlaceholder = NSAttributedString(string: "Code", attributes: [NSAttributedString.Key.foregroundColor:
-      UIColor(red:0.67, green:0.67, blue:0.67, alpha:1.0)])
-    verificationCode.layer.borderColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0).cgColor
+      ThemeManager.currentTheme().generalSubtitleColor])
+    verificationCode.layer.borderColor = ThemeManager.currentTheme().inputTextViewColor.cgColor
     
     return verificationCode
   }()
@@ -55,9 +55,9 @@ class EnterVerificationContainerView: UIView {
     resend.setTitle("Resend", for: .normal)
     resend.contentVerticalAlignment = .center
     resend.contentHorizontalAlignment = .center
-    resend.setTitleColor(UIColor(red:0.00, green:0.50, blue:1.00, alpha: 1.0), for: .normal)
-    resend.setTitleColor(UIColor(red:0.67, green:0.67, blue:0.67, alpha:1.0), for: .highlighted)
-    resend.setTitleColor(UIColor(red:0.67, green:0.67, blue:0.67, alpha:1.0), for: .disabled)
+    resend.setTitleColor(FalconPalette.defaultBlue, for: .normal)
+    resend.setTitleColor(ThemeManager.currentTheme().generalSubtitleColor, for: .highlighted)
+    resend.setTitleColor(ThemeManager.currentTheme().generalSubtitleColor, for: .disabled)
     
     return resend
   }()
@@ -71,7 +71,7 @@ class EnterVerificationContainerView: UIView {
   
   var timerLabel: UILabel = {
     var timerLabel = UILabel()
-    timerLabel.textColor = UIColor(red:0.67, green:0.67, blue:0.67, alpha:1.0)
+    timerLabel.textColor = ThemeManager.currentTheme().generalSubtitleColor
     timerLabel.font = UIFont.systemFont(ofSize: 13)
     timerLabel.translatesAutoresizingMaskIntoConstraints = false
     timerLabel.textAlignment = .center

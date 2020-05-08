@@ -15,6 +15,7 @@ protocol CountryPickerDelegate: class {
 
 public var countryCode = NSLocale.current.regionCode
 fileprivate var savedContentOffset = CGPoint(x: 0, y: -50)
+fileprivate var savedCountryCode = String()
 
 
 class SelectCountryCodeController: UITableViewController {
@@ -44,21 +45,21 @@ class SelectCountryCodeController: UITableViewController {
   
   fileprivate func configureView() {
     title = "Select your country"
-    view.backgroundColor = UIColor.white
+    view.backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
   }
   
   fileprivate func configureSearchBar() {
     searchBar.delegate = self
     searchBar.searchBarStyle = .minimal
     searchBar.placeholder = "Search"
-    searchBar.backgroundColor = UIColor.white
-    searchBar.keyboardAppearance = .default
+    searchBar.backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
+    searchBar.keyboardAppearance = ThemeManager.currentTheme().keyboardAppearance
     searchBar.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
   }
   
   fileprivate func configureTableView() {
-    tableView.backgroundColor = UIColor.white
-    tableView.indicatorStyle = .default
+    tableView.backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
+    tableView.indicatorStyle = ThemeManager.currentTheme().scrollBarStyle
     tableView.separatorStyle = .none
     tableView.tableHeaderView = searchBar
     filteredCountries = countries
@@ -84,14 +85,14 @@ extension SelectCountryCodeController {
     let identifier = "cell"
     
     let cell = tableView.dequeueReusableCell(withIdentifier: identifier) ?? UITableViewCell(style: .default, reuseIdentifier: identifier)
-    cell.backgroundColor = UIColor.white
+    cell.backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
     cell.textLabel?.font = UIFont.systemFont(ofSize: 18)
     
     let countryName = filteredCountries[indexPath.row]["name"]!
     let countryDial = " " + filteredCountries[indexPath.row]["dial_code"]!
     
-		let countryNameAttribute = [NSAttributedString.Key.foregroundColor: UIColor.black]
-		let countryDialAttribute = [NSAttributedString.Key.foregroundColor: UIColor(red:0.67, green:0.67, blue:0.67, alpha:1.0)]
+		let countryNameAttribute = [NSAttributedString.Key.foregroundColor: ThemeManager.currentTheme().generalTitleColor]
+		let countryDialAttribute = [NSAttributedString.Key.foregroundColor: ThemeManager.currentTheme().generalSubtitleColor]
     let countryNameAString = NSAttributedString(string: countryName, attributes: countryNameAttribute)
     let countryDialAString = NSAttributedString(string: countryDial, attributes: countryDialAttribute)
     
@@ -141,6 +142,10 @@ extension SelectCountryCodeController: UISearchBarDelegate {
     })
  
     tableView.reloadData()
+  }
+  
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    self.searchBar.endEditing(true)
   }
 }
 

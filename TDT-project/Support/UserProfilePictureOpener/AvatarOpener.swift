@@ -239,5 +239,8 @@ class AvatarOpener: NSObject, UIImagePickerControllerDelegate, UINavigationContr
       picker.popViewController(animated: true)
     }
   }
-
+  
+  func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+    parentController?.dismiss(animated: true, completion: nil)
+  }
 }

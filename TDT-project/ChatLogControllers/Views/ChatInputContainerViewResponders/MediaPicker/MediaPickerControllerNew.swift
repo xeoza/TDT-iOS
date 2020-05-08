@@ -2,12 +2,13 @@
 //  MediaPickerControllerNew.swift
 //  TDT-project
 //
-//  Created by Roma Babajanyan on 04.05.2020.
+//  Created by Danila Zykin on 04.05.2020.
 //  Copyright © 2020 Danila Zykin. All rights reserved.
 //
 
 import UIKit
 import Photos
+
 
 public let imageSourcePhotoLibrary = "imageSourcePhotoLibrary"
 public let imageSourceCamera = "imageSourceCamera"
@@ -382,4 +383,3 @@ extension MediaPickerControllerNew: ImagePickerTrayControllerDelegate {
     deleteItemsToCollectionViewAnimated(at: IndexPath(item: index, section: 0), index: index)
   }
 }
-

@@ -2,7 +2,7 @@
 //  ContactsController.swift
 //  TDT-project
 //
-//  Created by Roma Babajanyan on 28.04.2020.
+//  Created by Danila Zykin on 28.04.2020.
 //  Copyright © 2020 Danila Zykin. All rights reserved.
 //
 
@@ -14,7 +14,9 @@ import SDWebImage
 
 var localPhones = [String]()
 var globalUsers: [User] = [] {
-  didSet { }
+  didSet {
+    NotificationCenter.default.post(name: .falconUsersUpdated, object: nil)
+  }
 }
 
 private let falconUsersCellID = "falconUsersCellID"
@@ -186,6 +188,73 @@ class ContactsController: UITableViewController {
         headerTitle.textLabel?.textColor = ThemeManager.currentTheme().generalTitleColor
       }
     }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      return selectCell(for: indexPath)
+    }
+  
+    func selectCell(for indexPath: IndexPath) -> UITableViewCell {
+      if indexPath.section == 0 {
+        let cell = tableView.dequeueReusableCell(withIdentifier: currentUserCellID,
+                                                 for: indexPath) as? CurrentUserTableViewCell ?? CurrentUserTableViewCell()
+        cell.title.text = NameConstants.personalStorage
+        return cell
+      } else if indexPath.section == 1 {
+        let cell = tableView.dequeueReusableCell(withIdentifier: falconUsersCellID,
+                                                 for: indexPath) as? FalconUsersTableViewCell ?? FalconUsersTableViewCell()
+        let user = filteredUsers[indexPath.row]
+        cell.configureCell(for: user)
+        return cell
+        
+      } else {
+        let cell = tableView.dequeueReusableCell(withIdentifier: contactsCellID,
+                                                 for: indexPath) as? ContactsTableViewCell ?? ContactsTableViewCell()
+        cell.icon.image = UIImage(named: "UserpicIcon")
+        cell.title.text = filteredContacts[indexPath.row].givenName + " " + filteredContacts[indexPath.row].familyName
+        return cell
+      }
+    }
+  
+    var chatLogController: ChatLogController? = nil
+    var messagesFetcher: MessagesFetcher? = nil
+  
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      
+      if indexPath.section == 0 {
+        guard let currentUID = Auth.auth().currentUser?.uid else { return }
+        let conversationDictionary: [String: AnyObject] = ["chatID": currentUID as AnyObject,
+                                                          "isGroupChat": false  as AnyObject,
+                                                          "chatParticipantsIDs": [currentUID] as AnyObject]
+        
+        let conversation = Conversation(dictionary: conversationDictionary)
+        chatLogController = ChatLogController(collectionViewLayout: AutoSizingCollectionViewFlowLayout())
+        messagesFetcher = MessagesFetcher()
+        messagesFetcher?.delegate = self
+        messagesFetcher?.loadMessagesData(for: conversation)
+      } else if indexPath.section == 1 {
+        guard let currentUserID = Auth.auth().currentUser?.uid else { return }
+        let conversationDictionary: [String: AnyObject] = ["chatID": filteredUsers[indexPath.row].id as AnyObject, "chatName": filteredUsers[indexPath.row].name as AnyObject,
+                                                           "isGroupChat": false  as AnyObject,
+                                                           "chatOriginalPhotoURL": filteredUsers[indexPath.row].photoURL as AnyObject,
+                                                           "chatThumbnailPhotoURL": filteredUsers[indexPath.row].thumbnailPhotoURL as AnyObject,
+                                                           "chatParticipantsIDs": [filteredUsers[indexPath.row].id, currentUserID] as AnyObject]
+        
+        let conversation = Conversation(dictionary: conversationDictionary)
+        chatLogController = ChatLogController(collectionViewLayout: AutoSizingCollectionViewFlowLayout())
+        messagesFetcher = MessagesFetcher()
+        messagesFetcher?.delegate = self
+        messagesFetcher?.loadMessagesData(for: conversation)
+      } else {
+        let destination = ContactsDetailController()
+        destination.contactName = filteredContacts[indexPath.row].givenName + " " + filteredContacts[indexPath.row].familyName
+        destination.contactPhoneNumbers.removeAll()
+        destination .hidesBottomBarWhenPushed = true
+        for phoneNumber in filteredContacts[indexPath.row].phoneNumbers {
+          destination.contactPhoneNumbers.append(phoneNumber.value.stringValue)
+        }
+        self.navigationController?.pushViewController(destination, animated: true)
+      }
+    }
 }
 
 extension ContactsController: FalconUsersUpdatesDelegate {
@@ -195,6 +264,34 @@ extension ContactsController: FalconUsersUpdatesDelegate {
   }
 }
 
+extension ContactsController: MessagesDelegate {
+  
+  func messages(shouldChangeMessageStatusToReadAt reference: DatabaseReference) {
+    chatLogController?.updateMessageStatus(messageRef: reference)
+  }
+  
+  func messages(shouldBeUpdatedTo messages: [Message], conversation: Conversation) {
+    
+    chatLogController?.hidesBottomBarWhenPushed = true
+    chatLogController?.messagesFetcher = messagesFetcher
+    chatLogController?.messages = messages
+    chatLogController?.conversation = conversation
+    chatLogController?.observeTypingIndicator()
+    chatLogController?.configureTitleViewWithOnlineStatus()
+    chatLogController?.messagesFetcher.collectionDelegate = chatLogController
+    guard let destination = chatLogController else { return }
+    
+    if #available(iOS 11.0, *) {
+    } else {
+      self.chatLogController?.startCollectionViewAtBottom()
+    }
+    
+    navigationController?.pushViewController(destination, animated: true)
+    chatLogController = nil
+    messagesFetcher?.delegate = nil
+    messagesFetcher = nil
+  }
+}
 
 extension ContactsController: ContactsUpdatesDelegate {
  

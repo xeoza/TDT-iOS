@@ -161,4 +161,19 @@ open class INSPhotoViewController: UIViewController, UIScrollViewDelegate {
     
     // MARK:- UIScrollViewDelegate
     
+    open func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return scalingImageView.imageView
+    }
+    
+    open func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
+        scrollView.panGestureRecognizer.isEnabled = true
+    }
+    
+    open func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
+        // There is a bug, especially prevalent on iPhone 6 Plus, that causes zooming to render all other gesture recognizers ineffective.
+        // This bug is fixed by disabling the pan gesture recognizer of the scroll view when it is not needed.
+        if (scrollView.zoomScale == scrollView.minimumZoomScale) {
+            scrollView.panGestureRecognizer.isEnabled = false;
+        }
+    }
 }

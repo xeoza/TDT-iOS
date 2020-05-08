@@ -16,7 +16,7 @@ class EnterPhoneNumberContainerView: UIView {
     title.translatesAutoresizingMaskIntoConstraints = false
     title.textAlignment = .center
     title.text = "Phone number"
-    title.textColor = UIColor.black
+    title.textColor = ThemeManager.currentTheme().generalTitleColor
     title.font = UIFont.systemFont(ofSize: 32)
     title.sizeToFit()
     
@@ -28,7 +28,7 @@ class EnterPhoneNumberContainerView: UIView {
     instructions.translatesAutoresizingMaskIntoConstraints = false
     instructions.textAlignment = .center
     instructions.numberOfLines = 2
-    instructions.textColor = UIColor.black
+    instructions.textColor = ThemeManager.currentTheme().generalTitleColor
     instructions.font = UIFont.systemFont(ofSize: 18)
     instructions.sizeToFit()
 
@@ -39,11 +39,11 @@ class EnterPhoneNumberContainerView: UIView {
     let selectCountry = UIButton()
     selectCountry.translatesAutoresizingMaskIntoConstraints = false
     selectCountry.setTitle("Ukraine", for: .normal)
-    selectCountry.setTitleColor(UIColor.black, for: .normal)
+    selectCountry.setTitleColor(ThemeManager.currentTheme().generalTitleColor, for: .normal)
     selectCountry.contentHorizontalAlignment = .center
     selectCountry.contentVerticalAlignment = .center
     selectCountry.titleLabel?.sizeToFit()
-    selectCountry.backgroundColor = UIColor(red:0.94, green:0.94, blue:0.96, alpha:1.0)
+    selectCountry.backgroundColor = ThemeManager.currentTheme().controlButtonsColor
     selectCountry.layer.cornerRadius = 25
 		selectCountry.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10.0, bottom: 0.0, right: 10.0)
     selectCountry.titleLabel?.font = UIFont.systemFont(ofSize: 18)
@@ -57,7 +57,7 @@ class EnterPhoneNumberContainerView: UIView {
     countryCode.translatesAutoresizingMaskIntoConstraints = false
     countryCode.text = "+380"
     countryCode.textAlignment = .center
-    countryCode.textColor = UIColor.black
+    countryCode.textColor = ThemeManager.currentTheme().generalTitleColor
     countryCode.font = UIFont.systemFont(ofSize: 18)
     countryCode.sizeToFit()
    
@@ -70,8 +70,8 @@ class EnterPhoneNumberContainerView: UIView {
     phoneNumber.translatesAutoresizingMaskIntoConstraints = false
     phoneNumber.textAlignment = .center
     phoneNumber.keyboardType = .numberPad
-    phoneNumber.keyboardAppearance = .default
-    phoneNumber.textColor = UIColor.black
+    phoneNumber.keyboardAppearance = ThemeManager.currentTheme().keyboardAppearance
+    phoneNumber.textColor = ThemeManager.currentTheme().generalTitleColor
     phoneNumber.addTarget(self, action: #selector(EnterPhoneNumberController.textFieldDidChange(_:)), for: .editingChanged)
     
     return phoneNumber
@@ -82,7 +82,7 @@ class EnterPhoneNumberContainerView: UIView {
     phoneContainer.translatesAutoresizingMaskIntoConstraints = false
     phoneContainer.layer.cornerRadius = 25
     phoneContainer.layer.borderWidth = 1
-    phoneContainer.layer.borderColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0).cgColor
+    phoneContainer.layer.borderColor = ThemeManager.currentTheme().inputTextViewColor.cgColor
 
     return phoneContainer
   }()
