@@ -5,7 +5,7 @@ before_script:
   - agvtool new-version -all $(date +'%Y.%m.%d.%H.%M')
 before_install:
   - gem install xcpretty
-  - gem install cocoapods -v '0.32.1'
+  - gem install cocoapods 
 install:
   - rm -f Podfile.lock
   - travis_wait 10 pod deintegrate 
