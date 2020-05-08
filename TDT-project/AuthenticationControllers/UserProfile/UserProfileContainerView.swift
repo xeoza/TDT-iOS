@@ -35,7 +35,7 @@ class UserProfileContainerView: UIView {
     profileImageView.contentMode = .scaleAspectFill
     profileImageView.layer.masksToBounds = true
     profileImageView.layer.borderWidth = 1
-    profileImageView.layer.borderColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0).cgColor
+    profileImageView.layer.borderColor = ThemeManager.currentTheme().inputTextViewColor.cgColor
     profileImageView.layer.cornerRadius = 48
     profileImageView.isUserInteractionEnabled = true
     
@@ -47,7 +47,7 @@ class UserProfileContainerView: UIView {
     addPhotoLabel.translatesAutoresizingMaskIntoConstraints = false
     addPhotoLabel.text = "Add\nphoto"
     addPhotoLabel.numberOfLines = 2
-    addPhotoLabel.textColor = UIColor(red:0.00, green:0.50, blue:1.00, alpha: 1.0)
+    addPhotoLabel.textColor = FalconPalette.defaultBlue
     addPhotoLabel.textAlignment = .center
     
     return addPhotoLabel
@@ -63,8 +63,8 @@ class UserProfileContainerView: UIView {
     name.borderStyle = .none
     name.autocorrectionType = .no
     name.returnKeyType = .done
-    name.keyboardAppearance = .default
-    name.textColor = UIColor.black
+    name.keyboardAppearance = ThemeManager.currentTheme().keyboardAppearance
+    name.textColor = ThemeManager.currentTheme().generalTitleColor
   
     return name
   }()
@@ -78,8 +78,8 @@ class UserProfileContainerView: UIView {
     phone.placeholder = "Phone number"
     phone.borderStyle = .none
     phone.isEnabled = false
-    phone.textColor = UIColor(red:0.67, green:0.67, blue:0.67, alpha:1.0)
-    phone.keyboardAppearance = .default
+    phone.textColor = ThemeManager.currentTheme().generalSubtitleColor
+    phone.keyboardAppearance = ThemeManager.currentTheme().keyboardAppearance
    
     return phone
   }()
@@ -91,7 +91,7 @@ class UserProfileContainerView: UIView {
     bioPlaceholderLabel.textAlignment = .center
     bioPlaceholderLabel.backgroundColor = .clear
     bioPlaceholderLabel.translatesAutoresizingMaskIntoConstraints = false
-    bioPlaceholderLabel.textColor = UIColor(red:0.67, green:0.67, blue:0.67, alpha:1.0)
+    bioPlaceholderLabel.textColor = ThemeManager.currentTheme().generalSubtitleColor
 
     return bioPlaceholderLabel
   }()
@@ -101,7 +101,7 @@ class UserProfileContainerView: UIView {
     userData.translatesAutoresizingMaskIntoConstraints = false
     userData.layer.cornerRadius = 30
     userData.layer.borderWidth = 1
-    userData.layer.borderColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0).cgColor
+    userData.layer.borderColor = ThemeManager.currentTheme().inputTextViewColor.cgColor
     
     return userData
   }()
@@ -115,12 +115,12 @@ class UserProfileContainerView: UIView {
     bio.font = UIFont.systemFont(ofSize: 16)
     bio.isScrollEnabled = false
     bio.textContainerInset = UIEdgeInsets(top: 15, left: 35, bottom: 15, right: 35)
-    bio.keyboardAppearance = .default
+    bio.keyboardAppearance = ThemeManager.currentTheme().keyboardAppearance
     bio.backgroundColor = .clear
-    bio.textColor = UIColor.black
-    bio.indicatorStyle = .default
-    bio.layer.borderColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0).cgColor
-    bio.keyboardAppearance = .default
+    bio.textColor = ThemeManager.currentTheme().generalTitleColor
+    bio.indicatorStyle = ThemeManager.currentTheme().scrollBarStyle
+    bio.layer.borderColor = ThemeManager.currentTheme().inputTextViewColor.cgColor
+    bio.keyboardAppearance = ThemeManager.currentTheme().keyboardAppearance
     bio.textContainer.lineBreakMode = .byTruncatingTail
     bio.returnKeyType = .done
    
@@ -131,7 +131,7 @@ class UserProfileContainerView: UIView {
     let countLabel = UILabel()
     countLabel.translatesAutoresizingMaskIntoConstraints = false
     countLabel.sizeToFit()
-    countLabel.textColor = UIColor(red:0.67, green:0.67, blue:0.67, alpha:1.0)
+    countLabel.textColor = ThemeManager.currentTheme().generalSubtitleColor
     countLabel.isHidden = true
     
     return countLabel
@@ -142,7 +142,7 @@ class UserProfileContainerView: UIView {
   override init(frame: CGRect) {
     super.init(frame: frame)
     
-    backgroundColor = UIColor.white
+    backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
     
     addSubview(addPhotoLabel)
     addSubview(profileImageView)
