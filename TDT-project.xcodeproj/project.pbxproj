@@ -13,6 +13,7 @@
 		4BAEE48621272C4F0045AB10 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEE47D21272C4F0045AB10 /* OnboardingController.swift */; };
 		4BAEE48721272C4F0045AB10 /* OnboardingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEE47E21272C4F0045AB10 /* OnboardingContainerView.swift */; };
 		B1BB468BEEFE7EA8EA8A02A3 /* libPods-TDTTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F24AC5B42A93478A5728CCAA /* libPods-TDTTests.a */; };
+		E0319E0F2464A115004273F0 /* TestImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0319E0E2464A115004273F0 /* TestImages.xcassets */; };
 		E0477EDB245B518000632AA9 /* ContactsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477ED9245B517F00632AA9 /* ContactsDetailController.swift */; };
 		E0477EDC245B518000632AA9 /* ContactsController+SearchHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477EDA245B518000632AA9 /* ContactsController+SearchHandlers.swift */; };
 		E0477EE5245B51A500632AA9 /* FalconUsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477EDE245B51A500632AA9 /* FalconUsersTableViewCell.swift */; };
@@ -26,6 +27,7 @@
 		E0477EF2245B545E00632AA9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477EEE245B545E00632AA9 /* User.swift */; };
 		E0477EF3245B545E00632AA9 /* MediaObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0477EEF245B545E00632AA9 /* MediaObject.swift */; };
 		E04E67FC23FFE30B008CB5F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */; };
+		E05DF7D62464892E00A977E2 /* TDTTests_Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05DF7D52464892E00A977E2 /* TDTTests_Public.swift */; };
 		E095ADF023FE826C0068A4AA /* GeneralTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */; };
 		E097347A2430DE12001D64B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09734792430DE12001D64B5 /* LaunchScreen.storyboard */; };
 		E097347C2430DE3E001D64B5 /* SplashScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E097347B2430DE3E001D64B5 /* SplashScreenContainer.swift */; };
@@ -198,6 +200,7 @@
 		809B26A98B43F0D86F89BEF8 /* Pods_TDT_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TDT_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A254D4D6ED95219C8036E043 /* Pods-TDT-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDT-project.release.xcconfig"; path = "Target Support Files/Pods-TDT-project/Pods-TDT-project.release.xcconfig"; sourceTree = "<group>"; };
 		A7E91611BD823692429B49F2 /* Pods-TDT-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDT-project.debug.xcconfig"; path = "Target Support Files/Pods-TDT-project/Pods-TDT-project.debug.xcconfig"; sourceTree = "<group>"; };
+		E0319E0E2464A115004273F0 /* TestImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestImages.xcassets; sourceTree = "<group>"; };
 		E0477ED9245B517F00632AA9 /* ContactsDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsDetailController.swift; sourceTree = "<group>"; };
 		E0477EDA245B518000632AA9 /* ContactsController+SearchHandlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ContactsController+SearchHandlers.swift"; sourceTree = "<group>"; };
 		E0477EDE245B51A500632AA9 /* FalconUsersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FalconUsersTableViewCell.swift; sourceTree = "<group>"; };
@@ -211,6 +214,7 @@
 		E0477EEE245B545E00632AA9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E0477EEF245B545E00632AA9 /* MediaObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaObject.swift; sourceTree = "<group>"; };
 		E04E67FB23FFE30B008CB5F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E05DF7D52464892E00A977E2 /* TDTTests_Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDTTests_Public.swift; sourceTree = "<group>"; };
 		E095ADEF23FE826B0068A4AA /* GeneralTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTabBarController.swift; sourceTree = "<group>"; };
 		E09734792430DE12001D64B5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E097347B2430DE3E001D64B5 /* SplashScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenContainer.swift; sourceTree = "<group>"; };
@@ -998,6 +1002,8 @@
 				E0BEDE20246238DB006B98A7 /* TDTTests.swift */,
 				E0BEDE2824623C3C006B98A7 /* TDTTests_MessageSender.swift */,
 				E0BEDE22246238DB006B98A7 /* Info.plist */,
+				E05DF7D52464892E00A977E2 /* TDTTests_Public.swift */,
+				E0319E0E2464A115004273F0 /* TestImages.xcassets */,
 			);
 			path = TDTTests;
 			sourceTree = "<group>";
@@ -1233,6 +1239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0319E0F2464A115004273F0 /* TestImages.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1495,6 +1502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05DF7D62464892E00A977E2 /* TDTTests_Public.swift in Sources */,
 				E0BEDE2924623C3C006B98A7 /* TDTTests_MessageSender.swift in Sources */,
 				E0BEDE21246238DB006B98A7 /* TDTTests.swift in Sources */,
 			);

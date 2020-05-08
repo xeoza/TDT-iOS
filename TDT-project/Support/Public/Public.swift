@@ -266,7 +266,7 @@ func compressImage(image: UIImage) -> Data {
   UIGraphicsBeginImageContext(rect.size)
   image.draw(in: rect)
   let img = UIGraphicsGetImageFromCurrentImageContext()
-	let imageData = img!.jpegData(compressionQuality: compressionQuality)
+  let imageData = img!.jpegData(compressionQuality: compressionQuality)
   UIGraphicsEndImageContext();
   
   return imageData!
@@ -379,6 +379,7 @@ func timeAgoSinceDate(_ date:Date, numericDates:Bool = false) -> String {
     return "just now"
   }
 }
+
 public func rearrange<T>(array: Array<T>, fromIndex: Int, toIndex: Int) -> Array<T>{
   var arr = array
   let element = arr.remove(at: fromIndex)
