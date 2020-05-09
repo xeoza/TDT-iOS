@@ -9,10 +9,12 @@ before_install:
 install:
   - rm -f Podfile.lock
   - travis_wait 10 pod install --silent 
-script:
+script: 
   - xcodebuild -scheme TDT-project -workspace TDT-project.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8 Plus,OS=13.2.2' | xcpretty -s && exit ${PIPESTATUS[0]}
+script: 
+  - xcodebuild -scheme TDTTests -workspace TDT-project.xcworkspace -sdk iphonesimulator | xcpretty -s && exit ${PIPESTATUS[0]}
 after_success:
-   - gem install jazz
+   - gem install jazzy
    - make documentation
    - pwd
    - ls -al
