@@ -11,7 +11,7 @@
 
 Краткое описание проекта: Клиент облачной системы мгновенного обмена сообщениями на основе Firebase
 
-* [Trello](https://trello.com/b/5A3Gboak/tdt-sprint-board)
+* [Github project](https://github.com/users/xeoza/projects/2)
 * [Travis CI](https://travis-ci.com/xeoza/TDT-iOS)
 
 # Состав продукта
