@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "35484D2BA8A93DBB3E9D052264DAFA6D"
+               BuildableName = "Pods_TDT_project.framework"
+               BlueprintName = "Pods-TDT-project"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "4B4F452A1F32230C00A6FF96"
                BuildableName = "TDT.app"
                BlueprintName = "TDT-project"
