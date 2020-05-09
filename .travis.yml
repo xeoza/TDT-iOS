@@ -13,3 +13,12 @@ script:
   - xcodebuild -scheme TDT-project -workspace TDT-project.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8 Plus,OS=13.2.2' | xcpretty -s && exit ${PIPESTATUS[0]}
 after_success:
    bash <(curl -s https://codecov.io/bash)
+   - gem install jazz
+   - make documentation
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  local-dir: docs
+  on:
+    branch: develop
