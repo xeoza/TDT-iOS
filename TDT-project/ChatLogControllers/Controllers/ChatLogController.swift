@@ -18,6 +18,7 @@ protocol DeleteAndExitDelegate: class {
   func deleteAndExit(from conversationID: String)
 }
 
+/// Essential screen of the app. This viewController represents a chat with user or a group. Use it to send messages & media, get info about chat participant(s) 
 class ChatLogController: UICollectionViewController {
 
   var conversation: Conversation?

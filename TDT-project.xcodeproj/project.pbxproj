@@ -1273,7 +1273,7 @@
 				TargetAttributes = {
 					4B4F452A1F32230C00A6FF96 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 53J8SQKY56;
+						DevelopmentTeam = AC6BECBQCN;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -1742,7 +1742,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53J8SQKY56;
+				DEVELOPMENT_TEAM = AC6BECBQCN;
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = "TDT-project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

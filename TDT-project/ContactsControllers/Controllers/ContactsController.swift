@@ -23,6 +23,7 @@ private let falconUsersCellID = "falconUsersCellID"
 private let currentUserCellID = "currentUserCellID"
 private let contactsCellID = "contactsCellID"
 
+/// A tableViewController that represents user's contact list as well as users that already use app
 class ContactsController: UITableViewController {
   
   var contacts = [CNContact]()

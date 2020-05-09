@@ -8,17 +8,34 @@
 
 import UIKit
 
+/// An object that represents instance of s user
 class User: NSObject {
-
-  var id: String?
-  @objc var name: String?
-  var bio: String?
-  var photoURL: String?
-  var thumbnailPhotoURL: String?
-  var phoneNumber: String?
-  var onlineStatus: AnyObject?
-  var isSelected: Bool! = false // local only
   
+  /// User id
+  var id: String?
+
+  /// User name
+  @objc var name: String?
+
+  /// String containing bio info about user
+  var bio: String?
+
+  /// User photo url
+  var photoURL: String?
+
+  /// Thumbnail photo url
+  var thumbnailPhotoURL: String?
+	
+  /// User phone number
+  var phoneNumber: String?
+
+  /// Online status indication
+  var onlineStatus: AnyObject?
+
+  var isSelected: Bool! = false // local only
+	
+	/// Default init
+	/// - Parameter dictionary: pass a dictionary to initialize required variables of the instance that about to be created
   init(dictionary: [String: AnyObject]) {
     id = dictionary["id"] as? String
     name = dictionary["name"] as? String

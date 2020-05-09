@@ -15,6 +15,7 @@ enum BiometricType: Int {
   case face = 2
 }
 
+/// View that is shown at app launch that is used to show biometry authentication alerts
 class SplashScreenContainer: UIView {
 
   var navigationItem = UINavigationItem(title: AvatarOverlayTitle.user.rawValue)

@@ -20,20 +20,28 @@ protocol CollectionDelegate: class {
   func collectionView(updateStatus reference: DatabaseReference, message: Message)
 }
 
+/// An object that interacts with Firebase SDK to fetch messages from databse
 class MessagesFetcher: NSObject {
   
+  /// Fetcher messages
   private var messages = [Message]()
 
+  /// Querry over the data at a particular location
   var userMessagesReference: DatabaseQuery!
 
+  /// Refrenece to the databse
   var messagesReference: DatabaseReference!
   
+  /// Limit of messages to load
   private  let messagesToLoad = 50
 
+  /// Instance of audioplayer to play audiomessages
   private var chatLogAudioPlayer: AVAudioPlayer!
   
+  /// Instance of MessafgesDelegate protocol
   weak var delegate: MessagesDelegate?
 
+  /// Instance of CollectionDelegate protocol
   weak var collectionDelegate: CollectionDelegate?
 
   var isInitialChatMessagesLoad = true
@@ -42,6 +50,9 @@ class MessagesFetcher: NSObject {
 
   private var loadingNamesGroup = DispatchGroup()
 
+	
+	/// Fetches messages from the databse for the specified conversion
+	/// - Parameter conversation: conversation to fetch messages for
   func loadMessagesData(for conversation: Conversation) {
     guard let currentUserID = Auth.auth().currentUser?.uid, let conversationID = conversation.chatID else { return }
 
@@ -74,6 +85,7 @@ class MessagesFetcher: NSObject {
       })
     })
   }
+  
 
   func newLoadMessages(reference: DatabaseQuery, isGroupChat: Bool) {
     var loadedMessages = [Message]()
@@ -108,7 +120,9 @@ class MessagesFetcher: NSObject {
       })
     }
   }
-
+	
+	/// Handles UI interaction to show messages
+	/// - Parameter newDictionary: dictionary to create Message instance
   func handleMessageInsertionInRuntime(newDictionary: [String:AnyObject]) {
     guard let currentUserID = Auth.auth().currentUser?.uid else { return }
     let message = Message(dictionary: newDictionary)

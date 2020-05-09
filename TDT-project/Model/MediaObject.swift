@@ -9,16 +9,35 @@
 import UIKit
 import Photos
 
+/// And object that represents instance of meida files such as photos, videos & audio
 class MediaObject: NSObject {
+	
+  /// Data representation of media object
   var object: Data?
+	
+  /// Representation of video object
   var videoObject: Data?
+
+  /// Representation of audio object
   var audioObject: Data?
+
+  /// Media object indexPath
   var indexPath: IndexPath?
+
+  /// String representing image source
   var imageSource: String?
+
+  /// PHAsset of the object
   var phAsset: PHAsset?
+
+  /// Media object file name
   var filename: String?
+
+  /// Media object file url
   var fileURL: String?
   
+  /// Default init
+  /// - Parameter dictionary: pass a dictionary to initialize required variables of the instance that about to be created
   init(dictionary: [String: AnyObject]) {
     super.init()
     

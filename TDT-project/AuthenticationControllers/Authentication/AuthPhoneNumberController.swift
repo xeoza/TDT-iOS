@@ -8,7 +8,7 @@
 
 import UIKit
 
-
+/// A viewController that represents a screen where user enters his phone number when creating an account
 class AuthPhoneNumberController: EnterPhoneNumberController {
   
   override func configurePhoneNumberContainerView() {

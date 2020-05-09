@@ -15,6 +15,7 @@ protocol MessageSenderDelegate: class {
   func update(mediaSending progress: Double, animated: Bool)
 }
 
+/// An object that is responsible for communicating with Firebase API to send messages and media
 class MessageSender: NSObject {
   
   fileprivate let storageUploader = StorageMediaUploader()
