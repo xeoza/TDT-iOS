@@ -14,6 +14,8 @@ script:
 after_success:
    - gem install jazz
    - make documentation
+   - pwd
+   - ls -al
 deploy:
   provider: pages
   skip-cleanup: true
