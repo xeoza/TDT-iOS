@@ -34,6 +34,7 @@ protocol ManageAppearance: class {
   func manageAppearance(_ chatsController: ChatsTableViewController, didFinishLoadingWith state: Bool )
 }
 
+/// A tableViewController that shows list of chats with other users or a group
 class ChatsTableViewController: UITableViewController {
   
   fileprivate let userCellID = "userCellID"
@@ -43,13 +44,23 @@ class ChatsTableViewController: UITableViewController {
   
   var searchBar: UISearchBar?
   var searchChatsController: UISearchController?
-
+	
+  /// list of available conversations
   var conversations = [Conversation]()
+
+  /// list of filtered conversations
   var filtededConversations = [Conversation]()
+	
+  /// list of pinned conversations
   var pinnedConversations = [Conversation]()
+	
+  /// list of pinned & filtered conversations
   var filteredPinnedConversations = [Conversation]()
   
+  /// instance of ConversationsFetcher
   let conversationsFetcher = ConversationsFetcher()
+
+  /// instance of IANotificationManager
   let notificationsManager = InAppNotificationManager()
 
   let viewPlaceholder = ViewPlaceholder()

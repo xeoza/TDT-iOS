@@ -13,6 +13,7 @@ private let headerCellIdentifier = "headerCellIdentifier"
 private let phoneNumberCellIdentifier = "phoneNumberCellIdentifier"
 private let bioCellIdentifier = "bioCellIdentifier"
 
+/// A viewController that brings up screen with info about participant of the chat
 class UserInfoTableViewController: UITableViewController {
 
   var user: User? {

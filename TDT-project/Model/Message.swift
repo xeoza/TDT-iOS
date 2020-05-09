@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+/// Struct for message subtitle
 struct MessageSubtitle {
   static let video = "Attachment: Video"
   static let image = "Attachment: Image"
@@ -16,29 +17,51 @@ struct MessageSubtitle {
   static let empty = "No messages here yet."
 }
 
+/// An object that represents a message instance
 class Message: NSObject  {
   
+    /// Unique Identifier of the message
     var messageUID: String?
+	
+    /// Indication wheather this is info message
     var isInformationMessage: Bool?
-
+	
+    /// Message sender Id
     var fromId: String?
+	
+    /// Text of the message
     var text: String?
+
+    /// Message recipient Id
     var toId: String?
+
+    /// Message timestamp (raw)
     var timestamp: NSNumber?
+
+    /// Message timestamp (raw)
     var convertedTimestamp: String?
-  
+
+    /// String that represents staus of the message
     var status: String?
+	
+    /// Flag that determines wheather message was seen by recipient
     var seen: Bool?
   
+    /// Url of image attachment
     var imageUrl: String?
     var imageHeight: NSNumber?
     var imageWidth: NSNumber?
   
+    /// Local UIImage instance
     var localImage: UIImage?
-  
+
+    /// Urll of local video
     var localVideoUrl: String?
   
+    /// Voicemessage Data
     var voiceData: Data?
+
+    /// Voicemessage duration
     var voiceDuration: String?
     var voiceStartTime: Int?
     var voiceEncodedString: String?
@@ -49,11 +72,15 @@ class Message: NSObject  {
     var imageCellHeight: NSNumber?
   
     var senderName: String? //local only, group messages only
-      
+	
+	/// Returns id of chat participant only, not for group chats
+	/// - Returns: id of chat participant
     func chatPartnerId() -> String? {
         return fromId == Auth.auth().currentUser?.uid ? toId : fromId
     }
-  
+	
+	/// Default init
+	/// - Parameter dictionary: pass a dictionary to initialize required variables of the instance that about to be created
     init(dictionary: [String: AnyObject]) {
         super.init()
       

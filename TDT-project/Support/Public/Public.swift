@@ -59,6 +59,8 @@ extension UILocalizedIndexedCollation {
 }
 
 extension Array {
+	/// This method divides an array to 2 parts using a given predicate
+	/// - Parameter condition: given predicate
   public func stablePartition(by condition: (Element) throws -> Bool) rethrows -> ([Element], [Element]) {
     var indexes = Set<Int>()
     for (index, element) in self.enumerated() {
@@ -113,6 +115,9 @@ struct AppUtility {
   }
 }
 
+/// A method which finds top viewController in the specified roootViewController's hierarchy
+/// - Parameter rootViewController: a viewController in which search should be performed
+/// - Returns: topViewController
 func topViewController(rootViewController: UIViewController?) -> UIViewController? {
   guard let rootViewController = rootViewController else {
     return nil
@@ -175,7 +180,9 @@ extension String {
 }
 
 extension UINavigationController {
-  
+	
+	/// Pops nvaigationController to the specified viewController. Default Implementation of UINavigationController does not provide such ability
+	/// - Parameter viewController: destination viewController
   func backToViewController(viewController: Swift.AnyClass) {
     
     for element in viewControllers {
@@ -233,6 +240,7 @@ extension Int {
   }
 }
 
+/// A set of helpers that return date in formated manner
 extension Date {
   
   func getShortDateStringFromUTC() -> String {
@@ -311,6 +319,12 @@ func timestampOfChatLogMessage(_ date: Date) -> String {
   }
 }
 
+
+/// Returns a formatted string with time of user last seen online using given date
+/// - Parameters:
+///   - date: sice date
+///   - numericDates: set it to true to enable numeric formatting
+/// - Returns: formatted string with last seen date
 func timeAgoSinceDate(_ date:Date, numericDates:Bool = false) -> String {
   let calendar = NSCalendar.current
   let unitFlags: Set<Calendar.Component> = [.minute, .hour, .day, .weekOfYear, .month, .year, .second]
@@ -637,6 +651,9 @@ func compressImage(image: UIImage) -> Data {
   return imageData!
 }
 
+/// Creates UIImage instance using a given phAsset
+/// - Parameter phAsset: phAsset that represents phone's gallery photos
+/// - Returns: created UIImage instance
 func uiImageFromAsset(phAsset: PHAsset) -> UIImage? {
   
   var img: UIImage?
@@ -655,6 +672,9 @@ func uiImageFromAsset(phAsset: PHAsset) -> UIImage? {
   return img
 }
 
+/// Creates Data instance using a given phAsset
+/// - Parameter phAsset: phAsset that represents phone's gallery photos
+/// - Returns: created Data instance
 func dataFromAsset(asset: PHAsset) -> Data? {
   
   var finalData: Data?
@@ -768,6 +788,7 @@ extension NSObject: Utilities {
     case reachableViaWiFi
   }
   
+  /// Verifies current network status using legacy Darwin POSIX sockaddr_in struct
   var currentReachabilityStatus: ReachabilityStatus {
     
     var zeroAddress = sockaddr_in()

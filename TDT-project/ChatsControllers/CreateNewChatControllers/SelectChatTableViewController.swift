@@ -16,6 +16,7 @@ extension NSNotification.Name {
   static let falconUsersUpdated = NSNotification.Name(Bundle.main.bundleIdentifier! + ".falconUsers")
 }
 
+/// A tableViewController which is responsible for bringing up a screen where user can create new chat or group
 class SelectChatTableViewController: UITableViewController {
   
   let falconUsersCellID = "falconUsersCellID"

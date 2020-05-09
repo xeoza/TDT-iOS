@@ -9,12 +9,14 @@
 import UIKit
 import Firebase
 
+/// Enumeration for tabs of GeneralTabBarController
 enum Tabs: Int {
   case contacts = 0
   case chats = 1
   case settings = 2
 }
 
+/// Main control viewController. It holds three controller for settings, chat & contacts
 class GeneralTabBarController: UITabBarController {
 
   var onceToken = 0

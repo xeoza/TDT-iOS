@@ -8,21 +8,47 @@
 
 import UIKit
 
+/// An object that represents a conversation instance
 class Conversation: NSObject {
 
+  /// Id of the chat
   var chatID: String?
+	
+  /// Name of the Chat
   var chatName: String?
+	
+  /// Url of chat photo
   var chatPhotoURL: String?
+
+  /// Url of chat photo
   var chatThumbnailPhotoURL: String?
+	
+  /// Id of the last message
   var lastMessageID: String?
+  /// instance of the last message
   var lastMessage: Message?
+	
+  /// flast that shows wheather current conversation is group chat
   var isGroupChat: Bool?
+	
+  /// list that contains id's of participants if conversation is ment to be a group chat
   var chatParticipantsIDs:[String]?
+
+  // admin id
   var admin: String?
+
+  // value of converstation badge for tabBarController
   var badge: Int?
+	
+  /// flag that determines wheather chat is pinned
   var pinned: Bool?
+
+  /// flag that determines wheather chat is muted
   var muted: Bool?
   
+	
+	/// Retrieves placeholder of the last chat's message
+	/// - Returns: placeholder of the last chat's message
   func messageText() -> String {
     
     let isImageMessage = (lastMessage?.imageUrl != nil || lastMessage?.localImage != nil) && lastMessage?.videoUrl == nil
@@ -37,7 +63,9 @@ class Conversation: NSObject {
     
     return MessageSubtitle.empty
   }
-  
+	
+	/// Default init
+	/// - Parameter dictionary: pass a dictionary to initialize required variables of the instance that about to be created
   init(dictionary: [String: AnyObject]?) {
     super.init()
     
