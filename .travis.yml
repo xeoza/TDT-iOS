@@ -3,16 +3,16 @@ language: swift
 osx_image: xcode11.3
 before_script:
   - agvtool new-version -all $(date +'%Y.%m.%d.%H.%M')
-  - travis/before_script.sh
 before_install:
   - gem install xcpretty
   - gem install cocoapods -v '0.32.1'
 install:
   - rm -f Podfile.lock
   - travis_wait 10 pod install --silent 
-script: - travis/build_script.sh
+script: 
+  - xcodebuild -scheme TDT-project -workspace TDT-project.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8 Plus,OS=13.2.2' | xcpretty -s && exit ${PIPESTATUS[0]}
 after_success:
-   - gem install jazz
+   - gem install jazzy
    - make documentation
    - pwd
    - ls -al
