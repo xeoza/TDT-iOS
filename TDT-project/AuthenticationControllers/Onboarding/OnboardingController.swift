@@ -15,11 +15,23 @@ class OnboardingController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    view.backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
     view.addSubview(onboardingContainerView)
     onboardingContainerView.frame = view.bounds
+    setColorsAccordingToTheme()
+  }
+  
+  fileprivate func setColorsAccordingToTheme() {
+    let theme = ThemeManager.currentTheme()
+    ThemeManager.applyTheme(theme: theme)
+    view.backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
+    onboardingContainerView.backgroundColor = view.backgroundColor
   }
   
   @objc func startMessagingDidTap () {
+    let destination = AuthPhoneNumberController()
+    navigationController?.pushViewController(destination, animated: true)
   }
 
 }
+

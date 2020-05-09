@@ -15,15 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
   
+    /// Entry point of the Application. It contains all sorts of initial setups
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    ThemeManager.applyTheme(theme: ThemeManager.currentTheme())
     FirebaseApp.configure()
     Database.database().isPersistenceEnabled = true
+    userDefaults.configureInitialLaunch()
     
     let tabBarController = GeneralTabBarController()
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootViewController = tabBarController
     window?.makeKeyAndVisible()
-        
+    window?.backgroundColor = ThemeManager.currentTheme().generalBackgroundColor
     tabBarController.presentOnboardingController()
   
     return true
